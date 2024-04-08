@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    background: url("../images/zamboni.webp") center center/cover;
+    color: #FFFFFF;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+header{
+    background: url("../images/header_small.png") left;
+    background-attachment: fixed;
+    /* opacity: 0.7;*/
+    height: 100px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+.title{
+    opacity: 1;
+    display: flex;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;  
+}
+.titletext {
+    opacity: 1;
+    color: #ffffff;
+    display: inline-block;
+    align-self: flex-end;
+    font-size: 14px;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 60%;
+}
+.columns {
+    display: flex;
+    border-radius: 20px;
+
+}
+.main-column {
+    background: rgba(255, 255, 255, 0.3);
+    height: 50vh;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 10px;
+}
+/* Footer */
+.footer {
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none; 
+    vertical-align: middle;
+}
+
+
+.footer-buttons {
+    font-family: "Comfortaa", sans-serif;
+    background-color: rgba(0, 0, 0, 0.692);
+    color: #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    cursor: pointer;
+    margin: 3px;
+
+}
