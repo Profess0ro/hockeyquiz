@@ -13,6 +13,7 @@ header{
     height: 100px;
     border-radius: 10px;
     margin-bottom: 5px;
+    border: 2px solid rgba(255, 217, 0, 0.692);
 }
 .title{
     opacity: 1;
@@ -38,10 +39,16 @@ header{
     flex-direction: column;
 
 }
+.correct {
+    color: #15ff00;
+}
+.incorrect {
+    color: #ff0000;
+}
 .game-area {
     background: rgba(255, 255, 255, 0.3);
-    border: 2px solid #ffee00;
-    height: 50vh;
+    border: 2px solid rgba(255, 217, 0, 0.692);
+    height: 55vh;
     border-radius: 10px;
     padding: 10px;
     margin-top: 10px;
@@ -61,13 +68,13 @@ header{
     border-radius: 10px;
     align-self: center;
     width: 100%;
-    margin-top: 10%;
+    margin-top: 10px;
     text-align: center;
 }
 .question {
     background-color: rgba(0, 238, 255, 0.349);
     border-radius: 10px;
-    border: 2px solid #ff0000;
+    border: 2px solid rgba(255, 0, 0, 0.644);
     padding: 5px;
     font-size: 12px;
     margin: 5px;
@@ -83,7 +90,7 @@ header{
     color: #FFFFFF;
     width: 46%;
     border-radius: 10px;
-    border: 2px solid #0011ff;
+    border: 2px solid rgba(0, 26, 255, 0.692);
     padding: 10px;
     text-align: center;
     text-decoration: none;
@@ -92,6 +99,11 @@ header{
     cursor: pointer;
     margin: 3px;
     
+}
+.scores {
+    border: 2px solid #000000;
+    font-size: 10px;
+    font-weight: 400;
 }
 /* Footer */
 .footer {
@@ -104,6 +116,7 @@ header{
     justify-content: space-around;
     list-style-type: none; 
     vertical-align: middle;
+    border: 2px solid rgba(255, 217, 0, 0.692);
 }
 
 
