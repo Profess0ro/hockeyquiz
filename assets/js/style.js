@@ -1,3 +1,10 @@
+document.addEventListener("DOMContentLoaded", function(){
+    let buttons = document.getElementsByTagName("button");{
+
+    }
+});
+
+
 function startGame() {
 
 }
@@ -11,5 +18,5 @@ function addWrongAnswer() {
 
 }
 function displayNextQuestion () {
-    
+
 }
