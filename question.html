@@ -1,44 +1,52 @@
 <html lang="en-US">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hockeyquiz</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <header>
-        <div class="title">
-          <p class="titletext">Hockeyquiz</p>  
-        </div>
-</header>
-<main>
-    <div class="game-area columns">
-        <div class="image">
-            <img src="assets/images/header_small.png" alt="question1" class="questionimage">
-        </div>
-        <div class="question">
-            <p>This is the question column</p>
-        </div>
-        <div class="answers">
-            <button class="answerbutton">answer 1</button>
-            <button class="answerbutton">answer 2</button>
-            <button class="answerbutton">answer 3</button>
-            <button class="answerbutton">answer 4</button>
-        </div>
-        <div class="scores">
-            <p class="score">Goals: <span class="correct">0</span></p>
-            <p class="score">Missed shots: <span class="incorrect">0</span></p>
-        </div>
-    </div>
-</main>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hockeyquiz</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="title">
+                <p class="titletext border">Hockeyquiz</p>
+            </div>
+        </header>
+        <main>
+            <div class="game-area border columns">
+                <div class="image">
+                    <img src="assets/images/header_small.png" alt="question1"
+                        class="questionimage border">
+                </div>
+                <div class="question border">
+                    <p>This is the question column</p>
+                </div>
+                <div class="answers">
+                    <button data-type="answer1"
+                        class="answerbutton border">answer 1</button>
+                    <button data-type="answer2"
+                        class="answerbutton border">answer 2</button>
+                    <button data-type="answer3"
+                        class="answerbutton border">answer 3</button>
+                    <button data-type="answer4"
+                        class="answerbutton border">answer 4</button>
+                </div>
+                <div class="scores border">
+                    <p class="score">Goals: <span class="correct">0</span></p>
+                    <p class="score">Missed shots: <span
+                            class="incorrect">0</span></p>
+                </div>
+            </div>
+        </main>
 
-<footer>
-    <div class="footer">
-        <a href="index.html"><button class="footer-buttons">Main menu</button></a>
-        <button class="footer-buttons">High score</button>
-        <button class="footer-buttons">Contact</button>
-    </div>
-</footer>
-<script src="https://kit.fontawesome.com/214e058f0e.js" crossorigin="anonymous"></script>   
-</body>
+        <footer>
+            <div class="footer">
+                <a href="index.html"><button class="footer-buttons border">Main
+                        menu</button></a>
+                <button class="footer-buttons border">High score</button>
+                <button class="footer-buttons border">Contact</button>
+            </div>
+        </footer>
+        <script src="https://kit.fontawesome.com/214e058f0e.js"
+            crossorigin="anonymous"></script>
+    </body>
 </html>
