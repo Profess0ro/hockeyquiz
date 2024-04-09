@@ -10,7 +10,7 @@ body {
 header{
     background: url("../images/header_small.png") left;
     background-attachment: fixed;
-    /* opacity: 0.7;*/
+    background-position: left;
     height: 100px;
     border-radius: 20px;
     margin-bottom: 5px;
