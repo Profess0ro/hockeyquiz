@@ -37,20 +37,19 @@ header{
     padding: 10px;
     margin-left: 55%;
     border-radius: 10px;
-}
+}/*
 .columns {
     display: flex;
     border-radius: 20px;
     flex-direction: column;
 
-}
+}*/
 .correct {
     color: #15ff00;
 }
 .incorrect {
     color: #ff0000;
 }
-
 .content {
     background: rgba(255, 255, 255, 0.3);
     border: 2px solid rgba(255, 217, 0, 0.692);
@@ -59,8 +58,17 @@ header{
     margin-top: 10px;
     border-radius: 10px;
 }
-.startgame {
-    align-self: center;
+#startGame {
+display: flex;
+flex-direction: column;
+flex-grow: 0;
+}
+#username {
+    input {
+        background-color: #81BA5F;
+        color: #FFFFFF;
+        width: 108px;
+    }
 }
 #scores {
     background: rgba(255, 255, 255, 0.3);
