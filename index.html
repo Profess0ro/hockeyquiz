@@ -13,33 +13,42 @@
             </div>
         </header>
         <main>
+            <!-- Main area-->
             <div class="container">
+                <!-- Main menu -->
                 <div id="welcome" class=""><h3>Welcome to this game!</h3>
                     Instructions:
                     <div id="play"><button id="play-btn"
                             class="">Play!</button></div>
                 </div>
-                <div id="startgame" class="hide">
+                <!--  Contact -->
+                <div id="contact-area" class="hide">
                     <form action method="post"></form>
                     <input type="text" name="username" id="username" required>
                     <input type="submit" class="submit" value="Start Quiz"
-                        id="startquiz">
+                        id="send">
                 </div>
+                <!-- Game area-->
                 <div id="game-area" class="hide">
+                    <!-- questions shown here -->
                     <div id="question">Question</div>
+                    <!-- Answering buttons -->
                     <div id="answers">
                         <button class="answerbutton">answer1</button>
                         <button class="answerbutton">answer1</button>
                         <button class="answerbutton">answer1</button>
                         <button class="answerbutton">answer1</button>
                     </div>
+                    <!-- Scoreboard -->
                     <div id="scores">
                         <p class="score">Goals: <span class="correct">0</span> -
                             <span class="incorrect">0</span> Missed shots</p>
                     </div>
-                    <div class="next"><button id="nextQuestion"
-                        class="footer-buttons">Next question</button></div>
+                    <!-- button for next question -->
+                    <button id="nextQuestion"
+                    class="hide">Next question</button>
                 </div>
+
             </div>
 
         </main>
