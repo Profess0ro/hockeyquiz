@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hockeyquiz</title>
         <link rel="stylesheet" href="assets/css/style.css">
-        <script src="assets/js/style.js"></script>
+        
     </head>
     <body>
         <header>
@@ -14,14 +14,18 @@
         </header>
         <main>
             <div class="container">
-                <div id="welcome" class="content hide"><h3>Welcome to this game!</h3>
+                <div id="welcome" class=""><h3>Welcome to this game!</h3>
                     Instructions:
-                    <div id="play"><button id="startGame" class="footer-buttons">Play!</button></div>
+                    <div id="play"><button id="play-btn"
+                            class="">Play!</button></div>
                 </div>
-                <div id="startGame" class="content">
-                    <input type="text" name="username" id="username">
+                <div id="startgame" class="hide">
+                    <form action method="post"></form>
+                    <input type="text" name="username" id="username" required>
+                    <input type="submit" class="submit" value="Start Quiz"
+                        id="startquiz">
                 </div>
-                <div id="game-area" class=" content hide">
+                <div id="game-area" class="hide">
                     <div id="question">Question</div>
                     <div id="answers">
                         <button class="answerbutton">answer1</button>
@@ -29,22 +33,25 @@
                         <button class="answerbutton">answer1</button>
                         <button class="answerbutton">answer1</button>
                     </div>
-                    <div class="next"><button id="nextQuestion" class="footer-buttons">Next question</button></div>
                     <div id="scores">
-                        <p class="score">Goals: <span class="correct">0</span> - <span class="incorrect">0</span> Missed shots</p>
+                        <p class="score">Goals: <span class="correct">0</span> -
+                            <span class="incorrect">0</span> Missed shots</p>
                     </div>
+                    <div class="next"><button id="nextQuestion"
+                        class="footer-buttons">Next question</button></div>
                 </div>
             </div>
-            
+
         </main>
 
         <footer>
             <div class="footer">
-                <button id="mainMenu" class="footer-buttons">Main menu</button>
+                <button id="mainmenu" class="footer-buttons">Main menu</button>
                 <button id="contact" class="footer-buttons">Contact</button>
             </div>
         </footer>
         <script src="https://kit.fontawesome.com/214e058f0e.js"
             crossorigin="anonymous"></script>
     </body>
+    <script src="assets/js/style.js"></script>
 </html>
