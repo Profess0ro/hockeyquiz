@@ -143,7 +143,7 @@ input {
 .correctanswer {
     font-family: "Comfortaa", sans-serif;
     background-color: rgba(0, 255, 21, 0.623);
-    color: #000000;
+    color: #ffffff;
     border: 2px solid rgba(0, 255, 21, 0.897);
     padding: 10px;
     text-align: center;
@@ -152,6 +152,7 @@ input {
     cursor: pointer;
     margin: 3px;
     border-radius: 10px;
+    font-weight: bold;
 }
 .wronganswer {
     font-family: "Comfortaa", sans-serif;
@@ -165,6 +166,7 @@ input {
     cursor: pointer;
     margin: 3px;
     border-radius: 10px;
+    font-weight: bold;
 }
 
 /* Footer */

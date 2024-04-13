@@ -1,3 +1,4 @@
+
 const playButton = document.getElementById('play-btn')
 const contactButton = document.getElementById('contact')
 const questionContentArea = document.getElementById('game-area')
@@ -43,5 +44,5 @@ function resetState () {
 
 }
 function sendContact() {
-    
+
 }
