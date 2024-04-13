@@ -17,4 +17,3 @@ I want this game to be fun and not be questions about the game and the rules of 
 <img src="wireframes/game.png"><br>
 <img src="wireframes/end.png"><br>
 <img src="wireframes/contact.png"><br>
-<img src="wireframes/highscore.png.png"><br>
