@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hockeyquiz</title>
         <link rel="stylesheet" href="assets/css/style.css">
-        
+
     </head>
     <body>
         <header>
@@ -16,41 +16,47 @@
             <!-- Main area-->
             <div class="container">
                 <!-- Main menu -->
-                <div id="welcome" class=""><h3>Welcome to this game!</h3>
+                <div id="welcome" class><h3>Welcome to this game!</h3>
                     Instructions:
                     <div id="play"><button id="play-btn"
-                            class="">Play!</button></div>
+                            class>Play!</button></div>
                 </div>
                 <!--  Contact -->
                 <div id="contact-area" class="hide">
-                    <h3>Please fill in the field if you have some feedback about this game</h3>
+                    <h3>Please fill in the field if you have some feedback about
+                        this game</h3>
                     <form onsubmit="return false">
-                        Your name: <br><input class="form" type="text" id="name" required/><br><br>
-                        Your Email: <br><input class="form" type="email" id="email" required/><br><br>
-                        Your Message: <br><textarea class="form" id="message" rows="6"></textarea>
+                        Your name: <br><input class="form" type="text" id="name"
+                            required /><br><br>
+                        Your Email: <br><input class="form" type="email"
+                            id="email" required /><br><br>
+                        Your Message: <br><textarea class="form" id="message"
+                            rows="6"></textarea>
                         <br><br>
-                        <button class ="footer-buttons" onclick="sendContact();">Send</button>
+                        <button class="footer-buttons"
+                            onclick="sendContact();">Send</button>
                     </form>
                 </div>
                 <!-- Game area-->
                 <div id="game-area" class="hide">
+                    <!-- Scoreboard -->
+                    <div id="scores">
+                        <p class="score">Goals: <span class="correct">0</span> -
+                            <span class="incorrect">0</span> Missed shots</p>
+                    </div>
                     <!-- questions shown here -->
                     <div id="question">Here will it be a question shown</div>
                     <!-- Answering buttons -->
                     <div id="answers">
                         <button class="answerbutton">answer</button>
                         <button class="answerbutton">answer</button>
-                        <button class="wronganswer">Wrong answer</button>
-                        <button class="correctanswer">Correct answer</button>
+                        <button class="answerbutton">Wrong answer</button>
+                        <button class="answerbutton">Correct answer</button>
                     </div>
-                    <!-- Scoreboard -->
-                    <div id="scores">
-                        <p class="score">Goals: <span class="correct">0</span> -
-                            <span class="incorrect">0</span> Missed shots</p>
-                    </div>
+
                     <!-- button for next question -->
                     <button id="nextQuestion"
-                    class="hide">Next question</button>
+                        class="hide">Next question</button>
                 </div>
 
             </div>

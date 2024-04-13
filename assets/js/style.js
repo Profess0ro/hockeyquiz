@@ -1,4 +1,6 @@
-
+/**
+ * Here all different buttons and divs gets a const that are used in the functions
+ */
 const playButton = document.getElementById('play-btn')
 const contactButton = document.getElementById('contact')
 const questionContentArea = document.getElementById('game-area')
@@ -8,7 +10,9 @@ const welcomeArea = document.getElementById('welcome')
 const contactArea = document.getElementById('contact-area')
 const mainMenuButton = document.getElementById('mainmenu')
 
-
+/**
+ * what function will be called when you press the buttons
+ */
 playButton.addEventListener("click", playQuiz)
 contactButton.addEventListener("click", showContact)
 mainMenuButton.addEventListener("click", returnToMain)
@@ -17,6 +21,7 @@ mainMenuButton.addEventListener("click", returnToMain)
 function playQuiz() {
     welcomeArea.classList.add('hide')
     questionContentArea.classList.remove('hide')
+    contactArea.classList.add('hide')
 }
 function showContact () {
     welcomeArea.classList.add('hide')
