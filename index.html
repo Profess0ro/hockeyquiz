@@ -23,12 +23,18 @@
                 </div>
                 <!--  Contact -->
                 <div id="contact-area" class="hide">
-                    form with message function will be here
+                    <form onsubmit="return false">
+                        Your name: <input type="text" id="name" required/><br><br>
+                        Your Email: <input type="email" id="email" required/><br><br>
+                        Your Message: <textarea id="message" rows="6"></textarea>
+                        <br><br>
+                        <button class ="footer-buttons" onclick="sendContact();">Send</button>
+                    </form>
                 </div>
                 <!-- Game area-->
                 <div id="game-area" class="hide">
                     <!-- questions shown here -->
-                    <div id="question">Question</div>
+                    <div id="question">Here will it be a question shown</div>
                     <!-- Answering buttons -->
                     <div id="answers">
                         <button class="answerbutton">answer1</button>

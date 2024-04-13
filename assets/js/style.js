@@ -42,3 +42,6 @@ function displayNextQuestion () {
 function resetState () {
 
 }
+function sendContact() {
+    
+}
