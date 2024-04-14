@@ -23,7 +23,7 @@ let shuffledQuestions, currentQuestionIndex
 /**
  * what function will be called when you press the buttons
  */
-StartTheGameButton.addEventListener("click", playQuiz)
+StartTheGameButton.addEventListener("click", collectData)
 playButton.addEventListener("click", inputUserName)
 contactButton.addEventListener("click", showContact)
 mainMenuButton.addEventListener("click", returnToMain)
@@ -42,6 +42,25 @@ function inputUserName() {
     contactArea.classList.add('hide')
     EngGameButton.classList.add('hide');
     InputNameArea.classList.remove('hide')
+}
+
+//This function collects the name filled in and shows at the score
+function collectData() {
+    const inputField = document.getElementById('your-name');
+    const inputValue = inputField.value;
+
+    if (inputValue.trim() === '') {
+        alert('You didn\'t fill in your name');
+        inputUserName(); // Call inputUserName() if the input is empty
+    } else {
+        playQuiz(); // Call playQuiz() if the input is not empty
+    }
+
+    // Get the span element by its ID
+    const outputSpan = document.getElementById('username');
+
+    // Set the inner text of the span to the collected data
+    outputSpan.innerText = inputValue;
 }
 
 function playQuiz() {
