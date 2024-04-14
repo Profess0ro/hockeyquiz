@@ -56,10 +56,7 @@ function collectData() {
         playQuiz(); // Call playQuiz() if the input is not empty
     }
 
-    // Get the span element by its ID
     const outputSpan = document.getElementById('username');
-
-    // Set the inner text of the span to the collected data
     outputSpan.innerText = inputValue;
 }
 
