@@ -1,6 +1,4 @@
-/**
- * Here all different buttons and divs gets a const that are used in the functions
- */
+//Here all different buttons and divs gets a const that are used in the functions
 const playButton = document.getElementById("play-btn");
 const contactButton = document.getElementById("contact");
 const questionContentArea = document.getElementById("game-area");
@@ -15,22 +13,19 @@ const RestartButtonFooter = document.getElementById("restart-footer");
 const EngGameButton = document.getElementById("end-game-button");
 const StartTheGameButton = document.getElementById("start-the-game");
 const InputNameArea = document.getElementById("input-name");
-/**
- * this makes the index of the question to change during the quiz, so that the questions order will be random
- */
+
+//this makes the index of the question to change during the quiz, so that the questions order will be random
+
 let shuffledQuestions, currentQuestionIndex;
 
-/**
- * what function will be called when you press the buttons
- */
+//what function will be called when you press the buttons
 StartTheGameButton.addEventListener("click", collectData);
 playButton.addEventListener("click", inputUserName);
 contactButton.addEventListener("click", showContact);
 mainMenuButton.addEventListener("click", returnToMain);
 RestartButtonFooter.addEventListener("click", inputUserName);
-/**
- * When clicking next question it will call the function of displaying the next question.
- */
+
+//When clicking next question it will call the function of displaying the next question.
 NextQuestionButton.addEventListener("click", () => {
   currentQuestionIndex++;
   displayNextQuestion();
@@ -63,6 +58,7 @@ function collectData() {
 
 // This function shows the right div when the username are correctly filled and the game can start
 function playQuiz() {
+  resetScore();
   welcomeArea.classList.add("hide");
   questionContentArea.classList.remove("hide");
   contactArea.classList.add("hide");
@@ -88,16 +84,14 @@ function returnToMain() {
   EngGameButton.classList.add("hide");
   InputNameArea.classList.add("hide");
 }
-/**
- * Before the next question will be shown all conditions of the previous question will be reset
- */
+//Before the next question will be shown all conditions of the previous question will be reset
+
 function displayNextQuestion() {
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
   EngGameButton.classList.add("hide");
 }
-/**
- * This function will fetch the question and answer from the question array in question.js and
+/**This function will fetch the question and answer from the question array in question.js and
  * paste that text into both question div and the answering buttons
  */
 function showQuestion(questions) {
@@ -124,9 +118,8 @@ function resetState() {
     answerButtons.removeChild(answerButtons.firstChild);
   }
 }
-/**
- * This function will take take the targeted answer and look into the questions array to see if the answer are correct or not.
- */
+//This function will take take the targeted answer and look into the questions array to see if the answer are correct or not.
+
 function selectAnswer(e) {
   const selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
@@ -173,23 +166,34 @@ function clearStatusClass(button) {
 }
 // This function will increase the correct score if answered correct
 function addRightAnswer() {
-  const correctScoreElement = document.querySelector("#scores .correct"); // This will search up the right span to increase the value of
+  const correctScoreElement = document.querySelector("#scores .correct"); // This will search up the right element to increase the value of
 
   let oldCorrectScore = parseInt(correctScoreElement.innerText);
 
-  if (!isNaN(oldCorrectScore)) { //This will check first if that is a number it´s gonna increase and if that is it will increase by 1
+  if (!isNaN(oldCorrectScore)) {
+    //This will check first if that is a number it´s gonna increase and if that is it will increase by 1
     const newCorrectScore = oldCorrectScore + 1;
     correctScoreElement.innerText = newCorrectScore;
   }
 }
+
 // This function will increase the wrong score if answered wrong
 function addWrongAnswer() {
-  const correctScoreElement = document.querySelector("#scores .wrong"); // This will search up the right span to increase the value of
+  const correctScoreElement = document.querySelector("#scores .wrong"); // This will search up the right element to increase the value of
 
   let oldCorrectScore = parseInt(correctScoreElement.innerText);
 
-  if (!isNaN(oldCorrectScore)) { //This will check first if that is a number it´s gonna increase and if that is it will increase by 1
+  if (!isNaN(oldCorrectScore)) {
+    //This will check first if that is a number it´s gonna increase and if that is it will increase by 1
     const newCorrectScore = oldCorrectScore + 1;
     correctScoreElement.innerText = newCorrectScore;
   }
+}
+// This function will reset the score if you restart the game
+function resetScore() {
+  const correctScoreElement = document.querySelector("#scores .correct");
+  const wrongScoreElement = document.querySelector("#scores .wrong");
+
+  correctScoreElement.innerText = "0";
+  wrongScoreElement.innerText = "0";
 }
