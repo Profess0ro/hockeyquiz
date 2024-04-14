@@ -13,6 +13,8 @@ const mainMenuButton = document.getElementById('mainmenu')
 const NextQuestionButton = document.getElementById('next-question')
 const RestartButtonFooter = document.getElementById('restart-footer')
 const EngGameButton = document.getElementById('end-game-button')
+const StartTheGameButton = document.getElementById('start-the-game')
+const InputNameArea = document.getElementById('input-name')
 /**
  * this makes the index of the question to change during the quiz
  */
@@ -21,10 +23,11 @@ let shuffledQuestions, currentQuestionIndex
 /**
  * what function will be called when you press the buttons
  */
-playButton.addEventListener("click", playQuiz)
+StartTheGameButton.addEventListener("click", playQuiz)
+playButton.addEventListener("click", inputUserName)
 contactButton.addEventListener("click", showContact)
 mainMenuButton.addEventListener("click", returnToMain)
-RestartButtonFooter.addEventListener("click", returnToMain)
+RestartButtonFooter.addEventListener("click", inputUserName)
 /**
  * When clicking next question it will call the function of displaying the next question.
  */
@@ -33,11 +36,20 @@ NextQuestionButton.addEventListener("click", () => {
     displayNextQuestion()
 })
 
+function inputUserName() {
+    welcomeArea.classList.add('hide')
+    questionContentArea.classList.add('hide')
+    contactArea.classList.add('hide')
+    EngGameButton.classList.add('hide');
+    InputNameArea.classList.remove('hide')
+}
+
 function playQuiz() {
     welcomeArea.classList.add('hide')
     questionContentArea.classList.remove('hide')
     contactArea.classList.add('hide')
-    EngGameButton.classList.add('hide');
+    EngGameButton.classList.add('hide')
+    InputNameArea.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5) // this picks a random question from the array of questions
     currentQuestionIndex = 0
     displayNextQuestion()
@@ -47,12 +59,14 @@ function showContact () {
     questionContentArea.classList.add('hide')
     contactArea.classList.remove('hide')
     EngGameButton.classList.add('hide');
+    InputNameArea.classList.add('hide')
 }
 function returnToMain () {
     questionContentArea.classList.add('hide')
     contactArea.classList.add('hide')
     welcomeArea.classList.remove('hide')
     EngGameButton.classList.add('hide');
+    InputNameArea.classList.add('hide')
 }
 /**
  * Before the next question will be shown all conditions of the previous question will be reset
@@ -112,7 +126,7 @@ function resetState () {
             selectedButton.classList.add('wronganswer');
         }
     
-        // Show the next question button or restart button
+        // Show the next question button or a button to see the score.
         if (shuffledQuestions.length > currentQuestionIndex + 1) {
             NextQuestionButton.classList.remove('hide');
         } else {
