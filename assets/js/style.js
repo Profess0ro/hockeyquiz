@@ -88,7 +88,7 @@ function resetState () {
 function selectAnswer(e) {
     const selectedButton = e.target // makes a const out of the selected answer
     const correct = selectedButton.dataset.correct 
-    checkCorrectAnswer(correct)
+    checkCorrectAnswer(element, correct)
     Array.from(answerButtons.children).forEach(button => { //Creates an array from all the answerbuttons
         checkCorrectAnswer(button, button.dataset.correct)
     })
@@ -105,6 +105,7 @@ function checkCorrectAnswer(element, correct) {
         element.classList.add('correctanswer')
     } else {
         element.classList.add('wronganswer')
+        console.log()
     }
 }
 
