@@ -130,6 +130,11 @@ function resetState () {
         const selectedButton = e.target;
         const correct = selectedButton.dataset.correct;
     
+        //disables all answer buttons when you´ve selected your answer
+        Array.from(answerButtons.children).forEach(button => {
+            button.disabled = true;
+        });
+
         // Clear all status classes from all buttons
         Array.from(answerButtons.children).forEach(button => {
             clearStatusClass(button);
