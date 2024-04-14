@@ -43,6 +43,7 @@
                     <div id="scores">
                         <p class="score">Goals: <span class="correct">0</span> -
                             <span class="incorrect">0</span> Missed shots</p>
+                            <button id="restart" class="answerbutton hide">Restart</button>
                     </div>
                     <!-- questions shown here -->
                     <div id="question">Here will it be a question shown</div>
@@ -54,9 +55,11 @@
                         <button class="answerbutton">Correct answer</button>
                     </div>
 
-                    <!-- button for next question -->
+                    <!-- button for next question and restart-->
                     <button id="next-question"
-                        class="hide">Next question</button>
+                        class="answerbutton hide">Next question</button>
+                        <button id="end-game-button"
+                        class="answerbutton hide">See my score</button>
                 </div>
 
             </div>
@@ -66,7 +69,8 @@
         <footer>
             <div class="footer">
                 <button id="mainmenu" class="footer-buttons">Main menu</button>
-                <button id="contact" class="footer-buttons">Contact</button>
+                <button id="restart" class="footer-buttons hide">Restart</button>
+                <button id="contact" class="footer-buttons">Contact</button>                
             </div>
         </footer>
         <script src="https://kit.fontawesome.com/214e058f0e.js"

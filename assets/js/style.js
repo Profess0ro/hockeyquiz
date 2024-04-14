@@ -11,6 +11,8 @@ const welcomeArea = document.getElementById('welcome')
 const contactArea = document.getElementById('contact-area')
 const mainMenuButton = document.getElementById('mainmenu')
 const NextQuestionButton = document.getElementById('next-question')
+const RestartButton = document.getElementById('restart')
+const EngGameButton = document.getElementById('end-game-button')
 /**
  * this makes the index of the question to change during the quiz
  */
@@ -22,6 +24,7 @@ let shuffledQuestions, currentQuestionIndex
 playButton.addEventListener("click", playQuiz)
 contactButton.addEventListener("click", showContact)
 mainMenuButton.addEventListener("click", returnToMain)
+RestartButton.addEventListener("click", returnToMain)
 /**
  * When clicking next question it will call the function of displaying the next question.
  */
@@ -83,36 +86,43 @@ function resetState () {
         answerButtons.removeChild(answerButtons.firstChild)
     }
     ;}
-
-
-function selectAnswer(e) {
-    const selectedButton = e.target // makes a const out of the selected answer
-    const correct = selectedButton.dataset.correct 
-    checkCorrectAnswer(element, correct)
-    Array.from(answerButtons.children).forEach(button => { //Creates an array from all the answerbuttons
-        checkCorrectAnswer(button, button.dataset.correct)
-    })
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        NextQuestionButton.classList.remove('hide')
-    } else {
-        playButton.innerText = 'Restart'
-        playButton.classList.remove('hide')
+/**
+ * This function will take take the targeted answer and look into the questions array to see if the answer are correct or not.
+ * 
+ * 
+ *  */
+    function selectAnswer(e) {
+        const selectedButton = e.target;
+        const correct = selectedButton.dataset.correct;
+        if (correct !== undefined) {
+            checkCorrectAnswer(selectedButton, correct);
+        }
+        Array.from(answerButtons.children).forEach(button => { //this will make the current answers to an array so they will only search here for the correct boolean. 
+            if (button !== selectedButton) {
+                checkCorrectAnswer(button, button.dataset.correct);
+            }
+        });
+        if (shuffledQuestions.length > currentQuestionIndex + 1) { //This will check if there are som more questions to show or else a restart button will be shown.
+            NextQuestionButton.classList.remove('hide');
+        } /**else {
+            RestartButton.classList.remove('hide');
+        }*/
     }
-}
-
-function checkCorrectAnswer(element, correct) {
-    if (correct) {
-        element.classList.add('correctanswer')
-    } else {
-        element.classList.add('wronganswer')
-        console.log()
+    
+    function checkCorrectAnswer(button, correct) {
+        clearStatusClass(button);
+        if (correct === "true") {
+            button.classList.add('correctanswer');
+        } else {
+            button.classList.add('wronganswer');
+        }
     }
-}
+    
+    function clearStatusClass(button) {
+        button.classList.remove('correctanswer');
+        button.classList.remove('wronganswer');
+    }
 
-function clearStatusClass (element) {
-    element.classList.remove('correctanswer')
-    element.classList.remove('wronganswer')
-}
 function sendContact() {
 
 }
