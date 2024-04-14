@@ -4,7 +4,8 @@
 I want this game to be fun and not be questions about the game and the rules of the game. This will be a game about unique happenings that occur on or off the rink during a hockeygame. So even the people that have a lot of knowledge of the game of hockey will have a challenge. 
 
 [User Stories](#user-stories)<br>
-[Wireframes](#wireframes)
+[Wireframes](#wireframes)<br>
+[Credits](#credits)
 
 # User stories
 - **Main page:** As a visiting user I will be presented what type of game this is and have the possibility to either start the game or contact the creator.
@@ -23,3 +24,6 @@ On the main page there options for the user and there will be an instruction on 
 <img src="wireframes/game.png"><br>
 <img src="wireframes/end.png"><br>
 <img src="wireframes/contact.png"><br>
+
+# Credits
+- Facts to the question: https://thehockeywriters.com/the-strangest-things-to-ever-happen-in-an-nhl-game/

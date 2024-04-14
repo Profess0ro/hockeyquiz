@@ -38,6 +38,7 @@ function inputUserName() {
   contactArea.classList.add("hide");
   EngGameButton.classList.add("hide");
   InputNameArea.classList.remove("hide");
+  RestartButtonFooter.classList.add('hide');
 }
 
 // This function collects the name filled in and shows at the score
@@ -64,6 +65,7 @@ function playQuiz() {
   contactArea.classList.add("hide");
   EngGameButton.classList.add("hide");
   InputNameArea.classList.add("hide");
+  RestartButtonFooter.classList.remove('hide');
   shuffledQuestions = questions.sort(() => Math.random() - 0.5); // this picks a random question from the array of questions
   currentQuestionIndex = 0;
   displayNextQuestion();
@@ -75,6 +77,7 @@ function showContact() {
   contactArea.classList.remove("hide");
   EngGameButton.classList.add("hide");
   InputNameArea.classList.add("hide");
+  RestartButtonFooter.classList.add('hide');
 }
 // Hides and shows the right div when you click the Main menu button button.
 function returnToMain() {
@@ -83,6 +86,7 @@ function returnToMain() {
   welcomeArea.classList.remove("hide");
   EngGameButton.classList.add("hide");
   InputNameArea.classList.add("hide");
+  RestartButtonFooter.classList.add('hide');
 }
 //Before the next question will be shown all conditions of the previous question will be reset
 
