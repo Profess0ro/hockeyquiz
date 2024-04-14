@@ -104,9 +104,9 @@ function resetState () {
         });
         if (shuffledQuestions.length > currentQuestionIndex + 1) { //This will check if there are som more questions to show or else a restart button will be shown.
             NextQuestionButton.classList.remove('hide');
-        } /**else {
-            RestartButton.classList.remove('hide');
-        }*/
+        } else {
+            EngGameButton.classList.remove('hide');
+        }
     }
     
     function checkCorrectAnswer(button, correct) {
