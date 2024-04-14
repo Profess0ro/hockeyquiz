@@ -19,7 +19,7 @@ const questions = [
     },
  /**    {
         question: '',
-        answers: [
+        answer: [
             {text: '', correct: },
             {text: '', correct: },
             {text: '', correct: },
