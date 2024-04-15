@@ -17,6 +17,10 @@ const RestartButton = document.getElementById("restart-footer");
 const FooterArea = document.getElementById("footer");
 const mainmenuGame = document.getElementById("mainmenu-game");
 const contactGame = document.getElementById("contact-game");
+const endFooter = document.getElementById("end-footer");
+const endMainMenu = document.getElementById("mainmenu-end");
+const endRestart = document.getElementById("restart-end");
+const endContact = document.getElementById("contact-end");
 
 //this makes the index of the question to change during the quiz, so that the questions order will be random
 
@@ -30,6 +34,9 @@ mainMenuButton.addEventListener("click", returnToMain);
 RestartButtonFooter.addEventListener("click", DoYouWantToRestart);
 mainmenuGame.addEventListener("click", DoYouWantToLeaveMain);
 contactGame.addEventListener("click", DoYouWantToLeaveContact);
+endContact.addEventListener("click", showContact);
+endRestart.addEventListener("click", playQuiz);
+endMainMenu.addEventListener("click", returnToMain);
 
 //When clicking next question it will call the function of displaying the next question.
 NextQuestionButton.addEventListener("click", () => {
@@ -99,6 +106,7 @@ function playQuiz() {
   InputNameArea.classList.add("hide");
   RestartButton.classList.remove("hide");
   FooterArea.classList.add("hide");
+  endFooter.classList.add("hide");
   shuffledQuestions = questions.sort(() => Math.random() - 0.5); // this picks a random question from the array of questions
   currentQuestionIndex = 0;
   displayNextQuestion();
@@ -112,6 +120,7 @@ function showContact() {
   InputNameArea.classList.add("hide");
   RestartButton.classList.add("hide");
   FooterArea.classList.remove("hide");
+  endFooter.classList.add("hide");
 }
 // Hides and shows the right div when you click the Main menu button button.
 function returnToMain() {
@@ -122,6 +131,7 @@ function returnToMain() {
   InputNameArea.classList.add("hide");
   RestartButton.classList.add("hide");
   FooterArea.classList.remove("hide");
+  endFooter.classList.add("hide");
 }
 //Before the next question will be shown all conditions of the previous question will be reset
 
@@ -164,7 +174,7 @@ function showQuestion(questions) {
       } else {
         EndGame.classList.remove("hide");
         RestartButton.classList.add("hide");
-        FooterArea.classList.remove("hide");
+        endFooter.classList.remove("hide");
 
       }
     }
@@ -225,7 +235,7 @@ function selectAnswer(e) {
   } else {
     EndGame.classList.remove("hide");
     RestartButton.classList.add("hide");
-    FooterArea.classList.remove("hide");
+    endFooter.classList.remove("hide");
   }
 }
 // This function will add the class of right or worng answer to the selected answer
