@@ -151,15 +151,21 @@ function showQuestion(questions) {
   timer = setInterval(function () {
     count--;
     document.getElementById("timer").innerText = count;
-    if (count === 0) { // Stop the timer when time runs out and adding a wrong score if not answered in time.
+    if (count === 0) { // Stop the timer when time runs out and add a wrong score if not answered in time.
       clearInterval(timer); 
       addWrongAnswer();
       Array.from(answerButtons.children).forEach((button) => {
         button.disabled = true; // Disable answer buttons when the time runs out
-        NextQuestionButton.classList.remove("hide");
       });
+
+      // Show the next question button or the end game div based on the current question index
+      if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        NextQuestionButton.classList.remove("hide");
+      } else {
+        EndGame.classList.remove("hide");
+      }
     }
-  }, 1000);
+  }, 1000);  
 
   // Display the question and answer buttons
   questionContent.innerText = questions.question; // This puts in the question in the question div from the array in question.js
@@ -188,6 +194,7 @@ function resetState() {
 //This function will take take the targeted answer and look into the questions array to see if the answer are have true boolean at correct or not.
 
 function selectAnswer(e) {
+  clearInterval(timer); 
   const selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
 
