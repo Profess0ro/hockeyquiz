@@ -215,7 +215,7 @@
      border-radius: 10px;
      width: 120px;
 }
-.footer-buttons:hover {
+.footer-buttons:hover , #play-btn:hover {
     background-color: rgba(36, 36, 36, 0.692);
 }
  @media (min-width: 768px) {
