@@ -5,6 +5,7 @@ I want this game to be fun and not be questions about the game and the rules of 
 
 [User Stories](#user-stories)<br>
 [Wireframes](#wireframes)<br>
+[Bugs](#Bugs)<br>
 [Credits](#credits)
 
 # User stories

@@ -79,7 +79,7 @@ header{
 .form, #your-name {
     background-color: rgba(0, 0, 0, 0.3);
     color: #ffffff;
-    border:#000000;
+    border:2px solid #ffffff;
     max-width: 200px;
     padding: 2px;
     border-radius: 5px;
