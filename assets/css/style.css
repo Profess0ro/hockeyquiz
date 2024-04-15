@@ -161,6 +161,9 @@
      border-radius: 10px;
      font-weight: bold;
 }
+.answerbutton:hover{
+    background-color: rgba(199, 199, 199, 0.623);
+}
  .correctanswer {
      background-color: rgba(0, 255, 21, 0.623);
      border: 2px solid rgba(0, 255, 21, 0.897);
@@ -228,10 +231,10 @@
          grid-template-columns: repeat(2, auto);
     }
     .footer-buttons, #play-btn, div, button, .titletext, #start-the-game {
-        font-size: 16px;
+        font-size: 14px;
     }
     u {
-        font-size: 18px;
+        font-size: 16px;
     }
     #timer, #scores {
         font-size: 25px;
@@ -242,7 +245,9 @@
     #end-game, #question {
         color: #000000;
     }
-
+    #welcome, #game-area, #input-name, #contact-area {
+        height: 50vh;
+    }
 }
  @media (min-width: 1024px) {
      body {
@@ -254,5 +259,8 @@
     }
     button, #question {
         font-size: 25px;
+    }
+    #welcome, #game-area, #input-name, #contact-area {
+        height: 60vh;
     }
 }
