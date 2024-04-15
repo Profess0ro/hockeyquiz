@@ -227,7 +227,7 @@
      #answers {
          grid-template-columns: repeat(2, auto);
     }
-    .footer-buttons, #play-btn, div, button, .titletext  {
+    .footer-buttons, #play-btn, div, button, .titletext, #start-the-game {
         font-size: 16px;
     }
     u {
