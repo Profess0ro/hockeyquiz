@@ -124,7 +124,8 @@ input {
     justify-content: space-evenly; 
     align-items: center; 
 }
-#question {
+
+#question, #end-game {
     background-color: rgba(0, 238, 255, 0.349);
     border: 2px solid rgba(255, 0, 0, 0.644);
     padding: 15px;
@@ -137,7 +138,7 @@ input {
     display: grid;
     grid-template-columns: repeat(1, auto);
     gap: 5px;
-    margin: 20px 0;
+    margin-top: 20px;
 }
 .answerbutton {
     font-family: "Comfortaa", sans-serif;
