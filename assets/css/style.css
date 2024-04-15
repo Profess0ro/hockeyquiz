@@ -256,6 +256,9 @@
     #welcome, #game-area, #input-name, #contact-area {
         height: 45vh;
     }
+    .form, #your-name, .submit {
+        width: 300px;
+    }
 }
  @media (min-width: 1024px) {
      body {
