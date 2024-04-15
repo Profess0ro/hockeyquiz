@@ -36,16 +36,33 @@ NextQuestionButton.addEventListener("click", () => {
   currentQuestionIndex++;
   displayNextQuestion();
 });
-
+// If user want to restart, the score will reset and questions will start over
 function DoYouWantToRestart() {
 
+  const confirmLeave = window.confirm("Are you sure you want to restart?");
+
+  if (confirmLeave) { 
+   playQuiz() 
+  }
 }
+// If user want to go to quit the game and go to the contact page
 function DoYouWantToLeaveContact() {
 
-}
+  const confirmLeave = window.confirm("Are you sure you want to leave the game?");
 
+  if (confirmLeave) { 
+   showContact() 
+  }
+}
+// If user want to leave the game pressing "main menu" they will come back to the Main menu
 function DoYouWantToLeaveMain() {
-  
+    
+     const confirmLeave = window.confirm("Are you sure you want to leave the game?");
+
+     if (confirmLeave) { 
+      returnToMain() 
+     }
+ 
 }
 
 //What div will be shown when the function is called
