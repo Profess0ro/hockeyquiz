@@ -51,11 +51,13 @@ header{
     margin-left: 55%;
     border-radius: 10px;
 }
-
+#timer {
+    font-family: 'Digital Numbers', sans-serif;
+    color: #ffee00;
+}
 .correct {
     font-family: 'Digital Numbers', sans-serif;
     color: #15ff00;
-
 }
 .wrong {
     font-family: 'Digital Numbers', sans-serif;
@@ -82,6 +84,9 @@ header{
     padding: 2px;
     border-radius: 5px;
     font-size: 15px;
+}
+#your-name {
+    margin-bottom: 20px;
 }
 input {
     text-align: center; 

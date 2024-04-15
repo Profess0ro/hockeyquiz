@@ -43,6 +43,7 @@
                     <input type="text" id="your-name" spanholder="Your name">
                     <!-- When the button is clicked function collectData() will fetch the input-->
                     <button id ="start-the-game" class="answerbutton" onclick="collectData()">Start the game!</button>
+
                 </div>
                 <!-- Game area-->
                 <div id="game-area" class="hide">
@@ -50,7 +51,8 @@
                     <div id="scores">
                         <div class="score"><span id="username"></span> <span class="correct">0</span> -
                             <span class="wrong">0</span> Missed shots</div>
-                            <button id="restart" class="answerbutton hide">Restart</button>
+                            <button id="restart" class="answerbutton hide">Restart</button><br>
+                            <span id="timer"></span>
                     </div>
                     <!-- questions shown here -->
                     <div id="question">Here will it be a question shown</div>
