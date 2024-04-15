@@ -23,7 +23,6 @@ On the main page there options for the user and there will be an instruction on 
 
 <img src="wireframes/start.png"><br>
 <img src="wireframes/game.png"><br>
-<img src="wireframes/end.png"><br>
 <img src="wireframes/contact.png"><br>
 
 
