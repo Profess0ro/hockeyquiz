@@ -152,7 +152,7 @@ input {
     background-color: rgba(59, 59, 59, 0.623);
     color: #FFFFFF;
     border: 2px solid rgba(0, 26, 255, 0.692);
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -161,30 +161,12 @@ input {
     font-weight: bold;
 }
 .correctanswer {
-    font-family: "Comfortaa", sans-serif;
     background-color: rgba(0, 255, 21, 0.623);
-    color: #ffffff;
     border: 2px solid rgba(0, 255, 21, 0.897);
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    margin: 3px;
-    border-radius: 10px;
-    font-weight: bold;
 }
 .wronganswer {
-    font-family: "Comfortaa", sans-serif;
     background-color: rgba(255, 0, 0, 0.623);
-    color: #ffffff;
     border: 2px solid rgba(255, 0, 0, 0.897);
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    margin: 3px;
-    border-radius: 10px;
-    font-weight: bold;
 }
 
 /* Footer */

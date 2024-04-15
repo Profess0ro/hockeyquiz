@@ -1,113 +1,122 @@
 <html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hockeyquiz</title>
-        <link rel="stylesheet" href="assets/css/style.css">
-
-    </head>
-    <body>
-        <header>
-            <div class="title">
-                <p class="titletext">Hockeyquiz</p>
-            </div>
-        </header>
-        <main>
-            <!-- Main area-->
-            <div class="container">
-                <!-- Main menu -->
-                <div id="welcome" class="">
-                    <div id="instructions"> <h2>Welcome to my game about remarkable happenings during games of hockey!</h2>
-                        <u>Instructions:</u>
-                        <p class="rules">
-                            - When a question appears you will have 20seconds to answer. <br><br>
-                            - If the timer runs out you´re not able to answer anymore and that counts as a missed shot. <br><br>
-                            - Every question have 4 answers, only one are right. <br><br>
-                            - You can restart the quiz by pressing the restartbutton that will be visible once you started the quiz
-                        </p>
-                    </div>
-                    <div id="play"><button id="play-btn"
-                            class>Play!</button></div>
-                </div>
-                <!--  Contact -->
-                <div id="contact-area" class="hide">
-                    <h3>Please fill in the field if you have some feedback about
-                        this game</h3>
-                    <form onsubmit="return false">
-                        Your name: <br><input class="form" type="text" id="name"
-                            required /><br><br>
-                        Your Email: <br><input class="form" type="email"
-                            id="email" required /><br><br>
-                        Your Message: <br><textarea class="form" id="message"
-                            rows="6"></textarea>
-                        <br><br>
-                        <button class="footer-buttons"
-                            onclick="sendContact();">Send</button>
-                    </form>
-                </div>
-                <!-- Input username for the game-->
-                <div id="input-name" class="hide">
-                    <h3>Fill in your name to start the game!</h3><br>
-                    <input type="text" id="your-name" spanholder="Your name">
-                    <!-- When the button is clicked function collectData() will fetch the input-->
-                    <button id ="start-the-game" class="answerbutton" onclick="collectData()">Start the game!</button>
-
-                </div>
-                <!-- Game area-->
-                <div id="game-area" class="hide">
-                    <!-- Scoreboard -->
-                    <div id="scores">
-                        <div class="score"><span id="username"></span> <span class="correct">0</span> -
-                            <span class="wrong">0</span> Missed shots</div>
-                    </div>
-                    <div class="timer-div"><span id="timer"></span></div>
-                    <!-- questions shown here -->
-                    <div id="question">Here will it be a question shown</div>
-                    <!-- Answering buttons -->
-                    <div id="answers">
-                        <button class="answerbutton">answer</button>
-                        <button class="answerbutton">answer</button>
-                        <button class="answerbutton">Wrong answer</button>
-                        <button class="answerbutton">Correct answer</button>
-                    </div>
-
-                    <!-- button for next question and restart-->
-                    <button id="next-question"
-                        class="answerbutton hide">Next question</button>
-                        <div class="hide" id="end-game">Game ended, restart to see if you get a higher score!</div>
-                </div>
-            </div>
-
-        </main>
-
-        <footer>
-            <!-- Footer shown outside the game-->
-            <div id="footer">
-            <div class="footer">
-                <button id="mainmenu" class="footer-buttons">Main menu</button>
-                <button id="contact" class="footer-buttons">Contact</button>                
-            </div>
+  <head>
+    <meta charset="UTF-8">
+    <!-- Viewport responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Description of the page -->
+    <meta name="description"
+      content="Quiz about remarkable happenings to a hockeygame">
+    <!-- Searchwords -->
+    <meta name="keywords"
+      content="Quiz, hockey, remarkable, icehockey, happenings">
+    <!-- My name as the author of this site -->
+    <meta name="author" content="Freddy Larsson">
+    <title>Hockeyquiz</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <p class="titletext">Hockeyquiz</p>
+      </div>
+    </header>
+    <main>
+      <!-- Main area-->
+      <div class="container">
+        <!-- Main menu -->
+        <div id="welcome" class="">
+          <div id="instructions">
+            <h2>Welcome to my quiz about remarkable happenings during games of hockey!</h2>
+            <u>Instructions:</u>
+            <p class="rules">
+              - When a question appears you will have 20seconds to answer. <br><br>
+              - If the timer runs out you´re not able to answer anymore and that counts as a missed shot. <br><br>
+              - Every question have 4 answers, only one are right. <br><br>
+              - You can restart the quiz by pressing the restartbutton that will be visible once you started the quiz.<br><br>
+              - The right answer will only be visible if you answered right.
+            </p>
+          </div>
+          <div id="play"><button id="play-btn"
+            class>Play!</button></div>
         </div>
-        <!-- Footer shown inside the game with question if you want to leave the game-->
-            <div id="restart-footer" class="hide">
-            <div class="footer">
-                <button id="mainmenu-game" class="footer-buttons">Main menu</button>
-                <button id="restart-game" class="footer-buttons">Restart</button>
-                <button id="contact-game" class="footer-buttons">Contact</button>                
-            </div>
+        <!--  Contact -->
+        <div id="contact-area" class="hide">
+          <h3>Please fill in the field if you have some feedback about
+            this quiz
+          </h3>
+          <form onsubmit="return false">
+            Your name: <br><input class="form" type="text" id="name"
+              required /><br><br>
+            Your Email: <br><input class="form" type="email"
+              id="email" required /><br><br>
+            Your Message: <br><textarea class="form" id="message"
+              rows="6"></textarea>
+            <br><br>
+            <button class="footer-buttons"
+              onclick="sendContact();">Send</button>
+          </form>
         </div>
-        <!-- Footer shown when game ended without question if you want to leave the game -->
-        <div id="end-footer" class="hide">
-            <div class="footer">
-                <button id="mainmenu-end" class="footer-buttons">Main menu</button>
-                <button id="restart-end" class="footer-buttons">Restart</button>
-                <button id="contact-end" class="footer-buttons">Contact</button>                
-            </div>
+        <!-- Input username for the game-->
+        <div id="input-name" class="hide">
+          <h3>Fill in your name to start the quiz!</h3>
+          <br>
+          <input type="text" id="your-name" spanholder="Your name">
+          <!-- When the button is clicked function collectData() will fetch the input-->
+          <button id ="start-the-game" class="answerbutton" onclick="collectData()">Start the quiz!</button>
         </div>
-        </footer>
-        <script src="https://kit.fontawesome.com/214e058f0e.js"
-            crossorigin="anonymous"></script>
-    </body>
-    <script src="assets/js/questions.js"></script>
-    <script src="assets/js/style.js"></script>
+        <!-- Game area-->
+        <div id="game-area" class="hide">
+          <!-- Scoreboard -->
+          <div id="scores">
+            <div class="score"><span id="username"></span> <span class="correct">0</span> -
+              <span class="wrong">0</span> Missed shots
+            </div>
+          </div>
+          <div class="timer-div"><span id="timer"></span></div>
+          <!-- questions shown here -->
+          <div id="question">Here will it be a question shown</div>
+          <!-- Answering buttons -->
+          <div id="answers">
+            <button class="answerbutton">answer</button>
+            <button class="answerbutton">answer</button>
+            <button class="answerbutton">answer</button>
+            <button class="answerbutton">answer</button>
+          </div>
+          <!-- button for next question and restart-->
+          <button id="next-question"
+            class="answerbutton hide">Next question</button>
+          <div class="hide" id="end-game">Game ended, restart to see if you get a higher score!</div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <!-- Footer shown outside the game-->
+      <div id="footer">
+        <div class="footer">
+          <button id="mainmenu" class="footer-buttons">Main menu</button>
+          <button id="contact" class="footer-buttons">Contact</button>                
+        </div>
+      </div>
+      <!-- Footer shown inside the game with question if you want to leave the game-->
+      <div id="restart-footer" class="hide">
+        <div class="footer">
+          <button id="mainmenu-game" class="footer-buttons">Main menu</button>
+          <button id="restart-game" class="footer-buttons">Restart</button>
+          <button id="contact-game" class="footer-buttons">Contact</button>                
+        </div>
+      </div>
+      <!-- Footer shown when game ended without question if you want to leave the game -->
+      <div id="end-footer" class="hide">
+        <div class="footer">
+          <button id="mainmenu-end" class="footer-buttons">Main menu</button>
+          <button id="restart-end" class="footer-buttons">Restart</button>
+          <button id="contact-end" class="footer-buttons">Contact</button>                
+        </div>
+      </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/214e058f0e.js"
+      crossorigin="anonymous"></script>
+  </body>
+  <script src="assets/js/questions.js"></script>
+  <script src="assets/js/style.js"></script>
 </html>
