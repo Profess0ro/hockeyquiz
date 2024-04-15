@@ -13,7 +13,7 @@ const RestartButtonFooter = document.getElementById("restart-game");
 const EndGame = document.getElementById("end-game");
 const StartTheGameButton = document.getElementById("start-the-game");
 const InputNameArea = document.getElementById("input-name");
-const RestartButton = document.getElementById("restart-button");
+const RestartButton = document.getElementById("restart-footer");
 const FooterArea = document.getElementById("footer");
 const mainmenuGame = document.getElementById("mainmenu-game");
 const contactGame = document.getElementById("contact-game");
@@ -163,6 +163,9 @@ function showQuestion(questions) {
         NextQuestionButton.classList.remove("hide");
       } else {
         EndGame.classList.remove("hide");
+        RestartButton.classList.add("hide");
+        FooterArea.classList.remove("hide");
+
       }
     }
   }, 1000);  
@@ -221,6 +224,8 @@ function selectAnswer(e) {
     NextQuestionButton.classList.remove("hide");
   } else {
     EndGame.classList.remove("hide");
+    RestartButton.classList.add("hide");
+    FooterArea.classList.remove("hide");
   }
 }
 // This function will add the class of right or worng answer to the selected answer
