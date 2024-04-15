@@ -6,7 +6,7 @@ I want this game to be fun and not be questions about the game and the rules of 
 [User Stories](#user-stories)<br>
 [Wireframes](#wireframes)<br>
 [Bugs](#Bugs)<br>
-[Credits](#credits)
+[Resources](#resources)
 
 # User stories
 - **Main page:** As a visiting user I will be presented what type of game this is and have the possibility to either start the game or contact the creator.
@@ -26,5 +26,10 @@ On the main page there options for the user and there will be an instruction on 
 <img src="wireframes/end.png"><br>
 <img src="wireframes/contact.png"><br>
 
-# Credits
-- Facts to the question: https://thehockeywriters.com/the-strangest-things-to-ever-happen-in-an-nhl-game/
+
+# Resources
+- Basic structure of the quiz: https://www.youtube.com/watch?v=riDzcEQbX6k
+- Javascript codes: https://www.w3schools.com/ and https://codeinstitute.net/ 
+- Background image: https://unsplash.com/
+- Header image: https://www.pexels.com/sv-se/
+- Facts to the question: - https://thehockeywriters.com/the-strangest-things-to-ever-happen-in-an-nhl-game/
