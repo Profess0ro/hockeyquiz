@@ -73,7 +73,8 @@ header{
     align-items: center;
     color: #ffffff;
 }
-.form {
+
+.form, #your-name {
     background-color: rgba(0, 0, 0, 0.3);
     color: #ffffff;
     border:#000000;
@@ -113,10 +114,11 @@ input {
 #question {
     background-color: rgba(0, 238, 255, 0.349);
     border: 2px solid rgba(255, 0, 0, 0.644);
-    padding: 5px;
+    padding: 15px;
     margin: 5px;
     color: #FFFFFF;
     border-radius: 10px;
+    font-weight: bold;
 }
 #answers {
     display: grid;
@@ -135,6 +137,7 @@ input {
     cursor: pointer;
     margin: 3px;
     border-radius: 10px;
+    font-weight: bold;
 }
 .correctanswer {
     font-family: "Comfortaa", sans-serif;

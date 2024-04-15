@@ -40,7 +40,7 @@
                 <!-- Input username for the game-->
                 <div id="input-name" class="hide">
                     <h3>Fill in your name to start the game!</h3>
-                    <input type="text" id="your-name" spanholder="Your name" required>
+                    <input type="text" id="your-name" spanholder="Your name">
                     <!-- When the button is clicked function collectData() will fetch the input-->
                     <button id ="start-the-game" class="answerbutton" onclick="collectData()">Start the game!</button>
                 </div>
@@ -73,12 +73,14 @@
         </main>
 
         <footer>
+            <!-- Footer shown outside the game-->
             <div id="footer">
             <div class="footer">
                 <button id="mainmenu" class="footer-buttons">Main menu</button>
                 <button id="contact" class="footer-buttons">Contact</button>                
             </div>
         </div>
+        <!-- Footer shown inside the game-->
             <div id="restart-button" class="hide">
             <div class="footer">
                 <button id="mainmenu-game" class="footer-buttons">Main menu</button>
