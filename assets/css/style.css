@@ -19,7 +19,7 @@
      display: none;
 }
  header{
-     background: url("../images/header.webp") left;
+     background: url("../images/header_small.png") left;
      background-size: 100%;
      height: 100px;
      border-radius: 10px;
@@ -99,7 +99,7 @@
      max-width: 200px;
      padding: 2px;
      border-radius: 5px;
-     font-size: 15px;
+     font-size: 14px;
 }
  #your-name {
      margin-bottom: 20px;
@@ -133,7 +133,7 @@
      justify-content: space-evenly;
      align-items: center;
 }
- #question, #end-game, #instructions {
+ #question, #end-game, #instructions, h3 {
      background-color: rgba(0, 238, 255, 0.349);
      border: 2px solid rgba(255, 0, 0, 0.644);
      padding: 15px;
@@ -217,12 +217,32 @@
          margin-left: 20%;
          margin-right: 20%;
     }
+    header{
+        background: url("../images/header.webp") left;
+    }
      .form {
          max-width: 50%;
     }
+    /* Makes the answerbuttons appear in 2 columns instead of 1 that smaller screen shows*/
      #answers {
          grid-template-columns: repeat(2, auto);
     }
+    .footer-buttons, #play-btn, div, button, .titletext  {
+        font-size: 16px;
+    }
+    u {
+        font-size: 18px;
+    }
+    #timer, #scores {
+        font-size: 25px;
+    }
+    #next-question, #end-game {
+        margin-top: 30px;
+    }
+    #end-game {
+        color: #000000;
+    }
+
 }
  @media (min-width: 1024px) {
      body {
@@ -231,5 +251,8 @@
          margin-left: 30%;
          margin-right: 30%;
          font-size: 24px;
+    }
+    button, #question {
+        font-size: 25px;
     }
 }
