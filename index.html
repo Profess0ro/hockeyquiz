@@ -41,6 +41,7 @@
                 <div id="input-name" class="hide">
                     <h3>Fill in your name to start the game!</h3>
                     <input type="text" id="your-name" spanholder="Your name" required>
+                    <!-- When the button is clicked function collectData() will fetch the input-->
                     <button id ="start-the-game" class="answerbutton" onclick="collectData()">Start the game!</button>
                 </div>
                 <!-- Game area-->
@@ -67,17 +68,24 @@
                         <button id="end-game-button"
                         class="answerbutton hide">See my score</button>
                 </div>
-
             </div>
 
         </main>
 
         <footer>
+            <div id="footer">
             <div class="footer">
                 <button id="mainmenu" class="footer-buttons">Main menu</button>
-                <button id="restart-footer" class="footer-buttons hide">Restart</button>
                 <button id="contact" class="footer-buttons">Contact</button>                
             </div>
+        </div>
+            <div id="restart-button" class="hide">
+            <div class="footer">
+                <button id="mainmenu-game" class="footer-buttons">Main menu</button>
+                <button id="restart-game" class="footer-buttons">Restart</button>
+                <button id="contact-game" class="footer-buttons">Contact</button>                
+            </div>
+        </div>
         </footer>
         <script src="https://kit.fontawesome.com/214e058f0e.js"
             crossorigin="anonymous"></script>

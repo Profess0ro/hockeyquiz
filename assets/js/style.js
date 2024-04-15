@@ -9,10 +9,14 @@ const welcomeArea = document.getElementById("welcome");
 const contactArea = document.getElementById("contact-area");
 const mainMenuButton = document.getElementById("mainmenu");
 const NextQuestionButton = document.getElementById("next-question");
-const RestartButtonFooter = document.getElementById("restart-footer");
+const RestartButtonFooter = document.getElementById("restart-game");
 const EngGameButton = document.getElementById("end-game-button");
 const StartTheGameButton = document.getElementById("start-the-game");
 const InputNameArea = document.getElementById("input-name");
+const RestartButton = document.getElementById("restart-button")
+const FooterArea = document.getElementById("footer");
+const mainmenuGame = document.getElementById("mainmenu-game");
+const contactGame = document.getElementById("contact-game")
 
 //this makes the index of the question to change during the quiz, so that the questions order will be random
 
@@ -23,13 +27,26 @@ StartTheGameButton.addEventListener("click", collectData);
 playButton.addEventListener("click", inputUserName);
 contactButton.addEventListener("click", showContact);
 mainMenuButton.addEventListener("click", returnToMain);
-RestartButtonFooter.addEventListener("click", inputUserName);
+RestartButtonFooter.addEventListener("click", DoYouWantToRestart);
+mainmenuGame.addEventListener("click", DoYouWantToLeaveMain);
+contactGame.addEventListener("click", DoYouWantToLeaveContact);
 
 //When clicking next question it will call the function of displaying the next question.
 NextQuestionButton.addEventListener("click", () => {
   currentQuestionIndex++;
   displayNextQuestion();
 });
+
+function DoYouWantToRestart() {
+
+}
+function DoYouWantToLeaveContact() {
+
+}
+
+function DoYouWantToLeaveMain() {
+  
+}
 
 //What div will be shown when the function is called
 function inputUserName() {
@@ -38,7 +55,7 @@ function inputUserName() {
   contactArea.classList.add("hide");
   EngGameButton.classList.add("hide");
   InputNameArea.classList.remove("hide");
-  RestartButtonFooter.classList.add('hide');
+  RestartButton.classList.add('hide');
 }
 
 // This function collects the name filled in and shows at the score
@@ -65,7 +82,8 @@ function playQuiz() {
   contactArea.classList.add("hide");
   EngGameButton.classList.add("hide");
   InputNameArea.classList.add("hide");
-  RestartButtonFooter.classList.remove('hide');
+  RestartButton.classList.remove('hide');
+  FooterArea.classList.add('hide');
   shuffledQuestions = questions.sort(() => Math.random() - 0.5); // this picks a random question from the array of questions
   currentQuestionIndex = 0;
   displayNextQuestion();
@@ -77,7 +95,8 @@ function showContact() {
   contactArea.classList.remove("hide");
   EngGameButton.classList.add("hide");
   InputNameArea.classList.add("hide");
-  RestartButtonFooter.classList.add('hide');
+  RestartButton.classList.add('hide');
+  FooterArea.classList.remove('hide');
 }
 // Hides and shows the right div when you click the Main menu button button.
 function returnToMain() {
@@ -86,7 +105,8 @@ function returnToMain() {
   welcomeArea.classList.remove("hide");
   EngGameButton.classList.add("hide");
   InputNameArea.classList.add("hide");
-  RestartButtonFooter.classList.add('hide');
+  RestartButton.classList.add('hide');
+  FooterArea.classList.remove('hide');
 }
 //Before the next question will be shown all conditions of the previous question will be reset
 
