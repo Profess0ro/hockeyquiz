@@ -32,4 +32,5 @@ On the main page there options for the user and there will be an instruction on 
 - Tutorial for feedback form: https://www.youtube.com/watch?v=BgVjild0C9A
 - Background image: https://unsplash.com/
 - Header image: https://www.pexels.com/sv-se/
+- Favicon: https://favicon.io/emoji-favicons/ice-hockey/
 - Facts to the question:<br> - https://thehockeywriters.com/the-strangest-things-to-ever-happen-in-an-nhl-game/<br>- https://russianmachineneverbreaks.com/2024/04/07/joonas-korpisalo-blinded-by-sun-capitals-senators-game-paused/                    
