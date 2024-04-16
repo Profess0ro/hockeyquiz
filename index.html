@@ -13,6 +13,13 @@
     <meta name="author" content="Freddy Larsson">
     <title>Hockeyquiz</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript">
+      (function(){
+         emailjs.init({
+           publicKey: "W7Jj97_4aLD7ctTaC",
+         });
+      })();
+   </script>
   </head>
   <body>
     <header>
@@ -54,7 +61,7 @@
             Your Message: <br><textarea class="form" id="message"
               rows="6" placeholder="Message"></textarea>
             <br><br>
-            <button class="footer-buttons">Send</button>
+            <button onclick="sendEmail()" class="footer-buttons">Send</button>
           </form>
         </div>
         </div>
@@ -118,7 +125,7 @@
     </footer>
     <script src="https://kit.fontawesome.com/214e058f0e.js"
       crossorigin="anonymous"></script>
-  </body>
   <script src="assets/js/questions.js"></script>
   <script src="assets/js/style.js"></script>
+</body>
 </html>
