@@ -299,6 +299,11 @@ function sendEmail(event) {
         email : document.getElementById("email").value,
         message : document.getElementById("message").value,
     };
+    if (document.getElementById("name").value === ""){
+        alert("Please fill in your name")
+    } else if (document.getElementById("email").value === ""){
+        alert("please fill in your email")
+    } else {
     emailjs.send("service_jmbyfsi", "template_j35glvk", params)
         .then(function () {
             alert("Thank you for the feedback!");
@@ -311,5 +316,5 @@ function sendEmail(event) {
         .catch(function (error) {
             alert("Error sending email:", error); // Will send error message if email sending fails
             
-        });
+        });}
 }
