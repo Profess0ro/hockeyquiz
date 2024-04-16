@@ -189,6 +189,9 @@
 .answerbutton:hover{
     background-color: rgba(199, 199, 199, 0.623);
 }
+#next-question {
+    margin-top: 20px;
+}
  .correctanswer {
      background-color: rgba(0, 255, 21, 0.623);
      border: 2px solid rgba(0, 255, 21, 0.897);

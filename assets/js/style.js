@@ -19,7 +19,6 @@ const RestartButton = document.getElementById("restart-footer");
 const FooterArea = document.getElementById("footer");
 const mainmenuGame = document.getElementById("mainmenu-game");
 const contactGame = document.getElementById("contact-game");
-const endFooter = document.getElementById("end-footer");
 const endMainMenu = document.getElementById("mainmenu-end");
 const endRestart = document.getElementById("restart-end");
 const endContact = document.getElementById("contact-end");
@@ -50,29 +49,38 @@ NextQuestionButton.addEventListener("click", () => {
 
 // If user want to restart, the score will reset and questions will start over
 function DoYouWantToRestart() {
-    const confirmLeave = window.confirm("Are you sure you want to restart?");
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        const confirmRestart = window.confirm("Are you sure you want to restart?");
 
-    if (confirmLeave) {
+        if (confirmRestart) {
+            playQuiz();
+        }
+    } else {
         playQuiz();
     }
 }
 // If user want to go to quit the game and go to the contact page
-function DoYouWantToLeaveContact() {
-    const confirmLeave = window.confirm(
-        "Are you sure you want to leave the game?"
-    );
+function DoYouWantToLeaveContact() { 
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    const confirmLeave = window.confirm("Are you sure you want to leave the game?");
+
     if (confirmLeave) {
+        showContact();
+    }
+    } else {
         showContact();
     }
 }
 // If user want to leave the game pressing "main menu" they will come back to the Main menu
 function DoYouWantToLeaveMain() {
-    const confirmLeave = window.confirm(
-        "Are you sure you want to leave the game?"
-    );
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    const confirmLeave = window.confirm("Are you sure you want to leave the game?");
     if (confirmLeave) {
         returnToMain();
     }
+} else {
+    returnToMain();
+}
 }
 
 //What div will be shown when the function is called
@@ -109,7 +117,6 @@ function playQuiz() {
     InputNameArea.classList.add("hide");
     RestartButton.classList.remove("hide");
     FooterArea.classList.add("hide");
-    endFooter.classList.add("hide");
     userWin.classList.add("hide");
     quizWin.classList.add("hide");
     shuffledQuestions = questions.sort(() => Math.random() - 0.5); // this picks a random question from the array of questions
@@ -124,7 +131,6 @@ function showContact() {
     InputNameArea.classList.add("hide");
     RestartButton.classList.add("hide");
     FooterArea.classList.remove("hide");
-    endFooter.classList.add("hide");
     userWin.classList.add("hide");
     quizWin.classList.add("hide");
 }
@@ -136,7 +142,6 @@ function returnToMain() {
     InputNameArea.classList.add("hide");
     RestartButton.classList.add("hide");
     FooterArea.classList.remove("hide");
-    endFooter.classList.add("hide");
     userWin.classList.add("hide");
     quizWin.classList.add("hide");
 }
@@ -177,11 +182,7 @@ function showQuestion(questions) {
             // Show the next question button or the end game div based on the current question index
             if (shuffledQuestions.length > currentQuestionIndex + 1) {
                 NextQuestionButton.classList.remove("hide");
-            } else {
-                RestartButton.classList.add("hide");
-                endFooter.classList.remove("hide");
-
-            }
+            } 
         }
     }, 1000);
 
@@ -239,8 +240,6 @@ function selectAnswer(e) {
         NextQuestionButton.classList.remove("hide");
     } else {
         finalScore();
-        RestartButton.classList.add("hide");
-        endFooter.classList.remove("hide");
     }
     
 }
@@ -280,7 +279,7 @@ function resetScore() {
     correctScoreElement.innerText = "0";
     wrongScoreElement.innerText = "0";
 }
-
+// This function checks who has the highest score between user and quiz to send win or loss message at the end.
 function finalScore() {
     const correctScore = parseInt(document.querySelector("#scores .correct").innerText);
     const wrongScore = parseInt(document.querySelector("#scores .wrong").innerText);
