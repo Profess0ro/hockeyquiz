@@ -13,13 +13,12 @@
     <meta name="author" content="Freddy Larsson">
     <title>Hockeyquiz</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
       (function(){
-         emailjs.init({
-           publicKey: "W7Jj97_4aLD7ctTaC",
-         });
+          emailjs.init("W7Jj97_4aLD7ctTaC"); 
       })();
-   </script>
+  </script>
   </head>
   <body>
     <header>
@@ -61,7 +60,7 @@
             Your Message: <br><textarea class="form" id="message"
               rows="6" placeholder="Message"></textarea>
             <br><br>
-            <button onclick="sendEmail()" class="footer-buttons">Send</button>
+            <button class="footer-buttons" onclick="sendEmail(event)">Send</button>
           </form>
         </div>
         </div>
