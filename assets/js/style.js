@@ -283,7 +283,7 @@ function finalScore() {
 
     if (correctScore > wrongScore) {
         userWin.classList.remove("hide");
-        quizWin.classList.add("hide"); // Ensure quizWin remains hidden
+        quizWin.classList.add("hide"); 
     } else {
         userWin.classList.add("hide");
         quizWin.classList.remove("hide");
