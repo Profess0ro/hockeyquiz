@@ -27,7 +27,7 @@ const questions = [
         ]
     },
     {
-        question: 'The pucks these days are made of volcanic rubber, but what were they originally made of?',
+        question: 'The pucks these days are made of volcanic rubber, but what was the former pucks made of?',
         answers: [
             {text: 'Black plastic', correct: false},
             {text: 'Stone', correct: false},
