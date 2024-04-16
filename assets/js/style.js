@@ -13,7 +13,6 @@ const contactArea = document.getElementById("contact-area");
 const mainMenuButton = document.getElementById("mainmenu");
 const NextQuestionButton = document.getElementById("next-question");
 const RestartButtonFooter = document.getElementById("restart-game");
-const EndGame = document.getElementById("end-game");
 const StartTheGameButton = document.getElementById("start-the-game");
 const InputNameArea = document.getElementById("input-name");
 const RestartButton = document.getElementById("restart-footer");
@@ -81,7 +80,6 @@ function inputUserName() {
     welcomeArea.classList.add("hide");
     questionContentArea.classList.add("hide");
     contactArea.classList.add("hide");
-    EndGame.classList.add("hide");
     InputNameArea.classList.remove("hide");
     RestartButton.classList.add("hide");
 }
@@ -108,7 +106,6 @@ function playQuiz() {
     welcomeArea.classList.add("hide");
     questionContentArea.classList.remove("hide");
     contactArea.classList.add("hide");
-    EndGame.classList.add("hide");
     InputNameArea.classList.add("hide");
     RestartButton.classList.remove("hide");
     FooterArea.classList.add("hide");
@@ -124,7 +121,6 @@ function showContact() {
     welcomeArea.classList.add("hide");
     questionContentArea.classList.add("hide");
     contactArea.classList.remove("hide");
-    EndGame.classList.add("hide");
     InputNameArea.classList.add("hide");
     RestartButton.classList.add("hide");
     FooterArea.classList.remove("hide");
@@ -137,7 +133,6 @@ function returnToMain() {
     questionContentArea.classList.add("hide");
     contactArea.classList.add("hide");
     welcomeArea.classList.remove("hide");
-    EndGame.classList.add("hide");
     InputNameArea.classList.add("hide");
     RestartButton.classList.add("hide");
     FooterArea.classList.remove("hide");
@@ -150,7 +145,6 @@ function returnToMain() {
 function displayNextQuestion() {
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
-    EndGame.classList.add("hide");
 }
 
 let timer = null;
@@ -184,7 +178,6 @@ function showQuestion(questions) {
             if (shuffledQuestions.length > currentQuestionIndex + 1) {
                 NextQuestionButton.classList.remove("hide");
             } else {
-                EndGame.classList.remove("hide");
                 RestartButton.classList.add("hide");
                 endFooter.classList.remove("hide");
 
@@ -246,7 +239,6 @@ function selectAnswer(e) {
         NextQuestionButton.classList.remove("hide");
     } else {
         finalScore();
-        //EndGame.classList.remove("hide");
         RestartButton.classList.add("hide");
         endFooter.classList.remove("hide");
     }
