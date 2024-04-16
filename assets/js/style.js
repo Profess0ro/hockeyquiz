@@ -2,13 +2,12 @@
  * Here all different buttons and divs gets 
  * a const that are used in the functions 
  * and eventlisteners
- * */ 
+**/ 
 const playButton = document.getElementById("play-btn");
 const contactButton = document.getElementById("contact");
 const questionContentArea = document.getElementById("game-area");
 const questionContent = document.getElementById("question");
 const answerButtons = document.getElementById("answers");
-const answerButton = document.getElementById("answerbutton");
 const welcomeArea = document.getElementById("welcome");
 const contactArea = document.getElementById("contact-area");
 const mainMenuButton = document.getElementById("mainmenu");
@@ -243,15 +242,6 @@ function selectAnswer(e) {
         endFooter.classList.remove("hide");
     }
 }
-// This function will add the class of right or worng answer to the selected answer
-function checkCorrectAnswer(button, correct) {
-    clearStatusClass(button);
-    if (correct === "true") {
-        button.classList.add("correctanswer");
-    } else {
-        button.classList.add("wronganswer");
-    }
-}
 // This function will remove the class of right or wrong answer to the new answerbuttons
 function clearStatusClass(button) {
     button.classList.remove("correctanswer");
@@ -300,9 +290,9 @@ function sendEmail(event) {
         message : document.getElementById("message").value,
     };
     if (document.getElementById("name").value === ""){
-        alert("Please fill in your name")
+        alert("Please fill in your name");
     } else if (document.getElementById("email").value === ""){
-        alert("please fill in your email")
+        alert("please fill in your email");
     } else {
     emailjs.send("service_jmbyfsi", "template_j35glvk", params)
         .then(function () {
