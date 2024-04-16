@@ -90,7 +90,7 @@ const questions = [
         ]
     },
     {
-        question: 'Former NHL player used to eat something before his games, What?',
+        question: 'Former NHL player Mike Bossy used to eat something before his games, What?',
         answers: [
             {text: 'Vanilla ice Cream', correct: true},
             {text: '2 hot dogs', correct: false},
