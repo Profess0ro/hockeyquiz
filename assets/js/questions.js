@@ -17,13 +17,41 @@ const questions = [
             {text: 'Cat', correct: false},
         ]
     },
+    {
+        question: 'Who is "Slapshot Pete"?',
+        answers: [
+            {text: 'A defenseman who broke the glass behind the net with a slapshot', correct: false },
+            {text: 'A fan who won $10000 with a slapshot from center ice', correct: false},
+            {text: 'A live penguin who was Pittsburgh Penguins mascot', correct: true},
+            {text: 'A referee who got hit by 3 slapshots during one game', correct: false}
+        ]
+    },
+    {
+        question: 'The pucks these days are made of volcanic rubber, but what were they originally made of?',
+        answers: [
+            {text: 'Black plastic', correct: false},
+            {text: 'Stone', correct: false},
+            {text: 'Wood', correct: false},
+            {text: 'Frozen cow-dung', correct: true}
+        ]
+    },
+    {
+        question: 'In the beginning och hockey there was a strange rule for the captain. The captain was...',
+        answers: [
+            {text: '...not allowed to change during the game', correct: true},
+            {text: '...not allowed to be hit by the opponents', correct: false},
+            {text: '...not getting any penalties', correct: false},
+            {text: '...not allowed to hit opponents', correct: false}
+        ]
+    },
+    
  /**    {
         question: '',
-        answer: [
+        answers: [
             {text: '', correct: },
             {text: '', correct: },
             {text: '', correct: },
             {text: '', correct: }
         ]
-    }*/
+    },*/
 ]
