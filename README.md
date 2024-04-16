@@ -25,6 +25,12 @@ On the main page there options for the user and there will be an instruction on 
 <img src="wireframes/game.png"><br>
 <img src="wireframes/contact.png"><br>
 
+# Testing
+
+## Bugs 
+<img src="readme/bug1.png">
+
+# Validation
 
 # Resources
 - Basic structure of the quiz: https://www.youtube.com/watch?v=riDzcEQbX6k
@@ -33,4 +39,4 @@ On the main page there options for the user and there will be an instruction on 
 - Background image: https://unsplash.com/
 - Header image: https://www.pexels.com/sv-se/
 - Favicon: https://favicon.io/emoji-favicons/ice-hockey/
-- Facts to the question:<br> - https://thehockeywriters.com/the-strangest-things-to-ever-happen-in-an-nhl-game/<br>- https://russianmachineneverbreaks.com/2024/04/07/joonas-korpisalo-blinded-by-sun-capitals-senators-game-paused/<br>- https://www.mkewithkids.com/post/hockey-fun-facts/<br>- https://sportlobby.se/hockey/10-fakta-om-hockey-du-aldrig-hort-talas-om/<br>- https://www.electro-mech.com/team-sports/hockey/10-most-bizarre-ice-hockey-incidents/<br>- 
+- Facts to the questions:<br> - https://thehockeywriters.com/the-strangest-things-to-ever-happen-in-an-nhl-game/<br>- https://russianmachineneverbreaks.com/2024/04/07/joonas-korpisalo-blinded-by-sun-capitals-senators-game-paused/<br>- https://www.mkewithkids.com/post/hockey-fun-facts/<br>- https://sportlobby.se/hockey/10-fakta-om-hockey-du-aldrig-hort-talas-om/<br>- https://www.electro-mech.com/team-sports/hockey/10-most-bizarre-ice-hockey-incidents/<br>- 
