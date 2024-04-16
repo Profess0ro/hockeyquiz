@@ -36,7 +36,7 @@ const questions = [
         ]
     },
     {
-        question: 'In the beginning och hockey there was a strange rule for the captain. The captain was...',
+        question: 'In the beginning of hockey there was a strange rule for the captain. The captain was...',
         answers: [
             {text: '...not allowed to change during the game', correct: true},
             {text: '...not allowed to be hit by the opponents', correct: false},

@@ -254,7 +254,6 @@ function addRightAnswer() {
     let oldCorrectScore = parseInt(correctScoreElement.innerText);
 
     if (!isNaN(oldCorrectScore)) {
-        //This will check first if that is a number it´s gonna increase and if that is it will increase by 1
         const newCorrectScore = oldCorrectScore + 1;
         correctScoreElement.innerText = newCorrectScore;
     }
@@ -267,7 +266,6 @@ function addWrongAnswer() {
     let oldCorrectScore = parseInt(correctScoreElement.innerText);
 
     if (!isNaN(oldCorrectScore)) {
-        //This will check first if that is a number it´s gonna increase and if that is it will increase by 1
         const newCorrectScore = oldCorrectScore + 1;
         correctScoreElement.innerText = newCorrectScore;
     }
@@ -304,7 +302,7 @@ function sendEmail(event) {
             document.getElementById("message").value = "";
         })
         .catch(function (error) {
-            alert("Error sending email:", error); // Will send error message if email sending fails
+            alert("Error sending email:", error); // Will send error message if email fails to be sent
             
         });}
 }
