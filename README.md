@@ -29,6 +29,7 @@ On the main page there options for the user and there will be an instruction on 
 # Resources
 - Basic structure of the quiz: https://www.youtube.com/watch?v=riDzcEQbX6k
 - Javascript codes: https://www.w3schools.com/ and https://codeinstitute.net/ 
+- Tutorial for feedback form: https://www.youtube.com/watch?v=BgVjild0C9A
 - Background image: https://unsplash.com/
 - Header image: https://www.pexels.com/sv-se/
-- Facts to the question: - https://thehockeywriters.com/the-strangest-things-to-ever-happen-in-an-nhl-game/
+- Facts to the question:<br> - https://thehockeywriters.com/the-strangest-things-to-ever-happen-in-an-nhl-game/<br>- https://russianmachineneverbreaks.com/2024/04/07/joonas-korpisalo-blinded-by-sun-capitals-senators-game-paused/                    
