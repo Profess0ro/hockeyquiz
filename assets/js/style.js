@@ -37,9 +37,6 @@ mainMenuButton.addEventListener("click", returnToMain);
 RestartButtonFooter.addEventListener("click", DoYouWantToRestart);
 mainmenuGame.addEventListener("click", DoYouWantToLeaveMain);
 contactGame.addEventListener("click", DoYouWantToLeaveContact);
-endContact.addEventListener("click", showContact);
-endRestart.addEventListener("click", playQuiz);
-endMainMenu.addEventListener("click", returnToMain);
 
 //When clicking next question it will call the function of displaying the next question.
 NextQuestionButton.addEventListener("click", () => {
