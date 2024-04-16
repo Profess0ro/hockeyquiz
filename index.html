@@ -42,26 +42,27 @@
         </div>
         <!--  Contact -->
         <div id="contact-area" class="hide">
+          <div class="contact-form">
           <h3>Please fill in the field if you have some feedback about
             this quiz
           </h3>
-          <form onsubmit="return false">
-            Your name: <br><input class="form" type="text" id="name"
-              required /><br><br>
+          <form>
+            Your name: <br><input class="form" type="text" id="name" placeholder="Name"
+              required><br><br>
             Your Email: <br><input class="form" type="email"
-              id="email" required /><br><br>
+              id="email" placeholder="Email" required><br><br>
             Your Message: <br><textarea class="form" id="message"
-              rows="6"></textarea>
+              rows="6" placeholder="Message"></textarea>
             <br><br>
-            <button class="footer-buttons"
-              onclick="sendContact();">Send</button>
+            <button class="footer-buttons">Send</button>
           </form>
+        </div>
         </div>
         <!-- Input username for the game-->
         <div id="input-name" class="hide">
           <h3>Fill in your name to start the quiz!</h3>
           <br>
-          <input type="text" id="your-name" spanholder="Your name"><br>
+          <input type="text" id="your-name" placeholder="Your name"><br>
           <!-- When the button is clicked function collectData() will fetch the input-->
           <button id="start-the-game" class="footer-buttons" onclick="collectData()">Start!</button>
         </div>
