@@ -290,27 +290,26 @@ function resetScore() {
     correctScoreElement.innerText = "0";
     wrongScoreElement.innerText = "0";
 }
-function sendEmail() {
-    var params = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value,
-    };
-    const serviceID = "service_jmbyfsi";
-    const templateID = "template_j35glvk";
 
-    emailjs.send(serviceID, templateID, params)
-        .then((res) => {
+// This function sends an email if all are fields are filled in and also sends a reply to the persons email via Emailjs
+function sendEmail(event) {
+    event.preventDefault();
+    let params = {
+        name : document.getElementById("name").value,
+        email : document.getElementById("email").value,
+        message : document.getElementById("message").value,
+    };
+    emailjs.send("service_jmbyfsi", "template_j35glvk", params)
+        .then(function () {
+            alert("Thank you for the feedback!");
+
+            // Reset the value of the forms input fields
             document.getElementById("name").value = "";
             document.getElementById("email").value = "";
             document.getElementById("message").value = "";
-            alert("Thank you for the feedback");
-
-            // Call showContact after the email is sent successfully
-            showContact();
         })
-        .catch((error) => {
-            // Handle error if email sending fails
-            alert("Email sending failed:", error);
+        .catch(function (error) {
+            alert("Error sending email:", error); // Will send error message if email sending fails
+            
         });
 }
