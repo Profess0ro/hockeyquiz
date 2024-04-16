@@ -44,7 +44,60 @@ const questions = [
             {text: '...not allowed to hit opponents', correct: false}
         ]
     },
-    
+    {
+        question: 'In 1930 Abie Goldberry was hit by a puck, but what happened when he got hit?',
+        answers: [
+            {text: 'His uniform was set on fire, due to the matches he had in his pocket', correct: true},
+            {text: 'He got angry and slash his opponent with his stick', correct: false},
+            {text: 'He was sent to the hospital with a broken leg', correct: false},
+            {text: 'He lost all of his teeth', correct: false}
+        ]
+    },
+    {
+        question: 'The most penalized player in professional hockey history Joe Kocur almost lost his right hand. Why?',
+        answers: [
+            {text: 'He got slashed very hard by a opponent and broke all bones in the hand', correct: false},
+            {text: 'He crashed while riding a motorcycle', correct: false},
+            {text: 'He punched an opponents teeth and got infected', correct: true},
+            {text: 'He was angry and punched a wall', correct: false}
+        ]
+    },
+    {
+        question: 'What animal does fans to Detroit Red Wings throw in to the ice for luck?',
+        answers: [
+            {text: 'Birds', correct: false},
+            {text: 'Octopuses', correct: true},
+            {text: 'Fishes', correct: false},
+            {text: 'Rats', correct: false}
+        ]
+    },
+    {
+        question: 'How did “Mush” Marsh earn his nickname back in 1945?',
+        answers: [
+            {text: 'He had a really big mustache', correct: false},
+            {text: 'He liked to eat mushrooms before the game', correct: false},
+            {text: 'He couldn´t pronounce the word "much" correctly', correct: false},
+            {text: 'He got hit by a opponent and bit his tongue off', correct: true}
+        ]
+    },
+    {
+        question: 'The NHL’s original six teams were the Montreal Canadiens, Toronto Maple Leafs, Boston Bruins, New York Rangers, Detroit Red Wings, and Chicago Blackhawks. Which team joined next?',
+        answers: [
+            {text: 'Buffalo Sabres', correct: false},
+            {text: 'Vancouver Canucks', correct: false},
+            {text: 'Los Angeles Kings', correct: true},
+            {text: 'Atlanta Flames', correct: false}
+        ]
+    },
+    {
+        question: 'Former NHL player used to eat something before his games, What?',
+        answers: [
+            {text: 'Vanilla ice Cream', correct: true},
+            {text: '2 hot dogs', correct: false},
+            {text: 'Chicken BLT sandwich', correct: false},
+            {text: '3 hard boiled eggs', correct: false}
+        ]
+    },
  /**    {
         question: '',
         answers: [
