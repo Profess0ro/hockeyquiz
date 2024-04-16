@@ -143,6 +143,30 @@
      border-radius: 10px;
      font-weight: bold;
 }
+#win {
+    background-color: #000000;
+    border: 2px solid rgba(0, 255, 21, 0.897);
+    padding: 15px;
+    margin: 5px;
+    color: #FFFFFF;
+    border-radius: 10px;
+    font-weight: bold;
+}
+#win h2 {
+    color: rgba(0, 255, 21, 0.897);
+}
+#loss {
+    background-color: #000000;
+    border: 2px solid rgba(255, 0, 0, 0.897);
+    padding: 15px;
+    margin: 5px;
+    color: #FFFFFF;
+    border-radius: 10px;
+    font-weight: bold;
+}
+#loss h2 {
+    color: rgba(255, 0, 0, 0.897);
+}
  #answers {
      display: grid;
      grid-template-columns: repeat(1, auto);

@@ -24,6 +24,8 @@ const endFooter = document.getElementById("end-footer");
 const endMainMenu = document.getElementById("mainmenu-end");
 const endRestart = document.getElementById("restart-end");
 const endContact = document.getElementById("contact-end");
+const userWin = document.getElementById("win");
+const quizWin = document.getElementById("loss");
 
 //this makes the index of the question to change during the quiz, so that the questions order will be random
 
@@ -111,6 +113,8 @@ function playQuiz() {
     RestartButton.classList.remove("hide");
     FooterArea.classList.add("hide");
     endFooter.classList.add("hide");
+    userWin.classList.add("hide");
+    quizWin.classList.add("hide");
     shuffledQuestions = questions.sort(() => Math.random() - 0.5); // this picks a random question from the array of questions
     currentQuestionIndex = 0;
     displayNextQuestion();
@@ -125,6 +129,8 @@ function showContact() {
     RestartButton.classList.add("hide");
     FooterArea.classList.remove("hide");
     endFooter.classList.add("hide");
+    userWin.classList.add("hide");
+    quizWin.classList.add("hide");
 }
 // Hides and shows the right div when you click the Main menu button button.
 function returnToMain() {
@@ -136,6 +142,8 @@ function returnToMain() {
     RestartButton.classList.add("hide");
     FooterArea.classList.remove("hide");
     endFooter.classList.add("hide");
+    userWin.classList.add("hide");
+    quizWin.classList.add("hide");
 }
 //Before the next question will be shown all conditions of the previous question will be reset
 
@@ -237,10 +245,12 @@ function selectAnswer(e) {
         // Show the next question button or a button to see the score.
         NextQuestionButton.classList.remove("hide");
     } else {
-        EndGame.classList.remove("hide");
+        finalScore();
+        //EndGame.classList.remove("hide");
         RestartButton.classList.add("hide");
         endFooter.classList.remove("hide");
     }
+    
 }
 // This function will remove the class of right or wrong answer to the new answerbuttons
 function clearStatusClass(button) {
@@ -277,6 +287,19 @@ function resetScore() {
 
     correctScoreElement.innerText = "0";
     wrongScoreElement.innerText = "0";
+}
+
+function finalScore() {
+    const correctScore = parseInt(document.querySelector("#scores .correct").innerText);
+    const wrongScore = parseInt(document.querySelector("#scores .wrong").innerText);
+
+    if (correctScore > wrongScore) {
+        userWin.classList.remove("hide");
+        quizWin.classList.add("hide"); // Ensure quizWin remains hidden
+    } else {
+        userWin.classList.add("hide");
+        quizWin.classList.remove("hide");
+    }
 }
 
 // This function sends an email if all are fields are filled in and also sends a reply to the persons email via Emailjs
