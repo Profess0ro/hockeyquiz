@@ -36,14 +36,20 @@ function resetButtons() {
     mainMenuButton.removeEventListener("click", DoYouWantToLeaveMain);
     contactButton.removeEventListener("click", DoYouWantToLeaveContact);
     contactButton.addEventListener("click", showContact);
-    mainMenuButton.addEventListener("click", returnToMain);
+    mainMenuButton.addEventListener("click", returnToMain);  
 }
 // Adding game status to buttons so you´ll be asked if you are sure to leave the game or not.
 function setGameStatus() {
+    RestartButton.removeEventListener("click", playQuiz);
     mainMenuButton.removeEventListener("click", returnToMain);
     contactButton.removeEventListener("click", showContact);
     mainMenuButton.addEventListener("click", DoYouWantToLeaveMain);
     contactButton.addEventListener("click", DoYouWantToLeaveContact);
+    RestartButton.addEventListener("click", DoYouWantToRestart);
+}
+function endGameRestart(){
+    RestartButton.addEventListener("click", playQuiz);
+    RestartButton.removeEventListener("click", DoYouWantToRestart);
 }
 
 // If user want to restart, the score will reset and questions will start over
@@ -233,7 +239,6 @@ function selectAnswer(e) {
         NextQuestionButton.classList.remove("hide");
     } else {
         finalScore();
-        resetButtons();
     }
     
 }
@@ -275,6 +280,8 @@ function resetScore() {
 }
 // This function checks who has the highest score between user and quiz to send win or loss message at the end.
 function finalScore() {
+    resetButtons();
+    endGameRestart();
     const correctScore = parseInt(document.querySelector("#scores .correct").innerText);
     const wrongScore = parseInt(document.querySelector("#scores .wrong").innerText);
 
