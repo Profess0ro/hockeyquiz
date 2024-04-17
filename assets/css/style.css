@@ -212,6 +212,11 @@ input {
     background-color: rgba(255, 0, 0, 0.623);
     border: 2px solid rgba(255, 0, 0, 0.897);
 }
+@media (min-width: 400px) {
+    .big-div {
+        height: 55vh;
+   }
+}
 @media (min-width: 768px) {
     body {
         width: 60vw;
