@@ -12,16 +12,9 @@ const welcomeArea = document.getElementById("welcome");
 const contactArea = document.getElementById("contact-area");
 const mainMenuButton = document.getElementById("mainmenu");
 const NextQuestionButton = document.getElementById("next-question");
-const RestartButtonFooter = document.getElementById("restart-game");
+const RestartButton = document.getElementById("restart");
 const StartTheGameButton = document.getElementById("start-the-game");
 const InputNameArea = document.getElementById("input-name");
-const RestartButton = document.getElementById("restart-footer");
-const FooterArea = document.getElementById("footer");
-const mainmenuGame = document.getElementById("mainmenu-game");
-const contactGame = document.getElementById("contact-game");
-const endMainMenu = document.getElementById("mainmenu-end");
-const endRestart = document.getElementById("restart-end");
-const endContact = document.getElementById("contact-end");
 const userWin = document.getElementById("win");
 const quizWin = document.getElementById("loss");
 
@@ -32,11 +25,9 @@ let shuffledQuestions, currentQuestionIndex;
 //what function will be called when you press the buttons
 StartTheGameButton.addEventListener("click", collectData);
 playButton.addEventListener("click", inputUserName);
-contactButton.addEventListener("click", showContact);
-mainMenuButton.addEventListener("click", returnToMain);
-RestartButtonFooter.addEventListener("click", DoYouWantToRestart);
-mainmenuGame.addEventListener("click", DoYouWantToLeaveMain);
-contactGame.addEventListener("click", DoYouWantToLeaveContact);
+contactButton.addEventListener("click", DoYouWantToLeaveContact);
+mainMenuButton.addEventListener("click", DoYouWantToLeaveMain);
+RestartButton.addEventListener("click", DoYouWantToRestart);
 
 //When clicking next question it will call the function of displaying the next question.
 NextQuestionButton.addEventListener("click", () => {
@@ -113,7 +104,6 @@ function playQuiz() {
     contactArea.classList.add("hide");
     InputNameArea.classList.add("hide");
     RestartButton.classList.remove("hide");
-    FooterArea.classList.add("hide");
     userWin.classList.add("hide");
     quizWin.classList.add("hide");
     shuffledQuestions = questions.sort(() => Math.random() - 0.5); // this picks a random question from the array of questions
@@ -127,7 +117,6 @@ function showContact() {
     contactArea.classList.remove("hide");
     InputNameArea.classList.add("hide");
     RestartButton.classList.add("hide");
-    FooterArea.classList.remove("hide");
     userWin.classList.add("hide");
     quizWin.classList.add("hide");
 }
@@ -138,7 +127,6 @@ function returnToMain() {
     welcomeArea.classList.remove("hide");
     InputNameArea.classList.add("hide");
     RestartButton.classList.add("hide");
-    FooterArea.classList.remove("hide");
     userWin.classList.add("hide");
     quizWin.classList.add("hide");
 }
