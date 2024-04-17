@@ -21,7 +21,7 @@
   </head>
   <body>
     <header>
-      <div class="title">
+      <div class="header">
         <p class="titletext">Hockeyquiz</p>
       </div>
     </header>
@@ -29,7 +29,7 @@
       <!-- Main area-->
       <div class="container">
         <!-- Main menu -->
-        <div id="welcome" class="grey-div">
+        <div id="welcome" class="grey-div big-div">
           <div class="blue-div" id="instructions">
             <h1><b>Welcome to my quiz about fun facts of hockey!</b></h1><br><br>
             <p class="rules"><u>Instructions:</u> <br><br>
@@ -43,36 +43,36 @@
             </p>
           </div>
           <div id="play"><button id="play-btn"
-            class>Play!</button></div>
+            class="btn black-btn">Play!</button></div>
         </div>
         <!--  Contact -->
-        <div id="contact-area" class="grey-div hide">
+        <div id="contact-area" class="grey-div big-div hide">
           <div class="blue-div">
           <h3>Please fill in the field if you have some feedback about
             this quiz
           </h3>
           <form>
-            Your name: <br><input class="form" type="text" id="name"
+            Your name: <br><input class="inputs" type="text" id="name"
               required><br><br>
-            Your Email: <br><input class="form" type="email"
+            Your Email: <br><input class="inputs" type="email"
               id="email" required><br><br>
-            Your Message: <br><textarea class="form" id="message"
+            Your Message: <br><textarea class="inputs" id="message"
               rows="6"></textarea>
             <br><br>
-            <button class="footer-buttons" onclick="sendEmail(event)">Send</button>
+            <button class="btn black-btn" onclick="sendEmail(event)">Send</button>
           </form>
         </div>
         </div>
         <!-- Input username for the game-->
-        <div id="input-name" class="grey-div hide">
+        <div id="input-name" class="grey-div big-div hide">
           <h3>Fill in your name to start the quiz!</h3>
           <br>
-          <input type="text" id="your-name" placeholder="Your name"><br>
+          <input type="text" class="inputs" id="your-name" placeholder="Your name"><br>
           <!-- When the button is clicked function collectData() will fetch the input-->
-          <button id="start-the-game" class="footer-buttons" onclick="collectData()">Start!</button>
+          <button id="start-the-game" class="btn black-btn" onclick="collectData()">Start!</button>
         </div>
         <!-- Game area-->
-        <div id="game-area" class="grey-div hide">
+        <div id="game-area" class="grey-div big-div hide">
           <!-- Scoreboard -->
           <div id="scores">
             <div class="score"><span id="username"></span> <span class="correct">0</span> vs.
@@ -84,26 +84,26 @@
           <div id="question">Here will it be a question shown</div>
           <!-- Answering buttons -->
           <div id="answers">
-            <button class="answerbutton">answer</button>
-            <button class="answerbutton">answer</button>
-            <button class="answerbutton">answer</button>
-            <button class="answerbutton">answer</button>
+            <button class="btn answerbutton">answer</button>
+            <button class="btn answerbutton">answer</button>
+            <button class="btn answerbutton">answer</button>
+            <button class="btn answerbutton">answer</button>
           </div>
-          <!-- button for next question and restart-->
+          <!-- Next question and win or loss message -->
           <button id="next-question"
-            class="answerbutton hide">Next question</button>
+            class="btn answerbutton hide">Next question</button>
           <div class="hide" id="win"><h2>Win!</h2>Congratulations, You won against the quiz!<br>Restart to see if you beat your score.</div>
           <div class="hide" id="loss"><h2>Loss!</h2>Bad luck!<br>Restart to see if you can win against the quiz.</div>
         </div>
       </div>
     </main>
     <footer>
-      <!-- Footer -->
+      <!-- Footer with navigation -->
       <div id="footer">
-        <div class="footer">
-          <button id="mainmenu" class="footer-buttons">Main menu</button>
-          <div id="restart" class="hide"><button id="restart-game" class="footer-buttons">Restart</button></div>
-          <button id="contact" class="footer-buttons">Contact</button>                
+        <div class="footer grey-div">
+          <button id="mainmenu" class="btn black-btn">Main menu</button>
+          <div id="restart" class="hide"><button id="restart-game" class="btn black-btn">Restart</button></div>
+          <button id="contact" class="btn black-btn">Contact</button>                
         </div>
       </div>
       </div>

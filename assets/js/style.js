@@ -184,7 +184,7 @@ function showQuestion(questions) {
     questions.answers.forEach((answer) => {
         const button = document.createElement("button"); //This will create new answerbuttons for each question.
         button.innerText = answer.text;
-        button.classList.add("answerbutton");
+        button.classList.add("answerbutton", "btn");
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
