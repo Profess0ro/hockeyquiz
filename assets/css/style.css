@@ -32,7 +32,7 @@ header{
     border-radius: 10px;
     text-align: center;
 }
-.footer {
+.footer, #social-media {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
@@ -138,6 +138,13 @@ input {
     border-radius: 10px;
     font-weight: bold;
 }
+#social-media {
+    margin-top: 15px;
+    font-size: 25px;
+}
+#social-media a {
+    color: #FFFFFF;
+}
 #win {
     border: 2px solid rgba(0, 255, 21, 0.897);
 }
@@ -203,7 +210,6 @@ input {
     background-color: rgba(255, 0, 0, 0.623);
     border: 2px solid rgba(255, 0, 0, 0.897);
 }
-/* Footer */
 @media (min-width: 768px) {
     body {
         width: 60vw;
