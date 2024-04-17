@@ -233,6 +233,7 @@ function selectAnswer(e) {
         NextQuestionButton.classList.remove("hide");
     } else {
         finalScore();
+        resetButtons();
     }
     
 }
