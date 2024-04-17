@@ -23,6 +23,7 @@ header{
 }
 .big-div {
     height: 60vh;
+    overflow-y: auto;
 }
 .grey-div {
     background: rgba(255, 255, 255, 0.3);
