@@ -98,6 +98,15 @@ const questions = [
             {text: '3 hard boiled eggs', correct: false}
         ]
     },
+    {
+        question: 'What did Terry O´Reilly do in a game between Boston Bruins and New York Rangers back in 1979?',
+        answers: [
+            {text: 'He was the last goalie without a mask', correct: false},
+            {text: 'He knocked down 2 referees', correct: false},
+            {text: 'He jumped up in the stands and fought Ranger fans', correct: true},
+            {text: 'He was the first player with helmet that scored a hat-trick', correct: false}
+        ]
+    },
  /**    {
         question: '',
         answers: [
