@@ -2,9 +2,9 @@
 <html lang="en-US">
   <head>
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
     <meta charset="UTF-8">
     <!-- Viewport responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,12 +29,12 @@
       <!-- Main area-->
       <div class="container">
         <!-- Main menu -->
-        <div id="welcome" class="">
-          <div id="instructions">
-            <b>Welcome to my quiz about fun facts of hockey!</b><br><br>
-            <u>Instructions:</u>
-            <p class="rules">
+        <div id="welcome" class="grey-div">
+          <div class="blue-div" id="instructions">
+            <h1><b>Welcome to my quiz about fun facts of hockey!</b></h1><br><br>
+            <p class="rules"><u>Instructions:</u> <br><br>
               - You will play a game against the quiz to win the match. <br><br>
+              - The game will be played best of 11 questions<br><br>
               - When a question appears you will have 20seconds to answer. <br><br>
               - If the timer runs out you´re not able to answer anymore and that counts as a goal for the quiz. <br><br>
               - Every question have 4 answers, only one are correct. <br><br>
@@ -46,8 +46,8 @@
             class>Play!</button></div>
         </div>
         <!--  Contact -->
-        <div id="contact-area" class="hide">
-          <div class="contact-form">
+        <div id="contact-area" class="grey-div hide">
+          <div class="blue-div">
           <h3>Please fill in the field if you have some feedback about
             this quiz
           </h3>
@@ -64,7 +64,7 @@
         </div>
         </div>
         <!-- Input username for the game-->
-        <div id="input-name" class="hide">
+        <div id="input-name" class="grey-div hide">
           <h3>Fill in your name to start the quiz!</h3>
           <br>
           <input type="text" id="your-name" placeholder="Your name"><br>
@@ -72,7 +72,7 @@
           <button id="start-the-game" class="footer-buttons" onclick="collectData()">Start!</button>
         </div>
         <!-- Game area-->
-        <div id="game-area" class="hide">
+        <div id="game-area" class="grey-div hide">
           <!-- Scoreboard -->
           <div id="scores">
             <div class="score"><span id="username"></span> <span class="correct">0</span> vs.
