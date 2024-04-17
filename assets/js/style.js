@@ -15,22 +15,36 @@ const InputNameArea = document.getElementById("input-name");
 const userWin = document.getElementById("win");
 const quizWin = document.getElementById("loss");
 
-//this makes the index of the question to change during the quiz, so that the questions order will be random
+// This makes the index of the question to change during the quiz, so that the questions order will be random
 
 let shuffledQuestions, currentQuestionIndex;
 
-//what function will be called when you press the buttons
+// What function will be called when you press the buttons
 StartTheGameButton.addEventListener("click", collectData);
 playButton.addEventListener("click", inputUserName);
 contactButton.addEventListener("click", showContact);
 mainMenuButton.addEventListener("click", returnToMain);
 RestartButton.addEventListener("click", DoYouWantToRestart);
 
-//When clicking next question it will call the function of displaying the next question.
+// When clicking next question it will call the function of displaying the next question.
 NextQuestionButton.addEventListener("click", () => {
     currentQuestionIndex++;
     displayNextQuestion();
 });
+// Sets the buttons eventlistener to original state so you don´t being ask to leave the game outside the game
+function resetButtons() {
+    mainMenuButton.removeEventListener("click", DoYouWantToLeaveMain);
+    contactButton.removeEventListener("click", DoYouWantToLeaveContact);
+    contactButton.addEventListener("click", showContact);
+    mainMenuButton.addEventListener("click", returnToMain);
+}
+// Adding game status to buttons so you´ll be asked if you are sure to leave the game or not.
+function setGameStatus() {
+    mainMenuButton.removeEventListener("click", returnToMain);
+    contactButton.removeEventListener("click", showContact);
+    mainMenuButton.addEventListener("click", DoYouWantToLeaveMain);
+    contactButton.addEventListener("click", DoYouWantToLeaveContact);
+}
 
 // If user want to restart, the score will reset and questions will start over
 function DoYouWantToRestart() {
@@ -47,11 +61,7 @@ function DoYouWantToLeaveContact() {
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         const confirmLeave = window.confirm("Are you sure you want to leave the game?");
         if (confirmLeave) {
-            console.log("Leaving game...");
             showContact();
-            console.log("showContact() called.");
-        } else {
-            console.log("Cancelled leaving game.");
         }
     } 
 }
@@ -92,6 +102,7 @@ function collectData() {
 
 // This function shows the right div when the username are correctly filled and the game can start
 function playQuiz() {
+    setGameStatus();
     resetScore();
     welcomeArea.classList.add("hide");
     questionContentArea.classList.remove("hide");
@@ -100,14 +111,13 @@ function playQuiz() {
     RestartButton.classList.remove("hide");
     userWin.classList.add("hide");
     quizWin.classList.add("hide");
-    contactButton.addEventListener("click", DoYouWantToLeaveContact);
-    mainMenuButton.addEventListener("click", DoYouWantToLeaveMain);
     shuffledQuestions = questions.sort(() => Math.random() - 0.5); // this picks a random question from the array of questions
     currentQuestionIndex = 0;
     displayNextQuestion();
 }
 // Hides and shows the right div when you click the contact button.
 function showContact() {
+    resetButtons();
     welcomeArea.classList.add("hide");
     questionContentArea.classList.add("hide");
     contactArea.classList.remove("hide");
@@ -115,11 +125,11 @@ function showContact() {
     RestartButton.classList.add("hide");
     userWin.classList.add("hide");
     quizWin.classList.add("hide");
-    contactButton.addEventListener("click", showContact);
-    mainMenuButton.addEventListener("click", returnToMain);
+
 }
 // Hides and shows the right div when you click the Main menu button button.
 function returnToMain() {
+    resetButtons();
     questionContentArea.classList.add("hide");
     contactArea.classList.add("hide");
     welcomeArea.classList.remove("hide");
@@ -127,8 +137,6 @@ function returnToMain() {
     RestartButton.classList.add("hide");
     userWin.classList.add("hide");
     quizWin.classList.add("hide");
-    contactButton.addEventListener("click", showContact);
-    mainMenuButton.addEventListener("click", returnToMain);
 }
 //Before the next question will be shown all conditions of the previous question will be reset
 
