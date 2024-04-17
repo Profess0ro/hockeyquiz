@@ -15,18 +15,18 @@ const InputNameArea = document.getElementById("input-name");
 const userWin = document.getElementById("win");
 const quizWin = document.getElementById("loss");
 
-// This makes the index of the question to change during the quiz, so that the questions order will be random
+// This makes the value of how many questions shown and helps questions to be shuffled
 
 let shuffledQuestions, currentQuestionIndex;
 
-// What function will be called when you press the buttons
+// What function will be called by default when you click on the different buttons
 StartTheGameButton.addEventListener("click", collectData);
 playButton.addEventListener("click", inputUserName);
 contactButton.addEventListener("click", showContact);
 mainMenuButton.addEventListener("click", returnToMain);
 RestartButton.addEventListener("click", DoYouWantToRestart);
 
-// When clicking next question it will call the function of displaying the next question.
+// When clicking next question it will call the function to add 1 to how many questions has been shown
 NextQuestionButton.addEventListener("click", () => {
     currentQuestionIndex++;
     displayNextQuestion();
@@ -47,14 +47,15 @@ function setGameStatus() {
     contactButton.addEventListener("click", DoYouWantToLeaveContact);
     RestartButton.addEventListener("click", DoYouWantToRestart);
 }
+// Change which function to be called by restart button so you don´t get the question if you want to leave the game or not
 function endGameRestart(){
     RestartButton.addEventListener("click", playQuiz);
     RestartButton.removeEventListener("click", DoYouWantToRestart);
 }
 
-// If user want to restart, the score will reset and questions will start over
+// If there is question left in the game a window will ask if they are sure to leave
 function DoYouWantToRestart() {
-    if (11 > currentQuestionIndex + 1) { // If there is question left in the game a window will ask if they are sure to leave
+    if (11 > currentQuestionIndex + 1) { 
         const confirmRestart = window.confirm("Are you sure you want to restart?");
 
         if (confirmRestart) {
@@ -81,7 +82,7 @@ function DoYouWantToLeaveMain() {
 } 
 }
 
-//What div will be shown when the function is called
+// When you press play, the right div will be shown
 function inputUserName() {
     welcomeArea.classList.add("hide");
     questionContentArea.classList.add("hide");
@@ -90,7 +91,7 @@ function inputUserName() {
     RestartButton.classList.add("hide");
 }
 
-// This function collects the name filled in and shows at the score
+// This function collects the name filled in and that name shows at the scoreboard
 function collectData() {
     const inputField = document.getElementById("your-name");
     const inputValue = inputField.value;
@@ -106,7 +107,7 @@ function collectData() {
     outputSpan.innerText = inputValue;
 }
 
-// This function shows the right div when the username are correctly filled and the game can start
+// This function shows the right div when the game starts, changes buttons eventlisteners and resets the scoreboard
 function playQuiz() {
     setGameStatus();
     resetScore();
@@ -117,11 +118,11 @@ function playQuiz() {
     RestartButton.classList.remove("hide");
     userWin.classList.add("hide");
     quizWin.classList.add("hide");
-    shuffledQuestions = questions.sort(() => Math.random() - 0.5); // this picks a random question from the array of questions
+    shuffledQuestions = questions.sort(() => Math.random() - 0.5); // this picks a random question from the array of questions to be shown
     currentQuestionIndex = 0;
     displayNextQuestion();
 }
-// Hides and shows the right div when you click the contact button.
+// Hides and shows the right div when you navigate to contact page
 function showContact() {
     resetButtons();
     welcomeArea.classList.add("hide");
@@ -133,7 +134,7 @@ function showContact() {
     quizWin.classList.add("hide");
 
 }
-// Hides and shows the right div when you click the Main menu button button.
+// Hides and shows the right div when you navigate to main page
 function returnToMain() {
     resetButtons();
     questionContentArea.classList.add("hide");
@@ -144,7 +145,7 @@ function returnToMain() {
     userWin.classList.add("hide");
     quizWin.classList.add("hide");
 }
-//Before the next question will be shown all conditions of the previous question will be reset
+//Before the next question will be shown all conditions of the previous question and buttons will be reset
 
 function displayNextQuestion() {
     resetState();
@@ -158,16 +159,16 @@ let timer = null;
  * It also starts a new timer that counts down from 20.
  */
 function showQuestion(questions) {
-    let count = 20; // Sets the timer to start at 20 seconds
+    let count = 20; 
 
     document.getElementById("timer").innerText = count;
 
-    // deletes the previous questiontimer before setting up a new 
+    // resets the timer
     if (timer) {
         clearInterval(timer);
     }
 
-    // Set up the new timer
+    // Starts the timer and count down 1sec at the time
     timer = setInterval(function() {
         count--;
         document.getElementById("timer").innerText = count;
@@ -178,30 +179,30 @@ function showQuestion(questions) {
                 button.disabled = true; // Disable answer buttons when the time runs out
             });
 
-            // Show the next question button or the end game div based on the current question index
+            // Show the next question button if 11 questions hasn´t been shown
             if (11 > currentQuestionIndex + 1) {
                 NextQuestionButton.classList.remove("hide");
             } 
         }
-    }, 1000);
+    }, 1000); // timer set to count down by 1000milliseconds at the time (1sec)
 
-    // Display the question and answer buttons
+    // This will collect data from questions.js and will fill the question div with the question and create new buttons with the answers
     questionContent.innerText = questions.question; // This puts in the question in the question div from the array in question.js
     questions.answers.forEach((answer) => {
-        const button = document.createElement("button"); //This will create new answerbuttons for each question.
+        const button = document.createElement("button"); // Will create new answerbuttons for each question.
         button.innerText = answer.text;
-        button.classList.add("answerbutton", "btn");
+        button.classList.add("answerbutton", "btn"); // Which classes to be set on the new buttons
         if (answer.correct) {
-            button.dataset.correct = answer.correct;
+            button.dataset.correct = answer.correct; // This will check what answer is correct and paste that fact to the button
         }
-        button.addEventListener("click", selectAnswer);
+        button.addEventListener("click", selectAnswer); // Adds eventlisteners to the new buttons
         answerButtons.appendChild(button);
     });
 }
 
 /**
  * This function will hide the button for the next question and remove the previous answering buttons because
- * they either have correct or wrong values. We want to start next question with new buttons.
+ * they either have correct or wrong values. We want to start next question with new buttons 
  */
 function resetState() {
     NextQuestionButton.classList.add("hide");
@@ -209,14 +210,14 @@ function resetState() {
         answerButtons.removeChild(answerButtons.firstChild);
     }
 }
-//This function will take take the targeted answer and look into the questions array to see if the answer are have true boolean at correct or not.
+// This function will take take the targeted answer and look if the answer are set with the value correct
 
 function selectAnswer(e) {
     clearInterval(timer);
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
 
-    Array.from(answerButtons.children).forEach((button) => { //disables all answer buttons when you´ve selected your answer
+    Array.from(answerButtons.children).forEach((button) => { // disables all answer buttons when you´ve selected your answer
         button.disabled = true;
     });
 
@@ -226,7 +227,7 @@ function selectAnswer(e) {
     });
 
     if (correct === "true") {
-        // Add status class to the selected button
+        // Add status class to the selected button if it´s correct or wrong answer
         selectedButton.classList.add("correctanswer");
         addRightAnswer();
     } else {
@@ -235,7 +236,7 @@ function selectAnswer(e) {
     }
 
     if (11 > currentQuestionIndex + 1) {
-        // Show the next question button or a button to see the score.
+        // Checks if 11 question has been shown or not. If 11 has been shown the function finalScore() will be called
         NextQuestionButton.classList.remove("hide");
     } else {
         finalScore();
@@ -247,9 +248,9 @@ function clearStatusClass(button) {
     button.classList.remove("correctanswer");
     button.classList.remove("wronganswer");
 }
-// This function will increase the correct score if answered correct
+// This function will increase the users score if answered correct
 function addRightAnswer() {
-    const correctScoreElement = document.querySelector("#scores .correct"); // This will search up the right element to increase the value of
+    const correctScoreElement = document.querySelector("#scores .correct"); 
 
     let oldCorrectScore = parseInt(correctScoreElement.innerText);
 
@@ -259,9 +260,9 @@ function addRightAnswer() {
     }
 }
 
-// This function will increase the wrong score if answered wrong
+// This function will increase the quiz´s score if answered wrong
 function addWrongAnswer() {
-    const correctScoreElement = document.querySelector("#scores .wrong"); // This will search up the right element to increase the value of
+    const correctScoreElement = document.querySelector("#scores .wrong"); 
 
     let oldCorrectScore = parseInt(correctScoreElement.innerText);
 
@@ -270,7 +271,7 @@ function addWrongAnswer() {
         correctScoreElement.innerText = newCorrectScore;
     }
 }
-// This function will reset the score if you restart the game
+// This function will reset the scoreboard if you restart the game
 function resetScore() {
     const correctScoreElement = document.querySelector("#scores .correct");
     const wrongScoreElement = document.querySelector("#scores .wrong");
@@ -302,6 +303,7 @@ function sendEmail(event) {
         email : document.getElementById("email").value,
         message : document.getElementById("message").value,
     };
+    // This shows a warning if any of the fields are empty when submitting feedback
     if (document.getElementById("name").value === ""){
         alert("Please fill in your name");
     } else if (document.getElementById("email").value === ""){
@@ -313,13 +315,13 @@ function sendEmail(event) {
         .then(function () {
             alert("Thank you for the feedback!");
 
-            // Reset the value of the forms input fields
+            // Reset the value of the forms input fields when feedback has been sent
             document.getElementById("name").value = "";
             document.getElementById("email").value = "";
             document.getElementById("message").value = "";
         })
         .catch(function (error) {
-            alert("Error sending email:", error); // Will send error message if email fails to be sent
+            alert("Error sending email:", error); // Will send error message if feedback fails to be sent
             
         });}
 }
