@@ -107,6 +107,15 @@ const questions = [
             {text: 'He was the first player with helmet that scored a hat-trick', correct: false}
         ]
     },
+    {
+        question: 'How many teams played in NHL 2018/2019?',
+        answers: [
+            {text: '29', correct: false},
+            {text: '30', correct: false},
+            {text: '31', correct: true},
+            {text: '32', correct: false}
+        ]
+    },
  /**    {
         question: '',
         answers: [
