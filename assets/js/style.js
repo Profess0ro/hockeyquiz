@@ -1,8 +1,5 @@
-/**
- * Here all different buttons and divs gets 
- * a const that are used in the functions 
- * and eventlisteners
-**/ 
+// Here all different buttons and divs gets a const that are used in the functions and eventlisteners
+
 const playButton = document.getElementById("play-btn");
 const contactButton = document.getElementById("contact");
 const questionContentArea = document.getElementById("game-area");
@@ -37,7 +34,7 @@ NextQuestionButton.addEventListener("click", () => {
 
 // If user want to restart, the score will reset and questions will start over
 function DoYouWantToRestart() {
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    if (shuffledQuestions.length > currentQuestionIndex + 1) { // If there is question left in the game a window will ask if they are sure to leave
         const confirmRestart = window.confirm("Are you sure you want to restart?");
 
         if (confirmRestart) {
@@ -49,7 +46,7 @@ function DoYouWantToRestart() {
 }
 // If user want to go to quit the game and go to the contact page
 function DoYouWantToLeaveContact() { 
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    if (shuffledQuestions.length > currentQuestionIndex + 1) { // If there is question left in the game a window will ask if they are sure to leave
     const confirmLeave = window.confirm("Are you sure you want to leave the game?");
 
     if (confirmLeave) {
@@ -61,7 +58,7 @@ function DoYouWantToLeaveContact() {
 }
 // If user want to leave the game pressing "main menu" they will come back to the Main menu
 function DoYouWantToLeaveMain() {
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    if (shuffledQuestions.length > currentQuestionIndex + 1) { // If there is question left in the game a window will ask if they are sure to leave
     const confirmLeave = window.confirm("Are you sure you want to leave the game?");
     if (confirmLeave) {
         returnToMain();
