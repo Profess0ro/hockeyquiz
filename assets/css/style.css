@@ -1,283 +1,296 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.cdnfonts.com/css/digital-numbers'); /* font-family: 'Digital Numbers', sans-serif; */
-@import url('https://fonts.cdnfonts.com/css/digital-numbers'); /* font-family: 'Digital Numbers', sans-serif; */
- body {
-    background: url("../images/zamboni.webp") center center/cover;
-    color: #FFFFFF;
-    font-family: "Comfortaa", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 10px;
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/digital-numbers"); /* font-family: 'Digital Numbers', sans-serif; */
+@import url("https://fonts.cdnfonts.com/css/digital-numbers"); /* font-family: 'Digital Numbers', sans-serif; */
+body {
+  background: url("../images/zamboni.webp") center center/cover;
+  color: #ffffff;
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 10px;
 }
 .hide {
-    display: none;
+  display: none;
 }
-header{
-    background: url("../images/header_small.png") left;
-    background-size: 100%;
-    height: 100px;
-    border-radius: 10px;
-    margin-bottom: 5px;
-    border: 2px solid rgba(255, 217, 0, 0.692);
+header {
+  background: url("../images/header_small.png") left;
+  background-size: 100%;
+  height: 100px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  border: 2px solid rgba(255, 217, 0, 0.692);
 }
 .big-div {
-    height: 60vh;
-    overflow-y: auto;
+  height: 60vh;
+  overflow-y: auto;
 }
 .grey-div {
-    background: rgba(255, 255, 255, 0.3);
-    border: 2px solid rgba(255, 217, 0, 0.692);
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 10px;
-    text-align: center;
-}
-.footer, #social-media {
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    vertical-align: middle;
-}
-#contact-area {
-    align-items: center;
-}
-#welcome-text {
-    font-size: 14px;
-    font-weight: bold;
-}
-.rules {
-    text-align: left;
-    font-weight: bold;
-}
-.header{
-    opacity: 1;
-    display: flex;
-    border-radius: 20px;
-    height: 100%;
-    width: 100%;
-}
-.titletext {
-    opacity: 1;
-    display: inline-block;
-    align-self: flex-end;
-    font-size: 14px;
-    background-color: #000000;
-    padding: 10px;
-    margin-left: 55%;
-    border-radius: 10px;
-}
-.timer-div {
-    margin: 8px 0;
-}
-#timer {
-    background: #000000;
-    border: 2px solid rgba(255, 217, 0, 0.692);
-    padding: 2px 20px;
-    margin: 10px 0;
-    width: 30px;
-    font-family: 'Digital Numbers', sans-serif;
-    color: #ffee00;
-}
-.correct {
-    font-family: 'Digital Numbers', sans-serif;
-    color: #15ff00;
-}
-.wrong {
-    font-family: 'Digital Numbers', sans-serif;
-    color: #ff0000;
-}
-.inputs {
-    background-color: rgba(0, 0, 0, 0.3);
-    border:2px solid #ffffff;
-    max-width: 200px;
-    padding: 2px;
-    border-radius: 5px;
-    font-size: 14px;
-    color: #FFFFFF;
-}
-#your-name {
-    margin-bottom: 20px;
-}
-input {
-    text-align: center;
-}
-#message {
-    text-align: left;
-}
-.submit {
-    margin-top: 10px;
-    width: 200px;
-}
-#username {
-    display: flex;
-    flex-direction: column;
-}
-#scores {
-    font-family: 'Digital Numbers', sans-serif;
-    background-color: #000000;
-    text-align: center;
-    border: 2px solid #ffffff;
-    font-weight: 400;
-    margin: 5px;
-    padding: 3px;
-}
-.score {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 217, 0, 0.692);
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  text-align: center;
 }
 #question {
-    background-color: #000000;
-    border: 2px solid rgba(255, 217, 0, 0.692);
-    padding: 15px;
-    margin: 5px;
-    border-radius: 10px;
-    font-weight: bold;
-}
-.blue-div {
-    background-color: rgba(0, 238, 255, 0.349);
-    border: 2px solid rgba(255, 0, 0, 0.644);
-    padding: 15px;
-    margin: 5px;
-    border-radius: 10px;
-    font-weight: bold;
-}
-#social-media {
-    margin-top: 15px;
-    font-size: 25px;
-}
-#social-media a {
-    color: #FFFFFF;
-}
-#win {
-    border: 2px solid rgba(0, 255, 21, 0.897);
-}
-#win, #loss {
-    background-color: #000000;
-    padding: 15px;
-    margin: 5px;
-    border-radius: 10px;
-    font-weight: bold;
-}
-#win h2 {
-    color: rgba(0, 255, 21, 0.897);
-}
-#loss {
-    border: 2px solid rgba(255, 0, 0, 0.897);
-}
-#loss h2 {
-    color: rgba(255, 0, 0, 0.897);
+  background-color: #000000;
+  border: 2px solid rgba(255, 217, 0, 0.692);
+  padding: 15px;
+  margin: 5px;
+  border-radius: 10px;
+  font-weight: bold;
 }
 #answers {
     display: grid;
     grid-template-columns: repeat(1, auto);
     gap: 5px;
     margin-top: 20px;
+  }
+.blue-div {
+  background-color: rgba(0, 238, 255, 0.349);
+  border: 2px solid rgba(255, 0, 0, 0.644);
+  padding: 15px;
+  margin: 5px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+#social-media {
+  margin-top: 15px;
+  font-size: 25px;
+}
+#social-media a {
+  color: #ffffff;
+}
+.footer,
+#social-media {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  vertical-align: middle;
+}
+#contact-area {
+  align-items: center;
+}
+#welcome-text {
+  font-size: 14px;
+  font-weight: bold;
+}
+.rules {
+  text-align: left;
+  font-weight: bold;
+}
+.header {
+  opacity: 1;
+  display: flex;
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+}
+.titletext {
+  opacity: 1;
+  display: inline-block;
+  align-self: flex-end;
+  font-size: 14px;
+  background-color: #000000;
+  padding: 10px;
+  margin-left: 55%;
+  border-radius: 10px;
+}
+
+.correct {
+  font-family: "Digital Numbers", sans-serif;
+  color: #15ff00;
+}
+.wrong {
+  font-family: "Digital Numbers", sans-serif;
+  color: #ff0000;
+}
+.inputs {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid #ffffff;
+  max-width: 200px;
+  padding: 2px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #ffffff;
+}
+#your-name {
+  margin-bottom: 20px;
+}
+input {
+  text-align: center;
+}
+#message {
+  text-align: left;
+}
+.submit {
+  margin-top: 10px;
+  width: 200px;
+}
+#username {
+  display: flex;
+  flex-direction: column;
+}
+#scores {
+  font-family: "Digital Numbers", sans-serif;
+  background-color: #000000;
+  text-align: center;
+  border: 2px solid #ffffff;
+  font-weight: 400;
+  margin: 5px;
+  padding: 3px;
+}
+.score {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.timer-div {
+  margin: 8px 0;
+}
+#timer {
+  background: #000000;
+  border: 2px solid rgba(255, 217, 0, 0.692);
+  padding: 2px 20px;
+  margin: 10px 0;
+  width: 30px;
+  font-family: "Digital Numbers", sans-serif;
+  color: #ffee00;
+}
+
+#win {
+  border: 2px solid rgba(0, 255, 21, 0.897);
+}
+#win,
+#loss {
+  background-color: #000000;
+  padding: 15px;
+  margin: 5px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+#win h2 {
+  color: rgba(0, 255, 21, 0.897);
+}
+#loss {
+  border: 2px solid rgba(255, 0, 0, 0.897);
+}
+#loss h2 {
+  color: rgba(255, 0, 0, 0.897);
 }
 .btn {
-    border-radius: 10px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    margin: 3px;
-    font-family: "Comfortaa", sans-serif;
-    color: #FFFFFF;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 3px;
+  font-family: "Comfortaa", sans-serif;
+  color: #ffffff;
 }
 .black-btn {
-    background-color: rgba(0, 0, 0, 0.692);
-    border: none;
-    padding: 10px;
-    display: inline-block;
-    font-size: 12px;
-    width: 120px;
+  background-color: rgba(0, 0, 0, 0.692);
+  border: none;
+  padding: 10px;
+  display: inline-block;
+  font-size: 12px;
+  width: 120px;
 }
-.black-btn:hover , #play-btn:hover {
-    background-color: rgba(36, 36, 36, 0.692);
+.black-btn:hover,
+#play-btn:hover {
+  background-color: rgba(36, 36, 36, 0.692);
 }
 .answerbutton {
-    background-color: rgba(59, 59, 59, 0.623);
-    border: 2px solid rgba(0, 26, 255, 0.692);
-    padding: 5px;
-    font-weight: bold;
+  background-color: rgba(59, 59, 59, 0.623);
+  border: 2px solid rgba(0, 26, 255, 0.692);
+  padding: 5px;
+  font-weight: bold;
 }
-.answerbutton:hover{
-    background-color: rgba(199, 199, 199, 0.623);
+.answerbutton:hover {
+  background-color: rgba(199, 199, 199, 0.623);
 }
 #next-question {
-    margin-top: 20px;
-    border: 2px solid rgba(255, 217, 0, 0.692);
+  margin-top: 20px;
+  border: 2px solid rgba(255, 217, 0, 0.692);
 }
 #restart-game {
-    width: 80px;
+  width: 80px;
 }
 .correctanswer {
-    background-color: rgba(0, 255, 21, 0.623);
-    border: 2px solid rgba(0, 255, 21, 0.897);
+  background-color: rgba(0, 255, 21, 0.623);
+  border: 2px solid rgba(0, 255, 21, 0.897);
 }
 .wronganswer {
-    background-color: rgba(255, 0, 0, 0.623);
-    border: 2px solid rgba(255, 0, 0, 0.897);
+  background-color: rgba(255, 0, 0, 0.623);
+  border: 2px solid rgba(255, 0, 0, 0.897);
 }
 @media (min-width: 400px) {
-    .big-div {
-        height: 55vh;
-   }
-   #restart-game {
+  .big-div {
+    height: 55vh;
+  }
+  #restart-game {
     width: 120px;
-}
+  }
 }
 @media (min-width: 768px) {
-    body {
-        width: 60vw;
-        align-self: center;
-        margin-left: 20%;
-        margin-right: 20%;
-   }
-    header{
-        background: url("../images/header.webp") center;
-   }
-    .form {
-        max-width: 50%;
-   }
-   /* Makes the answerbuttons appear in 2 columns instead of 1 that smaller screen shows*/
-    #answers {
-        grid-template-columns: repeat(2, auto);
-   }
-    .black-btn, div, button, .titletext, u {
-        font-size: 14px;
-   }
-    .rules {
-        font-size: 12px;
-   }
-    #timer, #scores, #welcome-text {
-        font-size: 25px;
-   }
-    #next-question{
-        margin-top: 30px;
-   }
-    .big-div {
-        height: 45vh;
-   }
-    .inputs, .submit {
-        width: 300px;
-   }
-    #message {
-        max-width: 400px;
-   }
+  body {
+    width: 60vw;
+    align-self: center;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  header {
+    background: url("../images/header.webp") center;
+  }
+  .form {
+    max-width: 50%;
+  }
+  /* Makes the answerbuttons appear in 2 columns instead of 1 that smaller screen shows*/
+  #answers {
+    grid-template-columns: repeat(2, auto);
+  }
+  .black-btn,
+  div,
+  button,
+  .titletext,
+  u {
+    font-size: 14px;
+  }
+  .rules {
+    font-size: 12px;
+  }
+  #timer,
+  #scores,
+  #welcome-text {
+    font-size: 25px;
+  }
+  #next-question {
+    margin-top: 30px;
+  }
+  .big-div {
+    height: 45vh;
+  }
+  .inputs,
+  .submit {
+    width: 300px;
+  }
+  #message {
+    max-width: 400px;
+  }
 }
 @media (min-width: 1024px) {
-    body {
-        width: 40vw;
-        align-self: center;
-        margin-left: 30%;
-        margin-right: 30%;
-        font-size: 15px;
-   }
-    button, #question {
-        font-size: 20px;
-   }
-    .big-div {
-        height: 60vh;
-   }
+  body {
+    width: 40vw;
+    align-self: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    font-size: 15px;
+  }
+  button,
+  #question {
+    font-size: 20px;
+  }
+  .big-div {
+    height: 60vh;
+  }
 }
