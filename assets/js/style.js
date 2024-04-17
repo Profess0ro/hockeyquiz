@@ -22,8 +22,8 @@ let shuffledQuestions, currentQuestionIndex;
 //what function will be called when you press the buttons
 StartTheGameButton.addEventListener("click", collectData);
 playButton.addEventListener("click", inputUserName);
-contactButton.addEventListener("click", DoYouWantToLeaveContact);
-mainMenuButton.addEventListener("click", DoYouWantToLeaveMain);
+contactButton.addEventListener("click", showContact);
+mainMenuButton.addEventListener("click", returnToMain);
 RestartButton.addEventListener("click", DoYouWantToRestart);
 
 //When clicking next question it will call the function of displaying the next question.
@@ -40,21 +40,20 @@ function DoYouWantToRestart() {
         if (confirmRestart) {
             playQuiz();
         }
-    } else {
-        playQuiz();
-    }
+    } 
 }
 // If user want to go to quit the game and go to the contact page
 function DoYouWantToLeaveContact() { 
-    if (shuffledQuestions.length > currentQuestionIndex + 1) { // If there is question left in the game a window will ask if they are sure to leave
-    const confirmLeave = window.confirm("Are you sure you want to leave the game?");
-
-    if (confirmLeave) {
-        showContact();
-    }
-    } else {
-        showContact();
-    }
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        const confirmLeave = window.confirm("Are you sure you want to leave the game?");
+        if (confirmLeave) {
+            console.log("Leaving game...");
+            showContact();
+            console.log("showContact() called.");
+        } else {
+            console.log("Cancelled leaving game.");
+        }
+    } 
 }
 // If user want to leave the game pressing "main menu" they will come back to the Main menu
 function DoYouWantToLeaveMain() {
@@ -63,9 +62,7 @@ function DoYouWantToLeaveMain() {
     if (confirmLeave) {
         returnToMain();
     }
-} else {
-    returnToMain();
-}
+} 
 }
 
 //What div will be shown when the function is called
@@ -103,6 +100,8 @@ function playQuiz() {
     RestartButton.classList.remove("hide");
     userWin.classList.add("hide");
     quizWin.classList.add("hide");
+    contactButton.addEventListener("click", DoYouWantToLeaveContact);
+    mainMenuButton.addEventListener("click", DoYouWantToLeaveMain);
     shuffledQuestions = questions.sort(() => Math.random() - 0.5); // this picks a random question from the array of questions
     currentQuestionIndex = 0;
     displayNextQuestion();
@@ -116,6 +115,8 @@ function showContact() {
     RestartButton.classList.add("hide");
     userWin.classList.add("hide");
     quizWin.classList.add("hide");
+    contactButton.addEventListener("click", showContact);
+    mainMenuButton.addEventListener("click", returnToMain);
 }
 // Hides and shows the right div when you click the Main menu button button.
 function returnToMain() {
@@ -126,6 +127,8 @@ function returnToMain() {
     RestartButton.classList.add("hide");
     userWin.classList.add("hide");
     quizWin.classList.add("hide");
+    contactButton.addEventListener("click", showContact);
+    mainMenuButton.addEventListener("click", returnToMain);
 }
 //Before the next question will be shown all conditions of the previous question will be reset
 
@@ -287,6 +290,8 @@ function sendEmail(event) {
         alert("Please fill in your name");
     } else if (document.getElementById("email").value === ""){
         alert("please fill in your email");
+    } else if (document.getElementById("message").value === ""){
+        alert("your message are empty");
     } else {
     emailjs.send("service_jmbyfsi", "template_j35glvk", params)
         .then(function () {
