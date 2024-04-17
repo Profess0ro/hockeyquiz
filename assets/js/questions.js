@@ -116,6 +116,33 @@ const questions = [
             {text: '32', correct: false}
         ]
     },
+    {
+        question: 'How many nationalities are represented in the 2023/2024 season?',
+        answers: [
+            {text: '12', correct: false},
+            {text: '18', correct: true},
+            {text: '15', correct: false},
+            {text: '20', correct: false}
+        ]
+    },
+    {
+        question: 'In what country was former NHL goalie born?',
+        answers: [
+            {text: 'Switzerland', correct: false},
+            {text: 'Germany', correct: false},
+            {text: 'South Africa', correct: true},
+            {text: 'Austria', correct: false}
+        ]
+    },
+    {
+        question: 'Mike Sillinger has played for most teams during his 18 seasons in the NHL, how many teams did he represent?',
+        answers: [
+            {text: '10', correct: false},
+            {text: '11', correct: false},
+            {text: '12', correct: true},
+            {text: '13', correct: false}
+        ]
+    },
  /**    {
         question: '',
         answers: [
