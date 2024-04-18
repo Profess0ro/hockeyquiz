@@ -63,10 +63,10 @@ header {
   border: 2px solid #ffffff;
 }
 #social-media a {
-  color: #ffffff;
+  color: rgba(255, 0, 0, 0.644);
 }
 #social-media a:hover {
-  color: rgba(255, 0, 0, 0.644);
+  color: rgb(255, 150, 150, 0.644);
 }
 .footer,
 #social-media {
