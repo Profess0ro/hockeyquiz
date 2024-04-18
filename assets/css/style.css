@@ -59,8 +59,14 @@ header {
   margin-top: 15px;
   font-size: 25px;
 }
+#send-email {
+  border: 2px solid #ffffff;
+}
 #social-media a {
   color: #ffffff;
+}
+#social-media a:hover {
+  color: rgba(255, 0, 0, 0.644);
 }
 .footer,
 #social-media {
