@@ -26,6 +26,27 @@ On the main page there options for the user and there will be an instruction on 
 <img src="wireframes/contact.png"><br>
 
 # Testing
+`Home Page`
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Contact button | Directed to contact page | Clicked on Contact | Contact page was loaded | Pass |
+| Main menu button | No other page shall be visual | Clicked on Main menu | Nothing happened | Pass |
+| Play button | Directed to name input page | Clicked on Play | Name input was loaded | Pass |
+
+`Name input`
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Leaving namefield empty | Message be shown when left empty | Left the field empty and clicked Start! | Message told me to fill in my name | Pass |
+| Start the game | Question should be displayed when you fill in the name | Filled in name and clicked Start! | A question was shown and the quiz started | Pass |
+| Main menu | Directed back to home page | Clicked on Main menu | Home page was loaded | Pass | 
+| Contact | Directed to contact page | Clicked on Contact | Pass |
+
+`Game page`
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Timer start countdown from 30 |
+
 
 ## Bugs 
 <img src="readme/bug1.png">
