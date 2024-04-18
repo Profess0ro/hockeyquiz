@@ -1,22 +1,32 @@
 # Hockeyquiz
 
-### A quiz with questions of the fantastic quiz och hockey!
-I want this quiz to be fun and not be questions about the quiz and the rules of the quiz. This will be a quiz about unique happenings that occur on or off the rink during a hockeyquiz. So even the people that have a lot of knowledge of the quiz of hockey will have a challenge. 
+### Purpose of this quiz
+I want this quiz to:<br> - be fun and educational about the game of hockey. <br> - be about unique happenings that occur on or off the rink during a hockeyquiz. <br>- be challenging so when the player guesses wrong, they are not served the correct answer. The player must restart the game and try again to find out the right answer.
 
-[User Stories](#user-stories)<br>
+[User stories](#user-stories)<br>
+[Features](#features)<br>
+[Flowchart](#flowchart)<br>
+[Future features](#future-features)<br>
+[Typography and color scheme](#typography-and-color-scheme)<br>
 [Wireframes](#wireframes)<br>
 [Testing](#testing)<br>
+[Validation](#validation)<br>
 [Bugs](#bugs)<br>
+[Deployment](#deployment)<br>
+[Credits](#credits)<br>
 [Resources](#resources)
 
 # User stories
-- **Main page:** As a visiting user I will be presented what type of quiz this is and have the possibility to either start the quiz or contact the creator.
-- **Start quiz** As a visitung user I will be inserting my name before the quiz starts.
-- **Contact:** As a visiting user I want to share my feedback to the creator.
-- **quiz pages:** As a visiting user I´m being presented the question and 4 alternatives as answers, when pressing an answer I will be presented if I choose right or wrong. When I´m playing the quiz there´s also possibilities to cancel the quiz by pressing "Main menu". When pressing the button I will be asked if I´m really sure to exit or not.
+### First time visitor
+As a first time visiting: <br>- I will have instructions on how this quiz works directly when arriving to the main page.<br>- I can easily find the play button to start the quiz<br>- I can share my feedback about this quiz at the contact page.
+
+### Returning visitor
+As a returning visitor: <br>- I will have new question every game I´m playing the quiz since it´s only picks 11 random questions out of the array.
+
+### Frequently visitor
+As a frequently visitor: <br>- I want to challenge myself and win with 11 - 0 to the quiz since the correct answer only shows if you have answered right.
 
 # Features
-
 
 - ### **Main page:**<br>
 Here the user will find instruction on how this quiz works. <br>From this page the user can also navigate to main page and contact by clicking the buttons in the footer.<br>
@@ -25,21 +35,30 @@ Here the user will find instruction on how this quiz works. <br>From this page t
 
 - ### **Contact page:**<br>
 Here the user will find:<br>- form to submit feedback about the quiz<br>- Links to social media of the creator.<br>
-From this page the user can only navigate to the main page by clicking the button in the footer.
+From this page the user can only navigate to the main page by clicking the button in the footer.<br><br>
+<img src="readme/contact.png"><br>
 
 - ### **Start the quiz page:**<br>
 Here the quiz wants the user to fill in their name so that can be on the scoreboard when the quiz starts.<br>
-From this page the user can also navigate to main page and contact by clicking the buttons in the footer.
+From this page the user can also navigate to main page and contact by clicking the buttons in the footer.<br><br>
+<img src="readme/startquiz.png"><br>
 
 - ### **Quiz page:**<br>
-When the quiz starts a question will be shown, timer will count down from 30 seconds and 4 answering buttons will be shown.<br>
-The name the user put in before will be shown at the scoreboard.<br>
-The score updates when a question has been answered or the timer runs out<br>
-Now their are a restart button visible between "Main menu" and "Contact". <br>Clicking on one of these 3 buttons (Main menu/Restart/Contact) during the quiz will ask the user if really want to leave?<br>If the match has ended there will be no question asking the user if they want to leave.<br>
-When the quiz has ended the user will get a message if they won or lost the match against the quiz<br>
-  
+(1) When the quiz starts a question will be shown, timer will count down from 30 seconds and 4 answering buttons will be shown.<br>
+(2) The name the user put in before will be shown at the scoreboard.<br>
+(3) The score updates when a question has been answered or the timer runs out<br>
+(4) Now their are a restart button visible between "Main menu" and "Contact". <br>(5) Clicking on one of these 3 buttons (Main menu/Restart/Contact) during the quiz will ask the user if really want to leave?<br>If the match has ended there will be no question asking the user if they want to leave.<br>
+(6) When the quiz has ended the user will get a message if they won or lost the match against the quiz<br>
+<img src="readme/quiz.png"><br><img src="readme/endquiz.png">
 
+# **Flowchart**<br>
 <br><br><img src="readme/flowchart.png"><br>
+
+# **Future features**
+- I would like to improve this quiz with a function where visitors can send in questions that I can review and paste to the game
+
+# **Typography and color scheme**
+
 
 # Wireframes
 Here are my first blueprints on how I wanted this quiz to look.<br>The finished quiz looks pretty similar to how I wanted it to look.<br><br>
@@ -98,18 +117,22 @@ Here are my first blueprints on how I wanted this quiz to look.<br>The finished 
 | Sending feedback | If all inputs have been filled correctly a message will thank<br>and also a thank you email will be recieved in senders inbox | Filled in all fields correctly and clicked send | A message thanked me and I´ve also got a thank you email in my inbox | Pass |
 
 
-
-
-
-## Bugs 
-<img src="readme/bug1.png">
-
 # Validation
 
+# Bugs 
+<img src="readme/bug1.png"><br><img src="readme/bug2.png"><br><img src="readme/bug3.png"><br><img src="readme/bug4.png"><br>
+
+# Deployment
+
+# Credits 
+
+- https://github.com/bezebee/My-First-Project/blob/main/README.md#manual-testing - Bezebee, for a great README that help me.
+- https://www.youtube.com/watch?v=riDzcEQbX6k - Web Dev Simplified, for a great tutorial on the basic structure of the quiz.
+- https://www.youtube.com/watch?v=BgVjild0C9A - CodeEasy, for helping me get the contact form to function properly.
+
+
 # Resources
-- Basic structure of the quiz: https://www.youtube.com/watch?v=riDzcEQbX6k
 - Javascript codes: https://www.w3schools.com/ and https://codeinstitute.net/ 
-- Tutorial for feedback form: https://www.youtube.com/watch?v=BgVjild0C9A
 - Background image: https://unsplash.com/
 - Header image: https://www.pexels.com/sv-se/
 - Favicon: https://favicon.io/emoji-favicons/ice-hockey/
