@@ -260,7 +260,7 @@ input {
     font-size: 12px;
   }
   #timer,
-  #scores,
+  .score,
   #welcome-text {
     font-size: 25px;
   }
