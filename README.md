@@ -67,10 +67,15 @@ On the main page there options for the user and there will be an instruction on 
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Facebook link | When clicking on the facebook symbol<br>the profile of the maker will be shown in a new window | Clicked on the facebook logo | The facebookprofile of the creator was opened in a new window | Pass |
-| Instagram link | When clicking on the facebook symbol<br>the profile of the maker will be shown in a new window | Clicked on the instagram logo | The instagramprofile of the creator was opened in a new window | Pass |
-| Name input | When the namefield left empty <br>a message will be shown and tell the field was empty | Left the field empty and press send | A message told me to fill in the name | Pass |
-| Email input | When left 
+| Facebook link | When clicking on the facebook symbol:<br>the profile of the maker will be shown in a new window | Clicked on the facebook logo | The facebookprofile of the creator was opened in a new window | Pass |
+| Instagram link | When clicking on the facebook symbol:<br>the profile of the maker will be shown in a new window | Clicked on the instagram logo | The instagramprofile of the creator was opened in a new window | Pass |
+| Name input | Check if namefield has been filled <br>If empty a message will be shown and tell the field was empty | Left the namefield empty and press send | A message told me to fill in the name | Pass |
+| Email input empty | Check if emailfield has been filled<br>If empty a message will be shown and tell the field was empty | Left the emailfield empty and press send | A message told me to fill in an email | Pass |
+| Email validation | Check if a valid email has been filled<br>If unvalid a message will be shown and tell to fill in a valid email | Filled in a valid & unvalid email | When unvalid email was filled in the field,<br> a message told me to fill in a valid email.<br>When a valid email was filled in the field,<br>no message was shown to me | Pass |
+| Message input | Check if message has been filled<br>If empty a message will be shown tell the message was empty | Left messagefield empty | A message told me to fill in the message | Pass |
+| Sending feedback | If all inputs have been filled correctly a message will thank<br>and also a thank you email will be recieved in senders inbox | Filled in all fields correctly and clicked send | A message thanked me and I´ve also got a thank you email in my inbox | Pass |
+
+
 
 
 
