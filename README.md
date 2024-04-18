@@ -59,9 +59,34 @@ From this page the user can also navigate to main page and contact by clicking t
 
 # **Typography and color scheme**
 
+### **Fonts:**
+<img src="readme/font1.png"><br><br>
+- For all the text on this site I´ve used the font called ["Comfortaa"](https://fonts.google.com/?preview.text=Hockeyquiz&query=comfortaa).
+<img src="readme/font2.png"><br><br>
+- For the scoreboard and timer the font called ["Digital numbers"](https://www.cdnfonts.com/digital-numbers.font). This font makes the scoreboard look very similar to a old style scoreboard.
+
+### **Color scheme**
+- For the colors on this site I wanted it to look very similar to the colors used on the ice in a hockey arena.<br>
+- All text on this site are in white (#FFFFFF) except for the scores, timer and win/loss title at the end of the quiz.<br><br>
+<img src="readme/colorscheme1.png"><br><br>
+- The background on the main div and the footer are the rgba code (rgba(255, 255, 255, 0.3);) This color representing the ice. 
+- The border on the main div/footer/next question/timer are the rgba code (rgba(255, 217, 0, 0.692);). This color representing the lower part on the boards around the ice.
+- The background in the instruction div and contact form are the rgba code (rgba(0, 238, 255, 0.349);). This color representing the goalies area in front of the net.
+- The border around the instruction div and contact form are the rgba code (rgba(255, 0, 0, 0.644);) this color are also used on social media links and the loss message at the end of the quiz. This color are representing the redlines on the ice.
+- The buttons on the site are representing pucks with (rgba(0, 0, 0, 0.692);) as background and a hovering effect with the color (rgba(199, 199, 199, 0.623);).<br>
+<img src="readme/colorscheme2.png"><img src="readme/colorscheme3.png"><br><br>
+- The font colors for the players score are (#15ff00) and for the quiz score (#ff0000).
+- The scoreboard/timer/question have black (#000000) as background so the content inside are easy to read with the white text.
+- The answerbuttons background are (rgba(59, 59, 59, 0.623);) with a the border color (rgba(0, 26, 255, 0.692);) representing the blue lines on the ice.
+- The right answers buttons colors are (rgba(0, 255, 21, 0.623);) for the background and (rgba(0, 255, 21, 0.897);) for the border.
+- The wrong answers buttons color are (rgba(255, 0, 0, 0.623);) for the background and (rgba(255, 0, 0, 0.897);) for the border.
+- The win div at the end of the quiz has a black background (#000000) and (rgba(0, 255, 21, 0.897)) as border color and heading text.
+- The loss div at the end of the quiz has a black background (#000000) and (rgba(255, 0, 0, 0.644);) as border color and heading text.
+
 
 # Wireframes
-Here are my first blueprints on how I wanted this quiz to look.<br>The finished quiz looks pretty similar to how I wanted it to look.<br><br>
+Used Balsamiq to do the wireframes before i started coding this quiz.
+Here are my first blueprints on how I wanted this quiz to look.<br><br>
 <img src="wireframes/start.png"><br>
 <img src="wireframes/game.png"><br>
 <img src="wireframes/contact.png"><br>
