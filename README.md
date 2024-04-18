@@ -38,14 +38,29 @@ On the main page there options for the user and there will be an instruction on 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Leaving namefield empty | Message be shown when left empty | Left the field empty and clicked Start! | Message told me to fill in my name | Pass |
-| Start the game | Question should be displayed when you fill in the name | Filled in name and clicked Start! | A question was shown and the quiz started | Pass |
+| Start the game | Question should be displayed when I have filled in a name | Filled in a name and clicked Start! | A question was shown and the quiz started | Pass |
 | Main menu | Directed back to home page | Clicked on Main menu | Home page was loaded | Pass | 
 | Contact | Directed to contact page | Clicked on Contact | Pass |
 
-`Game page`
+`Quiz page`
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Timer start countdown from 30 |
+| Name to scoreboard | The name I filled in before starting <br>shall be visual on scoreboard | Filled in a name and clicked start | The name was on the scoreboard vs. quiz | Pass |
+| Timer start countdown from 30 | When quiz starts, the timer shall begin at 30 | Clicked start  | When quiz started the timer started at 30 | Pass |
+| Question displays | When quiz starts a random question from the array<br>shall be shown with answer options | Clicked start | A random question from the array <br>was displayed when game started | Pass
+| Answering right | - Timer shall stop <br>- Only selected answer shall change color (green) <br>- Point to user<br>- All answers shall be blocked<br>- Button for next question shall be visible | Clicked on right answer | - Timer stopped <br>- Answer changed to green <br>- Point was given to user<br>- All answered was blocked<br>- Button for next question was shown | Pass |
+| Answering wrong | - Timer shall stop <br>- Only selected answer shall change color (red) <br>- Point to quiz<br>- All answers shall be blocked<br>- Button for next question shall be visible | Clicked on wrong answer | - Timer stopped <br>- Answer changed to red <br>- Point was given to quiz<br>- All answered was blocked<br>- Button for next question was shown | Pass |
+| Timer runs out | - All answer should be blocked<br>- Point to quiz<br>- Button for next question shall be visible | Let the timer run out | - All answer was blocked<br>- Point was given to the quiz<br>- Button for the next question was shown | Pass |
+| Quiz stops after 11th question | Since there is more question in the array than 11,<br> button for next question shall not be shown <br>when answered the 11th question | Answered 11th question | Button for next question wasn´t shown | Pass |
+| Winning against the quiz | Score more than the quiz and a win message shall be shown | Won against the quiz | Message that I won the game against the quiz | Pass |
+| Loosing to the quiz | Score less than the quiz and a loss message shall be shown | Loosing to the quiz | Message that I lost to the quiz | Pass |
+| Main menu (during the game) | If 11 questions haven´t been answered:<br>I will be asked if I´m sure to leave?<br>Answering yes will direct me back to main menu.<br>Cancelling should bring me back to the quiz. | Clicked Main menu <br>(during the game) | I was asked to leave the game or not<br>Clicked yes and was directed back to the main menu<br>Cancelled the message and the quiz continued | Pass |
+| Main menu (quiz ended) | When 11 questions have been answered:<br>I won´t be asked to leave and directed back to main menu | Clicked Main menu <br>(when game finished) | I wasn´t asked to leave the game<br>and got back to main menu | Pass |
+| Contact (during the game)| If 11 questions haven´t been answered<br> I will be asked if I'm sure to leave<br>Answering yes will direct me to the contact page<br>Cancelling should bring me back to the quiz | Clicked Contact <br>(during the game) | I was asked to leave the game or not<br>Clicked yes and was directed to the contact page<br>Cancelled the message and the quiz continued | Pass |
+| Contact (quiz ended)| When 11 questions have been answered<br> I won´t be asked if I'm sure to leave. | Clicked Contact <br>(when quiz ended) | I wasn´t asked to leave the game<br>and the contact page was shown | Pass |
+| Restart (during the game) | If 11 questions haven´t been answered<br> I will be asked if I´m sure to leave<br>Answering yes will restart the game<br>Cancelling should bring me back to the quiz | Clicked Restart <br>(during the game) | I was asked to leave the game or not<br>Clicked yes and the game restarted with the scoreboard reset<br>Cancelled the message and the quiz continued | Pass |
+| Restart (quiz ended) | If 11 questions have been answered<br> I won´t be asked if I´m sure to leave<br>and the game shall restart | Clicked Restart <br>(quiz ended) | I wasn´t asked to leave the game or not<br> and the game restarted with the scoreboard reset | Pass |
+
 
 
 ## Bugs 
