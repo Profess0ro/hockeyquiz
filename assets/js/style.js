@@ -159,7 +159,7 @@ let timer = null;
  * It also starts a new timer that counts down from 20.
  */
 function showQuestion(questions) {
-    let count = 20; 
+    let count = 30; 
 
     document.getElementById("timer").innerText = count;
 
