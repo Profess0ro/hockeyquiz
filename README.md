@@ -35,6 +35,7 @@ On the main page there options for the user and there will be an instruction on 
 | Play button | Directed to name input page | Clicked on Play | Name input was loaded | Pass |
 
 `Name input`
+
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Leaving namefield empty | Message be shown when left empty | Left the field empty and clicked Start! | Message told me to fill in my name | Pass |
@@ -43,6 +44,7 @@ On the main page there options for the user and there will be an instruction on 
 | Contact | Directed to contact page | Clicked on Contact | Pass |
 
 `Quiz page`
+
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Name to scoreboard | The name I filled in before starting <br>shall be visual on scoreboard | Filled in a name and clicked start | The name was on the scoreboard vs. quiz | Pass |
@@ -60,6 +62,15 @@ On the main page there options for the user and there will be an instruction on 
 | Contact (quiz ended)| When 11 questions have been answered<br> I won´t be asked if I'm sure to leave. | Clicked Contact <br>(when quiz ended) | I wasn´t asked to leave the game<br>and the contact page was shown | Pass |
 | Restart (during the game) | If 11 questions haven´t been answered<br> I will be asked if I´m sure to leave<br>Answering yes will restart the game<br>Cancelling should bring me back to the quiz | Clicked Restart <br>(during the game) | I was asked to leave the game or not<br>Clicked yes and the game restarted with the scoreboard reset<br>Cancelled the message and the quiz continued | Pass |
 | Restart (quiz ended) | If 11 questions have been answered<br> I won´t be asked if I´m sure to leave<br>and the game shall restart | Clicked Restart <br>(quiz ended) | I wasn´t asked to leave the game or not<br> and the game restarted with the scoreboard reset | Pass |
+
+`Contact page`
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Facebook link | When clicking on the facebook symbol<br>the profile of the maker will be shown in a new window | Clicked on the facebook logo | The facebookprofile of the creator was opened in a new window | Pass |
+| Instagram link | When clicking on the facebook symbol<br>the profile of the maker will be shown in a new window | Clicked on the instagram logo | The instagramprofile of the creator was opened in a new window | Pass |
+| Name input | When the namefield left empty <br>a message will be shown and tell the field was empty | Left the field empty and press send | A message told me to fill in the name | Pass |
+| Email input | When left 
 
 
 

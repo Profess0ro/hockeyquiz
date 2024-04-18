@@ -303,17 +303,25 @@ function sendEmail(event) {
         email : document.getElementById("email").value,
         message : document.getElementById("message").value,
     };
-    // This shows a warning if any of the fields are empty when submitting feedback
-    if (document.getElementById("name").value === ""){
+    // Email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(params.email)) {
+        alert("Please enter a valid email address");
+        return; 
+    }
+
+    // Check if any of the fields are empty
+    if (params.name === "") {
         alert("Please fill in your name");
-    } else if (document.getElementById("email").value === ""){
-        alert("please fill in your email");
-    } else if (document.getElementById("message").value === ""){
-        alert("your message are empty");
+    } else if (params.email === "") {
+        alert("Please fill in your email");
+    } else if (params.message === "") {
+        alert("Your message is empty");
     } else {
-    emailjs.send("service_jmbyfsi", "template_j35glvk", params)
-        .then(function () {
-            alert("Thank you for the feedback!");
+        emailjs.send("service_jmbyfsi", "template_j35glvk", params)
+            .then(function () {
+                alert("Thank you for the feedback!");
 
             // Reset the value of the forms input fields when feedback has been sent
             document.getElementById("name").value = "";
