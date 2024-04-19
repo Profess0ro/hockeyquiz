@@ -126,7 +126,7 @@ const questions = [
         ]
     },
     {
-        question: 'In what country was former NHL goalie born?',
+        question: 'In what country was former NHL goalie Olaf Kölzig born?',
         answers: [
             {text: 'Switzerland', correct: false},
             {text: 'Germany', correct: false},
