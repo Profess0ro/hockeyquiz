@@ -40,7 +40,7 @@ function resetButtons() {
 }
 // Adding game status to buttons so you´ll be asked if you are sure to leave the game or not.
 function setGameStatus() {
-    RestartButton.removeEventListener("click", playQuiz);
+    RestartButton.removeEventListener("click", inputUserName);
     mainMenuButton.removeEventListener("click", returnToMain);
     contactButton.removeEventListener("click", showContact);
     mainMenuButton.addEventListener("click", DoYouWantToLeaveMain);
@@ -49,7 +49,7 @@ function setGameStatus() {
 }
 // Change which function to be called by restart button so you don´t get the question if you want to leave the game or not
 function endGameRestart(){
-    RestartButton.addEventListener("click", playQuiz);
+    RestartButton.addEventListener("click", inputUserName);
     RestartButton.removeEventListener("click", DoYouWantToRestart);
 }
 
@@ -59,7 +59,7 @@ function DoYouWantToRestart() {
         const confirmRestart = window.confirm("Are you sure you want to restart?");
 
         if (confirmRestart) {
-            playQuiz();
+            inputUserName();
         }
     } 
 }
