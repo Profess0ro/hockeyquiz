@@ -28,6 +28,7 @@ let quizWin = document.getElementById("loss");
 let shuffledQuestions = null;
 let currentQuestionIndex = null;
 
+function initializeGame() {
 /** 
  * What function will be called 
  * by default when you click 
@@ -50,6 +51,7 @@ nextQuestionButton.addEventListener("click", () => {
     currentQuestionIndex++;
     displayNextQuestion();
 });
+}
 /** 
  * Sets the buttons eventlistener 
  * to original state so you don´t 
@@ -95,10 +97,10 @@ function endGameRestart() {
  * */ 
 function DoYouWantToRestart() {
     if (11 > currentQuestionIndex + 1) {
-        const confirmRestart = window.confirm
+        const CONFIRMRESTART = window.confirm
         ("Are you sure you want to restart?");
 
-        if (confirmRestart) {
+        if (CONFIRMRESTART) {
             inputUserName();
         }
     }
@@ -111,9 +113,9 @@ function DoYouWantToRestart() {
  * */ 
 function DoYouWantToLeaveContact() {
     if (11 > currentQuestionIndex + 1) {
-        const confirmLeave = window.confirm
+        const CONFIRMLEAVE = window.confirm
         ("Are you sure you want to leave the game?");
-        if (confirmLeave) {
+        if (CONFIRMLEAVE) {
             showContact();
         }
     }
@@ -126,9 +128,9 @@ function DoYouWantToLeaveContact() {
  * */ 
 function DoYouWantToLeaveMain() {
     if (11 > currentQuestionIndex + 1) { 
-        const confirmLeave = window.confirm
+        const CONFIRMLEAVE = window.confirm
         ("Are you sure you want to leave the game?");
-        if (confirmLeave) {
+        if (CONFIRMLEAVE) {
             returnToMain();
         }
     }
@@ -159,19 +161,19 @@ function inputUserName() {
  * have been registered
  * */ 
 function collectRescentScore() {
-    const player = localStorage.getItem("latestUser");
-    const score = localStorage.getItem("latestScore");
+    const PLAYER = localStorage.getItem("latestUser");
+    const SCORE = localStorage.getItem("latestScore");
 
-    const rescentPlayerElement = document.getElementById("rescent-player");
-    const rescentScoreElement = document.getElementById("rescent-score");
-    if (player && score) {
+    const RESCENTPLAYERELEMENT = document.getElementById("rescent-player");
+    const RESCENTSCOREELEMENT = document.getElementById("rescent-score");
+    if (PLAYER && SCORE) {
 
-        rescentPlayerElement.textContent = player;
-        rescentScoreElement.textContent = score;
+        RESCENTPLAYERELEMENT.textContent = PLAYER;
+        RESCENTSCOREELEMENT.textContent = SCORE;
     } else {
 
-        rescentPlayerElement.innerText = "No finished games registered";
-        rescentScoreElement.innerText = "";
+        RESCENTPLAYERELEMENT.innerText = "No finished games registered";
+        RESCENTSCOREELEMENT.innerText = "";
     }
 }
 
@@ -183,23 +185,23 @@ function collectRescentScore() {
  * at the scoreboard
  * */ 
 function collectData() {
-    const inputField = document.getElementById("your-name");
-    const inputValue = inputField.value;
+    const INPUTFIELD = document.getElementById("your-name");
+    const INPUTVALUE = INPUTFIELD.value;
 
 /** 
  * If you left the namefield empty 
  * a warning will be displayed 
  * and send you back.
  * */ 
-    if (inputValue === "") {
+    if (INPUTVALUE === "") {
         alert("You didn't fill in your name"); 
         inputUserName();
     } else {
         playQuiz(); 
     }
  
-    const outputSpan = document.getElementById("username");
-    outputSpan.innerText = inputValue;
+    const OUTPUTSPAN = document.getElementById("username");
+    OUTPUTSPAN.innerText = inputValue;
 }
 
 /** 
@@ -326,13 +328,13 @@ function showQuestion(questions) {
      * */ 
     questionContent.innerText = questions.question; 
     questions.answers.forEach((answer) => {
-        const button = document.createElement("button"); 
-        button.innerText = answer.text;
-        button.classList.add("answerbutton", "btn"); 
+        const BUTTON = document.createElement("button"); 
+        BUTTON.innerText = answer.text;
+        BUTTON.classList.add("answerbutton", "btn"); 
         if (answer.correct) {
-            button.dataset.correct = answer.correct; 
+            BUTTON.dataset.correct = answer.correct; 
         }
-        button.addEventListener("click", selectAnswer); 
+        BUTTON.addEventListener("click", selectAnswer); 
         answerButtons.appendChild(button);
     });
 }
@@ -365,8 +367,8 @@ function resetState() {
 
 function selectAnswer(e) {
     clearInterval(timer);
-    const selectedButton = e.target;
-    const correct = selectedButton.dataset.correct;
+    const SELECTEDBUTTON = e.target;
+    const CORRECT = SELECTEDBUTTON.dataset.correct;
 
     Array.from(answerButtons.children).forEach((button) => { 
         button.disabled = true;
@@ -376,17 +378,17 @@ function selectAnswer(e) {
      clearStatusClass(button);
     });
 
-    if (correct === "true") {
+    if (CORRECT === "true") {
         /** 
          * Add status class to 
          * the selected button 
          * if it´s correct or 
          * wrong answer
          * */ 
-        selectedButton.classList.add("correctanswer");
+        SELECTEDBUTTON.classList.add("correctanswer");
         addRightAnswer();
     } else {
-        selectedButton.classList.add("wronganswer");
+        SELECTEDBUTTON.classList.add("wronganswer");
         addWrongAnswer();
     }
         /** 
@@ -421,13 +423,13 @@ function clearStatusClass(button) {
  * been selected
  * */ 
 function addRightAnswer() {
-    const correctScoreElement = document.querySelector("#scores .correct");
+    const CORRECTSCOREELEMENT = document.querySelector("#scores .correct");
 
-    let oldCorrectScore = parseInt(correctScoreElement.innerText);
+    let oldCorrectScore = parseInt(CORRECTSCOREELEMENT.innerText);
 
     if (!isNaN(oldCorrectScore)) {
-        const newCorrectScore = oldCorrectScore + 1;
-        correctScoreElement.innerText = newCorrectScore;
+        const NEWCORRECTSCORE = oldCorrectScore + 1;
+        CORRECTSCOREELEMENT.innerText = NEWCORRECTSCORE;
     }
 }
 
@@ -438,13 +440,13 @@ function addRightAnswer() {
  * are wrong
  * */ 
 function addWrongAnswer() {
-    const correctScoreElement = document.querySelector("#scores .wrong");
+    const CORRECTSCOREELEMENT = document.querySelector("#scores .wrong");
 
-    let oldCorrectScore = parseInt(correctScoreElement.innerText);
+    let oldCorrectScore = parseInt(CORRECTSCOREELEMENT.innerText);
 
     if (!isNaN(oldCorrectScore)) {
-        const newCorrectScore = oldCorrectScore + 1;
-        correctScoreElement.innerText = newCorrectScore;
+        const NEWCORRECTSCORE = oldCorrectScore + 1;
+        CORRECTSCOREELEMENT.innerText = NEWCORRECTSCORE;
     }
 }
 /** 
@@ -453,11 +455,11 @@ function addWrongAnswer() {
  * you restart the game
  * */ 
 function resetScore() {
-    const correctScoreElement = document.querySelector("#scores .correct");
-    const wrongScoreElement = document.querySelector("#scores .wrong");
+    const CORRECTSCOREELEMENT = document.querySelector("#scores .correct");
+    const WRONGSCOREELEMENT = document.querySelector("#scores .wrong");
 
-    correctScoreElement.innerText = "0";
-    wrongScoreElement.innerText = "0";
+    CORRECTSCOREELEMENT.innerText = "0";
+    WRONGSCOREELEMENT.innerText = "0";
 }
 /** 
  * This function checks 
@@ -469,12 +471,12 @@ function resetScore() {
 function finalScore() {
     resetButtons();
     endGameRestart();
-    const correctScore = 
+    const CORRECTSCORE = 
     parseInt(document.querySelector("#scores .correct").innerText);
-    const wrongScore = 
+    const WRONGSCORE = 
     parseInt(document.querySelector("#scores .wrong").innerText);
 
-    if (correctScore > wrongScore) {
+    if (CORRECTSCORE > WRONGSCORE) {
         userWin.classList.remove("hide");
         quizWin.classList.add("hide");
     } else {
@@ -493,18 +495,18 @@ function finalScore() {
  * before the quiz starts 
  * */
 function yourRescentScore() {
-    const player = document.getElementById("username").textContent;
-    const playerScore = 
+    const PLAYER = document.getElementById("username").textContent;
+    const PLAYERSCORE = 
     parseInt(document.querySelector("#scores .correct").innerText);
-    const quizScore = 
+    const QUIZSCORE = 
     parseInt(document.querySelector("#scores .wrong").innerText);
 
-    const rescentPlayerElement = document.getElementById("rescent-player");
-    const rescentScoreElement = document.getElementById("rescent-score");
+    const RESCENTPLAYERELEMENT = document.getElementById("rescent-player");
+    const RESCENTSCOREELEMENT = document.getElementById("rescent-score");
 
-    rescentPlayerElement.textContent = player;
-    rescentScoreElement.textContent = 
-    " scored " + playerScore + " - " + quizScore;
+    RESCENTPLAYERELEMENT.textContent = PLAYER;
+    RESCENTSCOREELEMENT.textContent = 
+    " scored " + PLAYERSCORE + " - " + QUIZSCORE;
 
     localStorage.setItem("latestUser", player);
     localStorage.setItem("latestScore", rescentScoreElement.textContent);
@@ -537,9 +539,9 @@ function sendEmail(event) {
         message: document.getElementById("message").value,
     };
     // Email validation
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const EMAILPATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!emailPattern.test(params.email)) {
+    if (!EMAILPATTERN.test(params.email)) {
         alert("Please enter a valid email address");
         return;
     }
