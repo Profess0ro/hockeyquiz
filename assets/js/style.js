@@ -91,15 +91,23 @@ function inputUserName() {
     RestartButton.classList.add("hide");
     collectRescentScore();
 }
+
+// This function will collect last finished game or show a message that no games have been registered
 function collectRescentScore() {
     const player = localStorage.getItem("latestUser");
     const score = localStorage.getItem("latestScore");
 
         const rescentPlayerElement = document.getElementById("rescent-player");
         const rescentScoreElement = document.getElementById("rescent-score");
-
-        rescentPlayerElement.textContent = player;
-        rescentScoreElement.textContent = score;
+        if (player && score) {
+            
+            rescentPlayerElement.textContent = player;
+            rescentScoreElement.textContent = score;
+        } else {
+            
+            rescentPlayerElement.innerText = "No finished games registered";
+            rescentScoreElement.innerText = "";
+        }
     }
 
 
