@@ -52,6 +52,17 @@ nextQuestionButton.addEventListener("click", () => {
     displayNextQuestion();
 });
 }
+function hideAreas(areaToDisplay) {
+    welcomeArea.classList.add("hide");
+    questionContentArea.classList.add("hide");
+    contactArea.classList.add("hide");
+    inputNameArea.classList.add("hide");
+    restartButton.classList.add("hide");
+    userWin.classList.add("hide");
+    quizWin.classList.add("hide");  
+   areaToDisplay.classList.remove("hide");
+    
+}
 /** 
  * Sets the buttons eventlistener 
  * to original state so you don´t 
@@ -141,11 +152,7 @@ function DoYouWantToLeaveMain() {
  * the right div will be shown
  * */ 
 function inputUserName() {
-    welcomeArea.classList.add("hide");
-    questionContentArea.classList.add("hide");
-    contactArea.classList.add("hide");
-    inputNameArea.classList.remove("hide");
-    restartButton.classList.add("hide");
+    hideAreas(inputNameArea);
     collectRescentScore();
     document.addEventListener("keydown", function(event) {
         if (event.key === "Enter") {
@@ -213,13 +220,8 @@ function collectData() {
 function playQuiz() {
     setGameStatus();
     resetScore();
-    welcomeArea.classList.add("hide");
-    questionContentArea.classList.remove("hide");
-    contactArea.classList.add("hide");
-    inputNameArea.classList.add("hide");
+    hideAreas(questionContentArea);
     restartButton.classList.remove("hide");
-    userWin.classList.add("hide");
-    quizWin.classList.add("hide");
 /**
  * This picks a random question 
  * from the array of questions 
@@ -235,14 +237,7 @@ function playQuiz() {
  * */ 
 function showContact() {
     resetButtons();
-    welcomeArea.classList.add("hide");
-    questionContentArea.classList.add("hide");
-    contactArea.classList.remove("hide");
-    inputNameArea.classList.add("hide");
-    restartButton.classList.add("hide");
-    userWin.classList.add("hide");
-    quizWin.classList.add("hide");
-
+    hideAreas(contactArea);
 }
 /** 
  * Hides and shows the right div 
@@ -250,13 +245,7 @@ function showContact() {
  * */ 
 function returnToMain() {
     resetButtons();
-    questionContentArea.classList.add("hide");
-    contactArea.classList.add("hide");
-    welcomeArea.classList.remove("hide");
-    inputNameArea.classList.add("hide");
-    restartButton.classList.add("hide");
-    userWin.classList.add("hide");
-    quizWin.classList.add("hide");
+    hideAreas(welcomeArea);
 }
 /**
  * Before the next question 
@@ -506,19 +495,12 @@ function yourRescentScore() {
 
     RESCENTPLAYERELEMENT.textContent = PLAYER;
     RESCENTSCOREELEMENT.textContent = 
-    " scored " + PLAYERSCORE + " - " + QUIZSCORE;
+    "   " + PLAYERSCORE + " - " + QUIZSCORE + "   QUIZ";
 
     localStorage.setItem("latestUser", PLAYER);
     localStorage.setItem("latestScore", RESCENTSCOREELEMENT.textContent);
 
-    if (PLAYERSCORE > QUIZSCORE) {
-        RESCENTPLAYERELEMENT.classList.remove("wrong");
-        RESCENTPLAYERELEMENT.classList.add("correct");
-
-    } else {
-        RESCENTPLAYERELEMENT.classList.remove("correct");
-        RESCENTPLAYERELEMENT.classList.add("wrong");
-    }
+ 
 
 
 }
