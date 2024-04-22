@@ -21,7 +21,7 @@ I want this quiz to:<br> - be fun and educational about the game of hockey. <br>
 As a first time visiting: <br>- I will have instructions on how this quiz works directly when arriving to the main page.<br>- I can easily find the play button to start the quiz<br>- I can share my feedback about this quiz at the contact page.
 
 ### Returning visitor
-As a returning visitor: <br>- I will have new question every game I´m playing the quiz since it´s only picks 11 random questions out of the array. I want to get a higher score than my last time.
+As a returning visitor: <br>- I will have new question every game I´m playing the quiz since it´s only picks 11 random questions out of the array. I want to get a higher score than my last visit.
 
 ### Frequently visitor
 As a frequently visitor: <br>- I want to challenge myself and win with 11 - 0 to the quiz since the correct answer only shows if you have answered right.
@@ -51,7 +51,7 @@ From this page the user can also navigate to main page and contact by clicking t
 (6) When the quiz has ended the user will get a message if they won or lost the match against the quiz<br>
 <img src="readme/quiz.png"><br><img src="readme/endquiz.png">
 
-# **Flowchart**<br>
+# Flowchart <br>
 - Before I began with this quiz, I made a flowchart manually at home. Underneith you can see how this game runs.
 <br><br><img src="readme/flowchart_start.png"><img src="readme/flowchart.png"><br>
 
@@ -94,6 +94,9 @@ Here are my first blueprints on how I wanted this quiz to look.<br><br>
 <img src="wireframes/contact.png"><br>
 
 # Testing
+
+- All manual tests has been done in Google Chrome and on following devices:<br>- Samsung Galaxy S23 Ultra<br>- Laptop with resolution 1920x1080<br>- Galaxy tab A8
+
 `Home Page`
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
@@ -111,6 +114,7 @@ Here are my first blueprints on how I wanted this quiz to look.<br><br>
 | Main menu | Directed back to home page | Clicked on Main menu | Home page was loaded | Pass | 
 | Contact | Directed to contact page | Clicked on Contact | Pass |
 | Rescent score | Rescent score on this device shall be shown | Played a game and got out of the page then back to this page | Last played score was shown | Pass |
+| No game played | Instead of rescent game, a message shall be shown that no game has been finished | Cleared cache and enter quiz page again | Message was shown | Pass |s 
 
 `Quiz page`
 
@@ -147,8 +151,27 @@ Here are my first blueprints on how I wanted this quiz to look.<br><br>
 
 # Validation
 
+### **Lighthouse**<br>
+<img src="readme/lighthouse.png">
+
+### **HTML**<br>
+<img src="readme/validateHTML.png">
+
+### **JSHint**<br>
+**style.js**
+- JSHint discovered 3 problems in style.js:<br>- questions are in a separate file (question.js)<br>- emailjs are defined in index.html<br>- sendEmail are used by an onclick in index.html
+<br><br><img src="readme/validateJS.png"><br><br>
+**question.js**<br>
+- JSHint discovered 1 problem in question.js<br>- question are used in style.js<br>
+<img src="readme/validatequestionJS.png">
+
+
 # Bugs 
-<img src="readme/bug1.png"><br><img src="readme/bug2.png"><br><img src="readme/bug3.png"><br><img src="readme/bug4.png"><br>
+### **These are the bugs that have been encountered**
+- **Choosing the wrong answer displayed all answer if they are right or wrong**<br>- This wasn´t something that I wanted to happen. Because if the player is shown the answer, the player will most likely not play again. I want the player to find interest in playing again and trying to figure out the answer in the next game they are playing. Also this makes the quiz more difficult.<br>**The solution:**<br>- By adding the function "selectAnswer(e)" I´ve managed to only show if the selected answer was right or wrong.
+
+<br><img src="readme/bug1.png"><br><br>
+- **When holding the phone horizontally, divs overlaps**<br>- When I tested this page horisontally in devtools (Galaxy fold) and manually on my phone and tablet the divs on the contact page and when you played the quiz overlaps.<br>**The Solution:**<br>- Done nothing to improve that because if the user holds the phone or tablet upright all the content will be displayed as it should be. (Hopefully the user will figure that out) <br><img src="readme/bug2.png"><br><img src="readme/bug3.png"><br><img src="readme/bug4.png"><br>
 
 # Deployment
 

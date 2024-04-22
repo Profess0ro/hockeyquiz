@@ -152,4 +152,4 @@ const questions = [
             {text: '', correct: }
         ]
     },*/
-]
+];
