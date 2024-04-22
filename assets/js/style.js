@@ -1,6 +1,6 @@
 /** 
  * Here all different buttons and divs 
- * gets a const that are used in 
+ * gets a let that are used in 
  * the functions and eventlisteners
  * */ 
 
@@ -21,7 +21,8 @@ let quizWin = document.getElementById("loss");
 
 // This makes the value of how many questions shown and helps questions to be shuffled
 
-let shuffledQuestions, currentQuestionIndex;
+let shuffledQuestions = null;
+let currentQuestionIndex = null;
 
 // What function will be called by default when you click on the different buttons
 startTheGameButton.addEventListener("click", collectData);
@@ -32,7 +33,7 @@ restartButton.addEventListener("click", DoYouWantToRestart);
 
 
 // When clicking next question it will call the function to add 1 to how many questions has been shown
-n.addEventListener("click", () => {
+nextQuestionButton.addEventListener("click", () => {
     currentQuestionIndex++;
     displayNextQuestion();
 });
@@ -211,7 +212,7 @@ function showQuestion(questions) {
 
             // Show the next question button if 11 questions hasn´t been shown
             if (11 > currentQuestionIndex + 1) {
-                n.classList.remove("hide");
+                nextQuestionButton.classList.remove("hide");
             }
         }
     }, 1000); // timer set to count down by 1000milliseconds at the time (1sec)
@@ -235,7 +236,7 @@ function showQuestion(questions) {
  * they either have correct or wrong values. We want to start next question with new buttons 
  */
 function resetState() {
-    n.classList.add("hide");
+    nextQuestionButton.classList.add("hide");
     while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
@@ -267,7 +268,7 @@ function selectAnswer(e) {
 
     if (11 > currentQuestionIndex + 1) {
         // Checks if 11 question has been shown or not. If 11 has been shown the function finalScore() will be called
-        n.classList.remove("hide");
+        nextQuestionButton.classList.remove("hide");
     } else {
         finalScore();
     }
