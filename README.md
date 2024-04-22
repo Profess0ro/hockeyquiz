@@ -21,7 +21,7 @@ I want this quiz to:<br> - be fun and educational about the game of hockey. <br>
 As a first time visiting: <br>- I will have instructions on how this quiz works directly when arriving to the main page.<br>- I can easily find the play button to start the quiz<br>- I can share my feedback about this quiz at the contact page.
 
 ### Returning visitor
-As a returning visitor: <br>- I will have new question every game I´m playing the quiz since it´s only picks 11 random questions out of the array.
+As a returning visitor: <br>- I will have new question every game I´m playing the quiz since it´s only picks 11 random questions out of the array. I want to get a higher score than my last time.
 
 ### Frequently visitor
 As a frequently visitor: <br>- I want to challenge myself and win with 11 - 0 to the quiz since the correct answer only shows if you have answered right.
@@ -52,7 +52,8 @@ From this page the user can also navigate to main page and contact by clicking t
 <img src="readme/quiz.png"><br><img src="readme/endquiz.png">
 
 # **Flowchart**<br>
-<br><br><img src="readme/flowchart.png"><br>
+- Before I began with this quiz, I made a flowchart manually at home. Underneith you can see how this game runs.
+<br><br><img src="readme/flowchart_start.png"><img src="readme/flowchart.png"><br>
 
 # **Future features**
 - I would like to improve this quiz with a function where visitors can send in questions that I can review and paste to the game
@@ -108,6 +109,7 @@ Here are my first blueprints on how I wanted this quiz to look.<br><br>
 | Start the quiz | Question should be displayed when I have filled in a name | Filled in a name and clicked Start! | A question was shown and the quiz started | Pass |
 | Main menu | Directed back to home page | Clicked on Main menu | Home page was loaded | Pass | 
 | Contact | Directed to contact page | Clicked on Contact | Pass |
+| Rescent score | Rescent score on this device shall be shown | Played a game and got out of the page then back to this page | Last played score was shown | Pass |
 
 `Quiz page`
 
