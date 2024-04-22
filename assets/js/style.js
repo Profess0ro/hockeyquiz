@@ -1,34 +1,38 @@
-// Here all different buttons and divs gets a const that are used in the functions and eventlisteners
+/** 
+ * Here all different buttons and divs 
+ * gets a const that are used in 
+ * the functions and eventlisteners
+ * */ 
 
-const playButton = document.getElementById("play-btn");
-const contactButton = document.getElementById("contact");
-const questionContentArea = document.getElementById("game-area");
-const questionContent = document.getElementById("question");
-const answerButtons = document.getElementById("answers");
-const welcomeArea = document.getElementById("welcome");
-const contactArea = document.getElementById("contact-area");
-const mainMenuButton = document.getElementById("mainmenu");
-const NextQuestionButton = document.getElementById("next-question");
-const RestartButton = document.getElementById("restart");
-const StartTheGameButton = document.getElementById("start-the-game");
-const InputNameArea = document.getElementById("input-name");
-const userWin = document.getElementById("win");
-const quizWin = document.getElementById("loss");
+let playButton = document.getElementById("play-btn");
+let contactButton = document.getElementById("contact");
+let questionContentArea = document.getElementById("game-area");
+let questionContent = document.getElementById("question");
+let answerButtons = document.getElementById("answers");
+let welcomeArea = document.getElementById("welcome");
+let contactArea = document.getElementById("contact-area");
+let mainMenuButton = document.getElementById("mainmenu");
+let nextQuestionButton = document.getElementById("next-question");
+let restartButton = document.getElementById("restart");
+let startTheGameButton = document.getElementById("start-the-game");
+let inputNameArea = document.getElementById("input-name");
+let userWin = document.getElementById("win");
+let quizWin = document.getElementById("loss");
 
 // This makes the value of how many questions shown and helps questions to be shuffled
 
 let shuffledQuestions, currentQuestionIndex;
 
 // What function will be called by default when you click on the different buttons
-StartTheGameButton.addEventListener("click", collectData);
+startTheGameButton.addEventListener("click", collectData);
 playButton.addEventListener("click", inputUserName);
 contactButton.addEventListener("click", showContact);
 mainMenuButton.addEventListener("click", returnToMain);
-RestartButton.addEventListener("click", DoYouWantToRestart);
+restartButton.addEventListener("click", DoYouWantToRestart);
 
 
 // When clicking next question it will call the function to add 1 to how many questions has been shown
-NextQuestionButton.addEventListener("click", () => {
+n.addEventListener("click", () => {
     currentQuestionIndex++;
     displayNextQuestion();
 });
@@ -41,17 +45,17 @@ function resetButtons() {
 }
 // Adding game status to buttons so you´ll be asked if you are sure to leave the game or not.
 function setGameStatus() {
-    RestartButton.removeEventListener("click", inputUserName);
+    restartButton.removeEventListener("click", inputUserName);
     mainMenuButton.removeEventListener("click", returnToMain);
     contactButton.removeEventListener("click", showContact);
     mainMenuButton.addEventListener("click", DoYouWantToLeaveMain);
     contactButton.addEventListener("click", DoYouWantToLeaveContact);
-    RestartButton.addEventListener("click", DoYouWantToRestart);
+    restartButton.addEventListener("click", DoYouWantToRestart);
 }
 // Change which function to be called by restart button so you don´t get the question if you want to leave the game or not
 function endGameRestart() {
-    RestartButton.addEventListener("click", inputUserName);
-    RestartButton.removeEventListener("click", DoYouWantToRestart);
+    restartButton.addEventListener("click", inputUserName);
+    restartButton.removeEventListener("click", DoYouWantToRestart);
 }
 
 // If there is question left in the game a window will ask if they are sure to leave
@@ -88,12 +92,12 @@ function inputUserName() {
     welcomeArea.classList.add("hide");
     questionContentArea.classList.add("hide");
     contactArea.classList.add("hide");
-    InputNameArea.classList.remove("hide");
-    RestartButton.classList.add("hide");
+    inputNameArea.classList.remove("hide");
+    restartButton.classList.add("hide");
     collectRescentScore();
     document.addEventListener("keydown", function(event) {
         if (event.key === "Enter") {
-            StartTheGameButton.click();
+            startTheGameButton.click();
         }
     });
 }
@@ -140,8 +144,8 @@ function playQuiz() {
     welcomeArea.classList.add("hide");
     questionContentArea.classList.remove("hide");
     contactArea.classList.add("hide");
-    InputNameArea.classList.add("hide");
-    RestartButton.classList.remove("hide");
+    inputNameArea.classList.add("hide");
+    restartButton.classList.remove("hide");
     userWin.classList.add("hide");
     quizWin.classList.add("hide");
     shuffledQuestions = questions.sort(() => Math.random() - 0.5); // this picks a random question from the array of questions to be shown
@@ -154,8 +158,8 @@ function showContact() {
     welcomeArea.classList.add("hide");
     questionContentArea.classList.add("hide");
     contactArea.classList.remove("hide");
-    InputNameArea.classList.add("hide");
-    RestartButton.classList.add("hide");
+    inputNameArea.classList.add("hide");
+    restartButton.classList.add("hide");
     userWin.classList.add("hide");
     quizWin.classList.add("hide");
 
@@ -166,8 +170,8 @@ function returnToMain() {
     questionContentArea.classList.add("hide");
     contactArea.classList.add("hide");
     welcomeArea.classList.remove("hide");
-    InputNameArea.classList.add("hide");
-    RestartButton.classList.add("hide");
+    inputNameArea.classList.add("hide");
+    restartButton.classList.add("hide");
     userWin.classList.add("hide");
     quizWin.classList.add("hide");
 }
@@ -207,7 +211,7 @@ function showQuestion(questions) {
 
             // Show the next question button if 11 questions hasn´t been shown
             if (11 > currentQuestionIndex + 1) {
-                NextQuestionButton.classList.remove("hide");
+                n.classList.remove("hide");
             }
         }
     }, 1000); // timer set to count down by 1000milliseconds at the time (1sec)
@@ -231,7 +235,7 @@ function showQuestion(questions) {
  * they either have correct or wrong values. We want to start next question with new buttons 
  */
 function resetState() {
-    NextQuestionButton.classList.add("hide");
+    n.classList.add("hide");
     while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
@@ -263,7 +267,7 @@ function selectAnswer(e) {
 
     if (11 > currentQuestionIndex + 1) {
         // Checks if 11 question has been shown or not. If 11 has been shown the function finalScore() will be called
-        NextQuestionButton.classList.remove("hide");
+        n.classList.remove("hide");
     } else {
         finalScore();
     }
