@@ -57,6 +57,7 @@ From this page the user can also navigate to main page and contact by clicking t
 
 # **Future features**
 - I would like to improve this quiz with a function where visitors can send in questions that I can review and paste to the game
+- A High score list
 
 # **Typography and color scheme**
 
@@ -150,6 +151,20 @@ Here are my first blueprints on how I wanted this quiz to look.<br><br>
 <img src="readme/bug1.png"><br><img src="readme/bug2.png"><br><img src="readme/bug3.png"><br><img src="readme/bug4.png"><br>
 
 # Deployment
+
+- **Visual Studio Code:**
+1. Installed extension "GitHub Pull Requests".
+2. Connected my Github account to Visual Studio.
+3. Used command "Git:Clone" and pasted my repository address, now I´m connected to my repository.
+4. "Git add ." | "Git commit -m" | "Git push" | Was commands used in Visual Studio to upload my files to my repository
+
+- **Github:** 
+1. Logged in to Github account.
+2. Got to the repository for the site. 
+3. Clicked on "settings" in the menu at the top. 
+4. In settings, located "Pages" on the left-side navigation.
+5. On the dropdown under "Source" selected "main" as branch and pressed save.<br><br>
+Live link: https://profess0ro.github.io/hockeyquiz/
 
 # Credits 
 
