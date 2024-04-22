@@ -98,6 +98,7 @@ Here are my first blueprints on how I wanted this quiz to look.<br><br>
 
 - All manual tests has been done in Google Chrome and on following devices:<br>- Samsung Galaxy S23 Ultra<br>- Laptop with resolution 1920x1080<br>- Galaxy tab A8
 
+<br><img src="readme/main.png"><br><br>
 `Home Page`
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
@@ -105,7 +106,8 @@ Here are my first blueprints on how I wanted this quiz to look.<br><br>
 | Contact button | Directed to contact page | Clicked on Contact | Contact page was loaded | Pass |
 | Main menu button | No other page shall be visual | Clicked on Main menu | Nothing happened | Pass |
 | Play button | Directed to name input page | Clicked on Play | Name input was loaded | Pass |
-<br><img src="readme/main.png"><br><br>
+
+<br><br><img src="readme/testinput.png"> <br>
 `Name input`
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
@@ -116,8 +118,8 @@ Here are my first blueprints on how I wanted this quiz to look.<br><br>
 | Contact | Directed to contact page | Clicked on Contact | Pass |
 | Rescent score | Rescent score on this device shall be shown | Played a game and got out of the page then back to this page | Last played score was shown | Pass |
 | No game played | Instead of rescent game, a message shall be shown that no game has been finished | Cleared cache and enter quiz page again | Message was shown | Pass |
-<br><br><img src="readme/testinput.png"> <br>
 
+<br><br><img src="readme/testquiz.png"><br><br>
 `Quiz page`
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
@@ -138,6 +140,7 @@ Here are my first blueprints on how I wanted this quiz to look.<br><br>
 | Restart (during the quiz) | If 11 questions haven´t been answered<br> I will be asked if I´m sure to leave<br>Answering yes will restart the quiz<br>Cancelling should bring me back to the quiz | Clicked Restart <br>(during the quiz) | I was asked to leave the quiz or not<br>Clicked yes and the quiz restarted with the scoreboard reset<br>Cancelled the message and the quiz continued | Pass |
 | Restart (quiz ended) | If 11 questions have been answered<br> I won´t be asked if I´m sure to leave<br>and the quiz shall restart | Clicked Restart <br>(quiz ended) | I wasn´t asked to leave the quiz or not<br> and the quiz restarted with the scoreboard reset | Pass |
 
+<br><img src="readme/contact.png"><br><br>
 `Contact page`
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
@@ -149,6 +152,7 @@ Here are my first blueprints on how I wanted this quiz to look.<br><br>
 | Email validation | Check if a valid email has been filled<br>If unvalid a message will be shown and tell to fill in a valid email | Filled in a valid & unvalid email | When unvalid email was filled in the field,<br> a message told me to fill in a valid email.<br>When a valid email was filled in the field,<br>no message was shown to me | Pass |
 | Message input | Check if message has been filled<br>If empty a message will be shown tell the message was empty | Left messagefield empty | A message told me to fill in the message | Pass |
 | Sending feedback | If all inputs have been filled correctly a message will thank<br>and also a thank you email will be recieved in senders inbox | Filled in all fields correctly and clicked send | A message thanked me and I´ve also got a thank you email in my inbox | Pass |
+
 
 # Technology
 
