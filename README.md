@@ -105,7 +105,7 @@ Here are my first blueprints on how I wanted this quiz to look.<br><br>
 | Contact button | Directed to contact page | Clicked on Contact | Contact page was loaded | Pass |
 | Main menu button | No other page shall be visual | Clicked on Main menu | Nothing happened | Pass |
 | Play button | Directed to name input page | Clicked on Play | Name input was loaded | Pass |
-
+<br><img src="readme/main.png"><br><br>
 `Name input`
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
@@ -115,7 +115,8 @@ Here are my first blueprints on how I wanted this quiz to look.<br><br>
 | Main menu | Directed back to home page | Clicked on Main menu | Home page was loaded | Pass | 
 | Contact | Directed to contact page | Clicked on Contact | Pass |
 | Rescent score | Rescent score on this device shall be shown | Played a game and got out of the page then back to this page | Last played score was shown | Pass |
-| No game played | Instead of rescent game, a message shall be shown that no game has been finished | Cleared cache and enter quiz page again | Message was shown | Pass |s 
+| No game played | Instead of rescent game, a message shall be shown that no game has been finished | Cleared cache and enter quiz page again | Message was shown | Pass |
+<br><br><img src="readme/testinput.png"> <br>
 
 `Quiz page`
 

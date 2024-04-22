@@ -335,7 +335,7 @@ function showQuestion(questions) {
             BUTTON.dataset.correct = answer.correct; 
         }
         BUTTON.addEventListener("click", selectAnswer); 
-        answerButtons.appendChild(button);
+        answerButtons.appendChild(BUTTON);
     });
 }
 
