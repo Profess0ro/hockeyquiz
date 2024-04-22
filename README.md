@@ -10,6 +10,7 @@ I want this quiz to:<br> - be fun and educational about the game of hockey. <br>
 [Typography and color scheme](#typography-and-color-scheme)<br>
 [Wireframes](#wireframes)<br>
 [Testing](#testing)<br>
+[Technology](#technology)<br>
 [Validation](#validation)<br>
 [Bugs](#bugs)<br>
 [Deployment](#deployment)<br>
@@ -49,9 +50,9 @@ From this page the user can also navigate to main page and contact by clicking t
 (3) The score updates when a question has been answered or the timer runs out<br>
 (4) Now their are a restart button visible between "Main menu" and "Contact". <br>(5) Clicking on one of these 3 buttons (Main menu/Restart/Contact) during the quiz will ask the user if really want to leave?<br>If the match has ended there will be no question asking the user if they want to leave.<br>
 (6) When the quiz has ended the user will get a message if they won or lost the match against the quiz<br>
-<img src="readme/quiz.png"><br><img src="readme/endquiz.png">
+<img src="readme/quiz.png"><br><img src="readme/endquiz.png"><br>
 
-# Flowchart <br>
+# Flowchart
 - Before I began with this quiz, I made a flowchart manually at home. Underneith you can see how this game runs.
 <br><br><img src="readme/flowchart_start.png"><img src="readme/flowchart.png"><br>
 
@@ -148,6 +149,13 @@ Here are my first blueprints on how I wanted this quiz to look.<br><br>
 | Message input | Check if message has been filled<br>If empty a message will be shown tell the message was empty | Left messagefield empty | A message told me to fill in the message | Pass |
 | Sending feedback | If all inputs have been filled correctly a message will thank<br>and also a thank you email will be recieved in senders inbox | Filled in all fields correctly and clicked send | A message thanked me and I´ve also got a thank you email in my inbox | Pass |
 
+# Technology
+
+- Languages - HTML, CSS and JavaScript<br>
+- Visual Studio Code - For coding<br>
+- Github pages - To deploy this site
+- Fontawesome - To display social media icons
+- Emailjs - When submitting the contactform mail will be sent and confirmation sent back to user
 
 # Validation
 
@@ -201,4 +209,4 @@ Live link: https://profess0ro.github.io/hockeyquiz/
 - Background image: https://unsplash.com/
 - Header image: https://www.pexels.com/sv-se/
 - Favicon: https://favicon.io/emoji-favicons/ice-hockey/
-- Facts to the questions:<br> - https://thehockeywriters.com/the-strangest-things-to-ever-happen-in-an-nhl-quiz/<br>- https://russianmachineneverbreaks.com/2024/04/07/joonas-korpisalo-blinded-by-sun-capitals-senators-quiz-paused/<br>- https://www.mkewithkids.com/post/hockey-fun-facts/<br>- https://sportlobby.se/hockey/10-fakta-om-hockey-du-aldrig-hort-talas-om/<br>- https://www.electro-mech.com/team-sports/hockey/10-most-bizarre-ice-hockey-incidents/<br>- https://thehockeynews.com/news/nhlers-with-bizarre-birthplaces<br>- https://www.sportskeeda.com/us/nhl/5-nhl-players-played-teams-feat-mike-sillinger<br>- 
+- Facts to the questions:<br> - https://thehockeywriters.com/the-strangest-things-to-ever-happen-in-an-nhl-quiz/<br>- https://russianmachineneverbreaks.com/2024/04/07/joonas-korpisalo-blinded-by-sun-capitals-senators-quiz-paused/<br>- https://www.mkewithkids.com/post/hockey-fun-facts/<br>- https://sportlobby.se/hockey/10-fakta-om-hockey-du-aldrig-hort-talas-om/<br>- https://www.electro-mech.com/team-sports/hockey/10-most-bizarre-ice-hockey-incidents/<br>- https://thehockeynews.com/news/nhlers-with-bizarre-birthplaces<br>- https://www.sportskeeda.com/us/nhl/5-nhl-players-played-teams-feat-mike-sillinger<br>
