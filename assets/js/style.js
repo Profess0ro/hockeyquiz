@@ -26,6 +26,7 @@ contactButton.addEventListener("click", showContact);
 mainMenuButton.addEventListener("click", returnToMain);
 RestartButton.addEventListener("click", DoYouWantToRestart);
 
+
 // When clicking next question it will call the function to add 1 to how many questions has been shown
 NextQuestionButton.addEventListener("click", () => {
     currentQuestionIndex++;
@@ -90,6 +91,11 @@ function inputUserName() {
     InputNameArea.classList.remove("hide");
     RestartButton.classList.add("hide");
     collectRescentScore();
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            StartTheGameButton.click();
+        }
+    });
 }
 
 // This function will collect last finished game or show a message that no games have been registered
