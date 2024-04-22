@@ -9,7 +9,7 @@ const QUESTIONS = [
         ]
     },
     {
-        question: 'In a game between LA Kings and Montreal Canadiens, 5th of March 1988 a living animal was thrown into the ice from the public. What animal landed on the ice?',
+        question: 'In a game between LA Kings and Montreal Canadiens back in 1988, an animal that was alive were thrown into the ice from the public. What animal landed on the ice?',
         answers: [
             {text: 'Chicken', correct: true},
             {text: 'Snake', correct: false},
