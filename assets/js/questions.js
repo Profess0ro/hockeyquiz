@@ -143,13 +143,4 @@ const questions = [
             {text: '13', correct: false}
         ]
     },
- /**    {
-        question: '',
-        answers: [
-            {text: '', correct: },
-            {text: '', correct: },
-            {text: '', correct: },
-            {text: '', correct: }
-        ]
-    },*/
 ];

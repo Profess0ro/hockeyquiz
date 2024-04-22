@@ -37,7 +37,7 @@ function resetButtons() {
     mainMenuButton.removeEventListener("click", DoYouWantToLeaveMain);
     contactButton.removeEventListener("click", DoYouWantToLeaveContact);
     contactButton.addEventListener("click", showContact);
-    mainMenuButton.addEventListener("click", returnToMain);  
+    mainMenuButton.addEventListener("click", returnToMain);
 }
 // Adding game status to buttons so you´ll be asked if you are sure to leave the game or not.
 function setGameStatus() {
@@ -49,38 +49,38 @@ function setGameStatus() {
     RestartButton.addEventListener("click", DoYouWantToRestart);
 }
 // Change which function to be called by restart button so you don´t get the question if you want to leave the game or not
-function endGameRestart(){
+function endGameRestart() {
     RestartButton.addEventListener("click", inputUserName);
     RestartButton.removeEventListener("click", DoYouWantToRestart);
 }
 
 // If there is question left in the game a window will ask if they are sure to leave
 function DoYouWantToRestart() {
-    if (11 > currentQuestionIndex + 1) { 
+    if (11 > currentQuestionIndex + 1) {
         const confirmRestart = window.confirm("Are you sure you want to restart?");
 
         if (confirmRestart) {
             inputUserName();
         }
-    } 
+    }
 }
 // If user want to go to quit the game and go to the contact page
-function DoYouWantToLeaveContact() { 
+function DoYouWantToLeaveContact() {
     if (11 > currentQuestionIndex + 1) {
         const confirmLeave = window.confirm("Are you sure you want to leave the game?");
         if (confirmLeave) {
             showContact();
         }
-    } 
+    }
 }
 // If user want to leave the game pressing "main menu" they will come back to the Main menu
 function DoYouWantToLeaveMain() {
     if (11 > currentQuestionIndex + 1) { // If there is question left in the game a window will ask if they are sure to leave
-    const confirmLeave = window.confirm("Are you sure you want to leave the game?");
-    if (confirmLeave) {
-        returnToMain();
+        const confirmLeave = window.confirm("Are you sure you want to leave the game?");
+        if (confirmLeave) {
+            returnToMain();
+        }
     }
-} 
 }
 
 // When you press play, the right div will be shown
@@ -103,18 +103,18 @@ function collectRescentScore() {
     const player = localStorage.getItem("latestUser");
     const score = localStorage.getItem("latestScore");
 
-        const rescentPlayerElement = document.getElementById("rescent-player");
-        const rescentScoreElement = document.getElementById("rescent-score");
-        if (player && score) {
-            
-            rescentPlayerElement.textContent = player;
-            rescentScoreElement.textContent = score;
-        } else {
-            
-            rescentPlayerElement.innerText = "No finished games registered";
-            rescentScoreElement.innerText = "";
-        }
+    const rescentPlayerElement = document.getElementById("rescent-player");
+    const rescentScoreElement = document.getElementById("rescent-score");
+    if (player && score) {
+
+        rescentPlayerElement.textContent = player;
+        rescentScoreElement.textContent = score;
+    } else {
+
+        rescentPlayerElement.innerText = "No finished games registered";
+        rescentScoreElement.innerText = "";
     }
+}
 
 
 // This function collects the name filled in and that name shows at the scoreboard
@@ -185,7 +185,7 @@ let timer = null;
  * It also starts a new timer that counts down from 20.
  */
 function showQuestion(questions) {
-    let count = 30; 
+    let count = 30;
 
     document.getElementById("timer").innerText = count;
 
@@ -208,7 +208,7 @@ function showQuestion(questions) {
             // Show the next question button if 11 questions hasn´t been shown
             if (11 > currentQuestionIndex + 1) {
                 NextQuestionButton.classList.remove("hide");
-            } 
+            }
         }
     }, 1000); // timer set to count down by 1000milliseconds at the time (1sec)
 
@@ -267,7 +267,7 @@ function selectAnswer(e) {
     } else {
         finalScore();
     }
-    
+
 }
 // This function will remove the class of right or wrong answer to the new answerbuttons
 function clearStatusClass(button) {
@@ -276,7 +276,7 @@ function clearStatusClass(button) {
 }
 // This function will increase the users score if answered correct
 function addRightAnswer() {
-    const correctScoreElement = document.querySelector("#scores .correct"); 
+    const correctScoreElement = document.querySelector("#scores .correct");
 
     let oldCorrectScore = parseInt(correctScoreElement.innerText);
 
@@ -288,7 +288,7 @@ function addRightAnswer() {
 
 // This function will increase the quiz´s score if answered wrong
 function addWrongAnswer() {
-    const correctScoreElement = document.querySelector("#scores .wrong"); 
+    const correctScoreElement = document.querySelector("#scores .wrong");
 
     let oldCorrectScore = parseInt(correctScoreElement.innerText);
 
@@ -314,7 +314,7 @@ function finalScore() {
 
     if (correctScore > wrongScore) {
         userWin.classList.remove("hide");
-        quizWin.classList.add("hide"); 
+        quizWin.classList.add("hide");
     } else {
         userWin.classList.add("hide");
         quizWin.classList.remove("hide");
@@ -324,12 +324,12 @@ function finalScore() {
 
 /** This will add the rescent score when the quiz ended
  * The rescent score will be shown where you put in the username before the quiz starts 
- * */ 
+ * */
 function yourRescentScore() {
     const player = document.getElementById("username").textContent;
     const playerScore = parseInt(document.querySelector("#scores .correct").innerText);
     const quizScore = parseInt(document.querySelector("#scores .wrong").innerText);
-    
+
     const rescentPlayerElement = document.getElementById("rescent-player");
     const rescentScoreElement = document.getElementById("rescent-score");
 
@@ -347,7 +347,7 @@ function yourRescentScore() {
         rescentPlayerElement.classList.remove("correct");
         rescentPlayerElement.classList.add("wrong");
     }
-    
+
 
 }
 
@@ -356,16 +356,16 @@ function yourRescentScore() {
 function sendEmail(event) {
     event.preventDefault();
     let params = {
-        name : document.getElementById("name").value,
-        email : document.getElementById("email").value,
-        message : document.getElementById("message").value,
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
     };
     // Email validation
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailPattern.test(params.email)) {
         alert("Please enter a valid email address");
-        return; 
+        return;
     }
 
     // Check if any of the fields are empty
@@ -377,16 +377,17 @@ function sendEmail(event) {
         alert("Your message is empty");
     } else {
         emailjs.send("service_jmbyfsi", "template_j35glvk", params)
-            .then(function () {
+            .then(function() {
                 alert("Thank you for the feedback!");
 
-            // Reset the value of the forms input fields when feedback has been sent
-            document.getElementById("name").value = "";
-            document.getElementById("email").value = "";
-            document.getElementById("message").value = "";
-        })
-        .catch(function (error) {
-            alert("Error sending email:", error); // Will send error message if feedback fails to be sent
-            
-        });}
+                // Reset the value of the forms input fields when feedback has been sent
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("message").value = "";
+            })
+            .catch(function(error) {
+                alert("Error sending email:", error); // Will send error message if feedback fails to be sent
+
+            });
+    }
 }

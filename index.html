@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Description of the page -->
     <meta name="description"
-      content="Quiz about remarkable happenings to a hockeygame">
+      content="Quiz about hockey">
     <!-- Searchwords -->
     <meta name="keywords"
       content="Quiz, hockey, remarkable, icehockey, happenings">
@@ -46,27 +46,28 @@
           <div id="play"><button id="play-btn"
             class="btn black-btn">Play!</button></div>
         </div>
-        <!--  Contact -->
+        <!--  Contact form -->
         <div id="contact-area" class="grey-div big-div hide">
           <div class="blue-div">
-          <h3>Please fill in the field if you have some feedback about
-            this quiz
-          </h3>
-          <form>
-            Your name: <br><input class="inputs" type="text" id="name"
-              required><br><br>
-            Your Email: <br><input class="inputs" type="email"
-              id="email" required><br><br>
-            Your Message: <br><textarea class="inputs" id="message"
-              rows="6"></textarea>
-            <br><br>
-            <button class="btn black-btn" id="send-email" onclick="sendEmail(event)">Send</button>
-          </form>
-        </div>
-        <!-- Social media links -->
+            <h3>Please fill in the field if you have some feedback about
+              this quiz
+            </h3>
+            <form>
+              Your name: <br><input class="inputs" type="text" id="name"
+                required><br><br>
+              Your Email: <br><input class="inputs" type="email"
+                id="email" required><br><br>
+              Your Message: <br><textarea class="inputs" id="message"
+                rows="6"></textarea>
+              <br><br>
+              <button class="btn black-btn" id="send-email" onclick="sendEmail(event)">Send</button>
+            </form>
+          </div>
+          <!-- Social media links -->
           <div class="blue-div" id="social-media">
             <a href="https://www.facebook.com/pr0fessoro" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/ferdynamnam?igsh=aXdvcG1xcXNkcTFz" target="_blank"><i class="fa-brands fa-instagram"></i></a> </div>
+            <a href="https://www.instagram.com/ferdynamnam?igsh=aXdvcG1xcXNkcTFz" target="_blank"><i class="fa-brands fa-instagram"></i></a> 
+          </div>
         </div>
         <!-- Input username for the game-->
         <div id="input-name" class="grey-div big-div hide">
@@ -75,6 +76,7 @@
           <input type="text" class="inputs" id="your-name" placeholder="Your name"><br>
           <!-- When the button is clicked function collectData() will fetch the input-->
           <button id="start-the-game" class="btn black-btn" onclick="collectData()">Start!</button>
+          <!-- Your latest gamescore will be shown here -->
           <div id="rescent" class="grey-div">
             <h3>Your latest game:</h3>
             <div id="rescent-game"><span id="rescent-player"></span><span id="rescent-score"></span></div>
@@ -89,7 +91,7 @@
             </div>
           </div>
           <div class="timer-div"><span id="timer"></span></div>
-          <!-- questions shown here -->
+          <!-- Questions shown here -->
           <div id="question">Here will it be a question shown</div>
           <!-- Answering buttons -->
           <div id="answers">
@@ -98,11 +100,18 @@
             <button class="btn answerbutton">answer</button>
             <button class="btn answerbutton">answer</button>
           </div>
-          <!-- Next question and win or loss message -->
+          <!-- Next question button -->
           <button id="next-question"
             class="btn answerbutton hide">Next question</button>
-          <div class="hide" id="win"><h2>Win!</h2>Congratulations, You won against the quiz!<br>Restart to see if you beat your score.</div>
-          <div class="hide" id="loss"><h2>Loss!</h2>Bad luck!<br>Restart to see if you can win against the quiz.</div>
+          <!-- Win or loss message -->
+          <div class="hide" id="win">
+            <h2>Win!</h2>
+            Congratulations, You won against the quiz!<br>Restart to see if you beat your score.
+          </div>
+          <div class="hide" id="loss">
+            <h2>Loss!</h2>
+            Bad luck!<br>Restart to see if you can win against the quiz.
+          </div>
         </div>
       </div>
     </main>
@@ -118,13 +127,14 @@
     </footer>
     <script src="https://kit.fontawesome.com/214e058f0e.js"
       crossorigin="anonymous"></script>
-  <script src="assets/js/questions.js"></script>
-  <script src="assets/js/style.js"></script>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    (function(){
-        emailjs.init("W7Jj97_4aLD7ctTaC"); 
-    })();
-</script>
-</body>
+    <script src="assets/js/questions.js"></script>
+    <script src="assets/js/style.js"></script>
+    <!-- Emailjs script will make contactform fully functional with sending mail when submitting -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function(){
+          emailjs.init("W7Jj97_4aLD7ctTaC"); 
+      })();
+    </script>
+  </body>
 </html>

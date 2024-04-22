@@ -79,7 +79,7 @@ From this page the user can also navigate to main page and contact by clicking t
 - The buttons on the site are representing pucks with (rgba(0, 0, 0, 0.692);) as background and a hovering effect with the color (rgba(199, 199, 199, 0.623);).<br>
 <img src="readme/colorscheme2.png"><img src="readme/colorscheme3.png"><br><br>
 - The font colors for the players score are (#15ff00) and for the quiz score (#ff0000).
-- The scoreboard/timer/question have black (#000000) as background so the content inside are easy to read with the white text.
+- The scoreboard/timer/question have black (#000000) as background so the content inside are easy to read with the white text (except timer that has #fbff00 as font color).
 - The answerbuttons background are (rgba(59, 59, 59, 0.623);) with a the border color (rgba(0, 26, 255, 0.692);) representing the blue lines on the ice.
 - The right answers buttons colors are (rgba(0, 255, 21, 0.623);) for the background and (rgba(0, 255, 21, 0.897);) for the border.
 - The wrong answers buttons color are (rgba(255, 0, 0, 0.623);) for the background and (rgba(255, 0, 0, 0.897);) for the border.
