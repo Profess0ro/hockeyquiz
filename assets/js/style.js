@@ -307,6 +307,7 @@ function yourRescentScore() {
     const rescentPlayerElement = document.getElementById("rescent-player");
     const rescentScoreElement = document.getElementById("rescent-score");
 
+
     rescentPlayerElement.textContent = player;
     if (playerScore > quizScore) {
         rescentPlayerElement.classList.remove("wrong");
@@ -317,7 +318,10 @@ function yourRescentScore() {
         rescentPlayerElement.classList.add("wrong");
     }
     rescentScoreElement.textContent = " scored " + playerScore + " - " + quizScore;
+    localStorage.setItem(rescentScoreElement);
+    localStorage.setItem(rescentPlayerElement);
 }
+
 
 // This function sends an email if all are fields are filled in and also sends a reply to the persons email via Emailjs
 function sendEmail(event) {
