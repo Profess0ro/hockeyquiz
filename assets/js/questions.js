@@ -1,4 +1,4 @@
-const questions = [
+const QUESTIONS = [
     {
         question: 'What made the goalie Joonas Korpisalo pause the game between Ottawa Senators and Washington Capitals on the 7th of april 2024?',
         answers: [

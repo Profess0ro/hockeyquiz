@@ -172,7 +172,7 @@ Here are my first blueprints on how I wanted this quiz to look.<br><br>
 
 ### **JSHint**<br>
 **style.js**
-- JSHint discovered 3 problems in style.js:<br>- questions are in a separate file (question.js)<br>- emailjs are defined in index.html<br>- sendEmail are used by an onclick in index.html
+- JSHint discovered 4 problems in style.js:<br>- questions are in a separate file (question.js)<br>- emailjs are defined in index.html<br>- initializeGame are called in index.html<br>- sendEmail are used by an onclick in index.html<br>
 <br><br><img src="readme/validateJS.png"><br><br>
 **question.js**<br>
 - JSHint discovered 1 problem in question.js<br>- question are used in style.js<br>

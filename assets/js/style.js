@@ -201,7 +201,7 @@ function collectData() {
     }
  
     const OUTPUTSPAN = document.getElementById("username");
-    OUTPUTSPAN.innerText = inputValue;
+    OUTPUTSPAN.innerText = INPUTVALUE;
 }
 
 /** 
@@ -225,7 +225,7 @@ function playQuiz() {
  * from the array of questions 
  * to be shown
  * */
-    shuffledQuestions = questions.sort(() => Math.random() - 0.5); 
+    shuffledQuestions = QUESTIONS.sort(() => Math.random() - 0.5); 
     currentQuestionIndex = 0;
     displayNextQuestion();
 }
@@ -283,7 +283,7 @@ let timer = null;
  * It also starts a new timer 
  * that counts down from 30.
  */
-function showQuestion(questions) {
+function showQuestion(QUESTIONS) {
     let count = 30;
 
     document.getElementById("timer").innerText = count;
@@ -326,8 +326,8 @@ function showQuestion(questions) {
      * create new buttons 
      * with the answers
      * */ 
-    questionContent.innerText = questions.question; 
-    questions.answers.forEach((answer) => {
+    questionContent.innerText = QUESTIONS.question; 
+    QUESTIONS.answers.forEach((answer) => {
         const BUTTON = document.createElement("button"); 
         BUTTON.innerText = answer.text;
         BUTTON.classList.add("answerbutton", "btn"); 
@@ -508,16 +508,16 @@ function yourRescentScore() {
     RESCENTSCOREELEMENT.textContent = 
     " scored " + PLAYERSCORE + " - " + QUIZSCORE;
 
-    localStorage.setItem("latestUser", player);
-    localStorage.setItem("latestScore", rescentScoreElement.textContent);
+    localStorage.setItem("latestUser", PLAYER);
+    localStorage.setItem("latestScore", RESCENTSCOREELEMENT.textContent);
 
-    if (playerScore > quizScore) {
-        rescentPlayerElement.classList.remove("wrong");
-        rescentPlayerElement.classList.add("correct");
+    if (PLAYERSCORE > QUIZSCORE) {
+        RESCENTPLAYERELEMENT.classList.remove("wrong");
+        RESCENTPLAYERELEMENT.classList.add("correct");
 
     } else {
-        rescentPlayerElement.classList.remove("correct");
-        rescentPlayerElement.classList.add("wrong");
+        RESCENTPLAYERELEMENT.classList.remove("correct");
+        RESCENTPLAYERELEMENT.classList.add("wrong");
     }
 
 
