@@ -293,6 +293,39 @@ function finalScore() {
         userWin.classList.add("hide");
         quizWin.classList.remove("hide");
     }
+    yourRescentScore();
+}
+
+
+// This will store the rescent score so if a player returns a week later it will show the rescent game they played.
+let cachedPlayerScore = null;
+let cachedQuizScore = null;
+
+function updateCachedScores() {
+    cachedPlayerScore = parseInt(document.querySelector("#scores .correct").innerText);
+    cachedQuizScore = parseInt(document.querySelector("#scores .wrong").innerText);
+}
+
+/** This will add the rescent score when the quiz ended
+ * The rescent score will be shown where you put in the username before the quiz starts 
+ * */ 
+function yourRecentScore() {
+    if (cachedPlayerScore === null || cachedQuizScore === null) {
+        updateCachedScores();
+    }
+
+    const player = document.getElementById("username").textContent;
+    
+    const rescentPlayerElement = document.getElementById("rescent-player");
+    const rescentScoreElement = document.getElementById("rescent-score");
+
+    rescentPlayerElement.textContent = player;
+    if (cachedPlayerScore > cachedQuizScore) {
+        rescentPlayerElement.classList.add("correct");
+    } else {
+        rescentPlayerElement.classList.add("wrong");
+    }
+    rescentScoreElement.textContent = " scored " + cachedPlayerScore + " - " + cachedQuizScore;
 }
 
 // This function sends an email if all are fields are filled in and also sends a reply to the persons email via Emailjs

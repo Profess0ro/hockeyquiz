@@ -138,6 +138,19 @@ input {
   display: flex;
   flex-direction: column;
 }
+#rescent-game {
+  font-family: "Digital Numbers", sans-serif;
+  background-color: #000000;
+  border: 2px solid #ffffff;
+  font-weight: 400;
+  margin: 5px;
+  padding: 3px;
+}
+#rescent-score {
+  font-family: "Digital Numbers", sans-serif;
+  text-align: center;
+
+}
 #scores {
   font-family: "Digital Numbers", sans-serif;
   background-color: #000000;
