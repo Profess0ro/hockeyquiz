@@ -209,4 +209,7 @@ Live link: https://profess0ro.github.io/hockeyquiz/
 - Background image: https://unsplash.com/
 - Header image: https://www.pexels.com/sv-se/
 - Favicon: https://favicon.io/emoji-favicons/ice-hockey/
+- Format css: https://www.cleancss.com/css-beautify/
+- Format html: https://www.freeformatter.com/html-formatter.html
+- Format js: https://beautifier.io/
 - Facts to the questions:<br> - https://thehockeywriters.com/the-strangest-things-to-ever-happen-in-an-nhl-quiz/<br>- https://russianmachineneverbreaks.com/2024/04/07/joonas-korpisalo-blinded-by-sun-capitals-senators-quiz-paused/<br>- https://www.mkewithkids.com/post/hockey-fun-facts/<br>- https://sportlobby.se/hockey/10-fakta-om-hockey-du-aldrig-hort-talas-om/<br>- https://www.electro-mech.com/team-sports/hockey/10-most-bizarre-ice-hockey-incidents/<br>- https://thehockeynews.com/news/nhlers-with-bizarre-birthplaces<br>- https://www.sportskeeda.com/us/nhl/5-nhl-players-played-teams-feat-mike-sillinger<br>
