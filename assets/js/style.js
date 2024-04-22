@@ -18,6 +18,8 @@ const quizWin = document.getElementById("loss");
 // This makes the value of how many questions shown and helps questions to be shuffled
 
 let shuffledQuestions, currentQuestionIndex;
+localStorage.getItem(rescentPlayerElement);
+localStorage.getItem(rescentScoreElement);
 
 // What function will be called by default when you click on the different buttons
 StartTheGameButton.addEventListener("click", collectData);
