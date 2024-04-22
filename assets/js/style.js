@@ -18,8 +18,6 @@ const quizWin = document.getElementById("loss");
 // This makes the value of how many questions shown and helps questions to be shuffled
 
 let shuffledQuestions, currentQuestionIndex;
-localStorage.getItem(rescentPlayerElement);
-localStorage.getItem(rescentScoreElement);
 
 // What function will be called by default when you click on the different buttons
 StartTheGameButton.addEventListener("click", collectData);
@@ -91,7 +89,19 @@ function inputUserName() {
     contactArea.classList.add("hide");
     InputNameArea.classList.remove("hide");
     RestartButton.classList.add("hide");
+    collectRescentScore();
 }
+function collectRescentScore() {
+    const player = localStorage.getItem("latestUser");
+    const score = localStorage.getItem("latestScore");
+
+        const rescentPlayerElement = document.getElementById("rescent-player");
+        const rescentScoreElement = document.getElementById("rescent-score");
+
+        rescentPlayerElement.textContent = player;
+        rescentScoreElement.textContent = score;
+    }
+
 
 // This function collects the name filled in and that name shows at the scoreboard
 function collectData() {
@@ -309,8 +319,12 @@ function yourRescentScore() {
     const rescentPlayerElement = document.getElementById("rescent-player");
     const rescentScoreElement = document.getElementById("rescent-score");
 
-
     rescentPlayerElement.textContent = player;
+    rescentScoreElement.textContent = " scored " + playerScore + " - " + quizScore;
+
+    localStorage.setItem("latestUser", player);
+    localStorage.setItem("latestScore", rescentScoreElement.textContent);
+
     if (playerScore > quizScore) {
         rescentPlayerElement.classList.remove("wrong");
         rescentPlayerElement.classList.add("correct");
@@ -319,9 +333,8 @@ function yourRescentScore() {
         rescentPlayerElement.classList.remove("correct");
         rescentPlayerElement.classList.add("wrong");
     }
-    rescentScoreElement.textContent = " scored " + playerScore + " - " + quizScore;
-    localStorage.setItem(rescentScoreElement);
-    localStorage.setItem(rescentPlayerElement);
+    
+
 }
 
 
