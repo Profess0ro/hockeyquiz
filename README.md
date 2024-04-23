@@ -207,6 +207,7 @@ Live link: https://profess0ro.github.io/hockeyquiz/
 - https://github.com/bezebee/My-First-Project/blob/main/README.md#manual-testing - Bezebee, for a great README that help me.
 - https://www.youtube.com/watch?v=riDzcEQbX6k - Web Dev Simplified, for a great tutorial on the basic structure of the quiz.
 - https://www.youtube.com/watch?v=BgVjild0C9A - CodeEasy, for helping me get the contact form to function properly.
+- Rohit Sharma - My mentor that guided me well through this project.
 
 
 # Resources
