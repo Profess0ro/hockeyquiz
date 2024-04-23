@@ -374,10 +374,10 @@ function selectAnswer(e) {
          * if it´s correct or 
          * wrong answer
          * */ 
-        SELECTEDBUTTON.classList.add("correctanswer");
+        SELECTED_BUTTON.classList.add("correctanswer");
         addRightAnswer();
     } else {
-        SELECTEDBUTTON.classList.add("wronganswer");
+        SELECTED_BUTTON.classList.add("wronganswer");
         addWrongAnswer();
     }
         /** 
