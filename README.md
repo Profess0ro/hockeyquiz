@@ -22,10 +22,10 @@ I want this quiz to:<br> - be fun and educational about the game of hockey. <br>
 As a first time visiting: <br>- I will have instructions on how this quiz works directly when arriving to the main page.<br>- I can easily find the play button to start the quiz<br>- I can share my feedback about this quiz at the contact page.
 
 ### Returning visitor
-As a returning visitor: <br>- I will have new question every game I´m playing the quiz since it´s only picks 11 random questions out of the array. I want to get a higher score than my last visit.
+As a returning visitor: <br>- I will have new questions every game I´m playing the quiz since it´s only picks 11 random questions out of the array. I want to get a higher score than my last visit.
 
 ### Frequently visitor
-As a frequently visitor: <br>- I want to challenge myself and win with 11 - 0 to the quiz since the correct answer only shows if you have answered right.
+As a frequently visitor: <br>- I want to challenge myself and try to win with 11 - 0 against the quiz since the correct answer only shows if you have answered right.
 
 # Features
 
@@ -64,7 +64,7 @@ From this page the user can also navigate to main page and contact by clicking t
 
 ### **Fonts:**
 <img src="readme/font1.png"><br><br>
-- For all the text on this site I´ve used the font called ["Comfortaa"](https://fonts.google.com/?preview.text=Hockeyquiz&query=comfortaa).
+- For all the text on this site I´ve used the font called ["Comfortaa"](https://fonts.google.com/?preview.text=Hockeyquiz&query=comfortaa).<br><br>
 <img src="readme/font2.png"><br><br>
 - For the scoreboard and timer the font called ["Digital numbers"](https://www.cdnfonts.com/digital-numbers.font). This font makes the scoreboard look very similar to a old style scoreboard.
 
