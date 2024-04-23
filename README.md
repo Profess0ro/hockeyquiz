@@ -145,8 +145,8 @@ Here are my first blueprints on how I wanted this quiz to look.<br><br>
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Facebook link | When clicking on the facebook symbol:<br>the profile of the maker will be shown in a new window | Clicked on the facebook logo | The facebookprofile of the creator was opened in a new window | Pass |
-| Instagram link | When clicking on the facebook symbol:<br>the profile of the maker will be shown in a new window | Clicked on the instagram logo | The instagramprofile of the creator was opened in a new window | Pass |
+| Facebook link | When clicking on the facebook symbol:<br>link will be shown in a new window | Clicked on the facebook logo | The facebookprofile of the creator was opened in a new window | Pass |
+| Instagram link | When clicking on the facebook symbol:<br>link will be shown in a new window | Clicked on the instagram logo | The instagramprofile of the creator was opened in a new window | Pass |
 | Name input | Check if namefield has been filled <br>If empty a message will be shown and tell the field was empty | Left the namefield empty and press send | A message told me to fill in the name | Pass |
 | Email input empty | Check if emailfield has been filled<br>If empty a message will be shown and tell the field was empty | Left the emailfield empty and press send | A message told me to fill in an email | Pass |
 | Email validation | Check if a valid email has been filled<br>If unvalid a message will be shown and tell to fill in a valid email | Filled in a valid & unvalid email | When unvalid email was filled in the field,<br> a message told me to fill in a valid email.<br>When a valid email was filled in the field,<br>no message was shown to me | Pass |
