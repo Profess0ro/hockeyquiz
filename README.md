@@ -170,6 +170,9 @@ Here are my first blueprints on how I wanted this quiz to look.<br><br>
 ### **HTML**<br>
 <img src="readme/validateHTML.png">
 
+### **CSS**<br>
+<img src="readme/validatecss.png">
+
 ### **JSHint**<br>
 **style.js**
 - JSHint discovered 4 problems in style.js:<br>- questions are in a separate file (question.js)<br>- emailjs are defined in index.html<br>- initializeGame are called in index.html<br>- sendEmail are used by an onclick in index.html<br>
